@@ -9,7 +9,7 @@ Short description of proposed Discovery work item.
 - Tasks: Legacy term kept for continuity with earlier drafts.
 - Jobs: Legacy term kept for continuity with earlier drafts.
 
-## Problem Statement 
+## Problem Statement and Work Scope
 
 Many distributed processing environments depend on the interaction between components that do not have pre-configured relationships. In order for these systems to operate correctly, the components must be able to discover each other. For complete generality, we call these components "entities". Entities may be software tasks, services, AI agents, etc.
 
