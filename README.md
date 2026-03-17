@@ -3,10 +3,11 @@ Discovery
 
 ## Terminology 
 
-- Entity: 
-- Object: 
-- Tasks:
-- Jobs:
+- Entity: A system component that communicates at a peer-to-peer or client-server level with another entity. Examples include, AI agents.
+- Object: The records in the discovery system.
+- Function: The functional processing capability that an entity offers. Examples include, tasks, jobs, services, tools.
+- Tasks: Legacy term kept for continuity with earlier drafts.
+- Jobs: Legacy term kept for continuity with earlier drafts.
 
 ## Problem Statement 
 
@@ -34,11 +35,21 @@ Where possible, any solutions work will be built in a modular way using existing
 
 ## Functional Requirements
 
-- Who discovery 
+- Who discovery
+- Who discovers (an entity)
+- Who is discovered (another entity or a class of entities)
 - What information is being discovered?
-
+	- Who is responsible for this vs anonymous
+	- Type (e.g., IETF, Microsoft,...)
+	- What it does (functionality)
+	- How much of this function can it do
+	- How do I communicate with the entity (and security for communications)
+	- Who made the registration (trust or no-trust authentication)
+- How do I register my entity (with option for attestation) — out of scope
 
 Responsiblity
 Capability
 Tasks
-Schema 
+Schema
+
+Minimum viable discovery input
