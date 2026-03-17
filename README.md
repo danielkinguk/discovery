@@ -1,5 +1,5 @@
 # Discovery of Entities
-This document provides short description of a proposed Discovery work item.
+This document provides short description of a proposed Discovery IETF work item.
 This is not a BoF Request and not a draft Working Group Charter.
 The intention is to capture the scope of a piece of work that the proponents believes is in IETF scope and needs urgent attention.
 Our hope is that Area Directors will help us dispatch this to a place to do the work:
@@ -10,15 +10,15 @@ The proponents fully intend to continue refining existing Internet-Drafts concur
 
 ## Terminology 
 
-- Entity: A system component that communicates at a peer-to-peer or client-server level with another entity. Examples include, AI agents.
-- Object: The records in the discovery system.
+- Entity: A system component that communicates at a peer-to-peer or client-server level with another entity. Examples include, tools, skills, tasks, workloads, services, task owners, and AI agents.
+- Object: The records in the discovery system. Examples include, agent cards, task cards, resource cards, tool cards, and skill cards.
 - Function: The functional processing capability that an entity offers. Examples include, tasks, workloads, jobs, services, tools.
 - Tasks: Legacy term kept for continuity with earlier drafts.
 - Jobs: Legacy term kept for continuity with earlier drafts.
 
 ## Problem Statement and Work Scope
 
-Many distributed processing environments depend on the interaction between components that do not have pre-configured relationships. In order for these systems to operate correctly, the components must be able to discover each other. For complete generality, we call these components "entities". Entities may be software tasks, workloads (cf. WIMSE), services, AI agents, etc.
+Many distributed processing environments depend on the interaction between components that do not have pre-configured relationships. In order for these systems to operate correctly, the components must be able to discover each other. For complete generality, we call these components "entities". Entities may be tasks, workloads (cf. WIMSE), services, AI agents, etc.
 
 This discovery is as simple as asking "Find me an entity to talk to." However, there is a lot of detail underlying this question including:
 - What functionality do we want an entity to provide for us?
@@ -36,7 +36,7 @@ This work effort seeks to solve the following questions:
 - How is the information extensible on a per class-of-entity basis?
 - Can this problem be solved in a centralised and distributed way? (Consider scaling, consolidation, regulation, etc.)
 
-Issues of the larger architecture of how entities select each other and how they communicate are out of scope. How agents register and authenticate their registration are also how of scope. The solution should work independent of the discovery architecture and the system architecture into which the discovery system sits.
+Issues of the larger architecture of how entities select each other and how they communicate are out of scope. How agents register and authenticate their registration are also out of scope. The solution should work independent of the discovery architecture and the system architecture into which the discovery system sits.
 
 Where possible, any solutions work will be built in a modular way using existing IETF protocols. However, no protocol solution choices will be made until the requirements (functional and behavioral) have been agreed.
 
