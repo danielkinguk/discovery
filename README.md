@@ -34,7 +34,7 @@ This work effort seeks to solve the following questions:
 - How is an entity communicated with?
 - What is the base set of information that is held for each entity?
 - How is the information extensible on a per class-of-entity basis?
-- Can this problem be solved in a centralised and distributed way?
+- Can this problem be solved in a centralised and distributed way? (Consider scaling, consolidation, regulation, etc.)
 
 Issues of the larger architecture of how entities select each other and how they communicate are out of scope. How agents register and authenticate their registration are also how of scope. The solution should work independent of the discovery architecture and the system architecture into which the discovery system sits.
 
@@ -51,7 +51,6 @@ Where possible, any solutions work will be built in a modular way using existing
 	- How much of this function can it do
 	- How do I communicate with the entity (and security for communications)
 	- Who made the registration (trust or no-trust authentication)
-- How do I register my entity (with option for attestation) — out of scope
 
 Discovered Information may be further categorised as:
 - Mandatory or Optional
@@ -59,6 +58,7 @@ Discovered Information may be further categorised as:
 - Extensible by vendor/implementation, through further standardisation, or not at all
 
 ## Out Of Scope
+- How do I register my entity (with option for attestation)
 - Trust 
 - Responsibility
 - Capability and Negotiation 
@@ -73,6 +73,7 @@ This is a list of people who contributed to the discussions that led to this wor
 - Hesham Moussa <hesham.moussa@huawei.com>
 - Roland Schott <Roland.Schott@telekom.de>
 - Zaheduzzaman Sarker <zahed.sarker.ietf@gmail.com>
+- Jim Mozley <jmozley@infoblox.com>
 - Daniel King <daniel@olddog.co.uk>
 - Adrian Farrel <adrian@olddog.co.uk>
 
