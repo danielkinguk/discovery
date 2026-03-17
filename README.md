@@ -80,6 +80,13 @@ This is a list of people who contributed to the discussions that led to this wor
 This section does not imply that any draft is *the* draft, but attempts to show that people are thinking about this topic already.
 - "AI Agent Discovery (AID) Problem Statement" <https://datatracker.ietf.org/doc/draft-mozley-aidiscovery/>
 - "DNS for AI Discovery" <https://datatracker.ietf.org/doc/draft-mozleywilliams-dnsop-dnsaid/>
+- "A Layered Approach to AI discovery" <https://datatracker.ietf.org/doc/draft-am-layered-ai-discovery-architecture/>
+- "Task discovery in agentic networks" <https://datatracker.ietf.org/doc/draft-mapmw-task-discovery/>
+- "Agent Identity and Discovery (AID)" <https://datatracker.ietf.org/doc/draft-nemethi-aid-agent-identity-discovery/>
+- "Agent Registration and Discovery Protocol (ARDP)" <https://datatracker.ietf.org/doc/draft-pioli-agent-discovery/>
+- "AI Agent Discovery and Invocation Protocol" <https://datatracker.ietf.org/doc/draft-cui-ai-agent-discovery-invocation/>
+- "DNS-based Service Discovery for Computing-Aware Traffic Steering (CATS)" <https://datatracker.ietf.org/doc/draft-liu-cats-dns-service-discovery/>
+
 
 
 
