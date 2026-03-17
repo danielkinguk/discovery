@@ -51,12 +51,9 @@ Where possible, any solutions work will be built in a modular way using existing
 ### Optional 
 
 ## Out Of Scope
-Trust 
-Responsiblity
-Capability
-Tasks
-Schema
-
-
-
+- Trust 
+- Responsiblity
+- Capability and Negotiation 
+- Tasks Managment
+- Schema Definition
 
