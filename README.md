@@ -47,9 +47,16 @@ Where possible, any solutions work will be built in a modular way using existing
 	- Who made the registration (trust or no-trust authentication)
 - How do I register my entity (with option for attestation) — out of scope
 
+### Mandatory
+
+### Optional 
+
+## Out Of Scope
 Responsiblity
 Capability
 Tasks
 Schema
 
-Minimum viable discovery input
+
+
+
