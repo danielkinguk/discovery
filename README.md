@@ -1,5 +1,5 @@
 # Discovery
-Discovery
+Short description of proposed Discovery work item.
 
 ## Terminology 
 
@@ -35,7 +35,6 @@ Where possible, any solutions work will be built in a modular way using existing
 
 ## Functional Requirements
 
-- Who discovery
 - Who discovers (an entity)
 - Who is discovered (another entity or a class of entities)
 - What information is being discovered?
@@ -52,6 +51,7 @@ Where possible, any solutions work will be built in a modular way using existing
 ### Optional 
 
 ## Out Of Scope
+Trust 
 Responsiblity
 Capability
 Tasks
