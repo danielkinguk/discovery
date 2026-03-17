@@ -62,5 +62,16 @@ Where possible, any solutions work will be built in a modular way using existing
 - Capability and Negotiation 
 - Tasks Management
 - Agent-to-agent communications
+
+## Proponents
+This is a list of people who contributed to the discussions that led to this work description. Draw no conclusions from the ordering of people in this list.
+- Nic Williams <nwilliams@infoblox.com>
+- Laurent Ciavaglia <laurent.ciavaglia@nokia.com>
+- Arashmid Akhavain <arashmid.akhavain@huawei.com>
+- Hesham Moussa <hesham.moussa@huawei.com>
+- Roland Schott <Roland.Schott@telekom.de>
+- Zaheduzzaman Sarker <zahed.sarker.ietf@gmail.com>
+- Daniel King <daniel@olddog.co.uk>
+- Adrian Farrel <adrian@olddog.co.uk>
 - Schema Definition
 
