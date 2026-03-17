@@ -52,9 +52,10 @@ Where possible, any solutions work will be built in a modular way using existing
 	- Who made the registration (trust or no-trust authentication)
 - How do I register my entity (with option for attestation) — out of scope
 
-### Mandatory
-
-### Optional 
+Discovered Information may be further categorised as:
+- Mandatory or Optional
+- Static, Mainly Static, or Dynamic
+- Extensible by vendor/implementation, through further standardisation, or not at all
 
 ## Out Of Scope
 - Trust 
