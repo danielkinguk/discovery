@@ -86,6 +86,7 @@ This section does not imply that any draft is *the* draft, but attempts to show 
 - "Agent Identity and Discovery (AID)" <https://datatracker.ietf.org/doc/draft-nemethi-aid-agent-identity-discovery/>
 - "Agent Registration and Discovery Protocol (ARDP)" <https://datatracker.ietf.org/doc/draft-pioli-agent-discovery/>
 - "AI Agent Discovery and Invocation Protocol" <https://datatracker.ietf.org/doc/draft-cui-ai-agent-discovery-invocation/>
+- "Agent Registration and Discovery Protocol (ARDP)" <https://datatracker.ietf.org/doc/draft-pioli-agent-discovery>
 - "DNS-based Service Discovery for Computing-Aware Traffic Steering (CATS)" <https://datatracker.ietf.org/doc/draft-liu-cats-dns-service-discovery/>
 
 
