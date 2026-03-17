@@ -55,5 +55,17 @@ Where possible, any solutions work will be built in a modular way using existing
 - Responsibility
 - Capability and Negotiation 
 - Tasks Management
+
+## Proponents
+This is a lit of people who have contributed to this work topic description. Draw no conclusions from the ordering of this list.
+- Nic Williams <nwilliams@infoblox.com>
+- Zaheduzzaman Sarker <zahed.sarker.ietf@gmail.com>
+- Laurent Ciavaglia <laurent.ciavaglia@nokia.com>
+- Daniel King <daniel@olddog.co.uk>
+- Arashmid Akhavain <arashmid.akhavain@huawei.com>
+- Hesham Moussa <hesham.moussa@huawei.com>
+- Adrian Farrel <adrian@olddog.co.uk>
+
+
 - Schema Definition
 
