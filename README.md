@@ -75,5 +75,4 @@ This is a list of people who contributed to the discussions that led to this wor
 - Zaheduzzaman Sarker <zahed.sarker.ietf@gmail.com>
 - Daniel King <daniel@olddog.co.uk>
 - Adrian Farrel <adrian@olddog.co.uk>
-- Schema Definition
 
