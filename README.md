@@ -78,6 +78,8 @@ This is a list of people who contributed to the discussions that led to this wor
 
 ## Relevant Internet-Drafts
 This section does not imply that any draft is *the* draft, but attempts to show that people are thinking about this topic already.
-- 
+- "AI Agent Discovery (AID) Problem Statement" <https://datatracker.ietf.org/doc/draft-mozley-aidiscovery/>
+- "DNS for AI Discovery" <https://datatracker.ietf.org/doc/draft-mozleywilliams-dnsop-dnsaid/>
+
 
 
