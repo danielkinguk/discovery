@@ -65,6 +65,10 @@ Discovered Information may be further categorised as:
 - Tasks Management
 - Agent-to-agent communications
 
+## Implementations and Interoperability
+
+>>> This section to be completed per suggestions at IETF Plenary
+
 ## Proponents
 This is a list of people who contributed to the discussions that led to this work description. Draw no conclusions from the ordering of people in this list.
 - Nic Williams <nwilliams@infoblox.com>
