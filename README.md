@@ -66,6 +66,8 @@ Discovered Information may be further categorised as:
 - Static, Mainly Static, or Dynamic
 - Extensible by vendor/implementation, through further standardisation, or not at all
 
+Authentication and authorisation of the discovery mechanisms will be important, but verification of entity security propoerties are out of scope.
+
 ## Out Of Scope
 - How do I register my entity (with option for attestation)
 - Trust, authentication, and authorisation of the entities
