@@ -72,9 +72,6 @@ Discovered Information may be further categorised as:
 - Tasks Management
 - Agent-to-agent communications
 
-## Lifecycle of a "service"
-- Show the phases and inteeactions/steps.
-
 ## Implementations and Interoperability
 
 >>> This section to be completed per suggestions at IETF Plenary
