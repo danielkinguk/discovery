@@ -68,7 +68,7 @@ Discovered Information may be further categorised as:
 
 ## Out Of Scope
 - How do I register my entity (with option for attestation)
-- Trust 
+- Trust, authentication, and authorisation of the entities
 - Responsibility
 - Capability and Negotiation 
 - Tasks Management
