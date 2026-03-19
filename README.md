@@ -26,7 +26,7 @@ Many distributed processing environments depend on the interaction between compo
 
 This discovery is as simple as asking "Find me an entity to talk to." However, there is a lot of detail underlying this question including:
 - What functionality do we want an entity to provide for us?
-- How do I communicate with that entity?
+- What mechanisms exist to facilitate ommunication with that entity?
 - Is the information about the entity trustable?
 
 There is a functional layer after discovery that determines which instance of a class of entity should be used. This process may examine location, reachability, load, and operational status. Those pieces of information have to be examinable, but they do not form part of the core discovery function, but may be implemented by a discovered intermediary aggregation point or broker. This element of the problem space is not in scope for the discovery work.
