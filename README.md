@@ -15,6 +15,9 @@ The proponents fully intend to continue refining existing Internet-Drafts concur
 - Function: The functional processing capability that an entity offers. Examples include, tasks, workloads, endpoints, jobs, services, tools.
 - Tasks: Legacy term kept for continuity with earlier drafts.
 - Jobs: Legacy term kept for continuity with earlier drafts.
+- Registration:
+- Discovery:
+- Selection: 
 
 ## Problem Statement and Work Scope
 
