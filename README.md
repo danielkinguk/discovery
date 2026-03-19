@@ -33,6 +33,8 @@ There is a functional layer after discovery that determines which instance of a 
 
 However, the different parts of the problem space lead to considering the distinction between mandatory base information which is likely to be static or semi-static, and more dynamic information that could be changing frequently and which is likely to cause scaling and stability issues for a discovery system.
 
+Many discovery techniques exist today, and work has progressed beyond the discovery of simple web sites. This work effort will examine new types of entities and their special needs with respect to discovery and contrast them with state of the art discovery tools and mechanisms. Applicability will include the discovery of AI agents, but will also seek to generalise discovery to "entities" as defined here.
+
 This work effort seeks to solve the following questions:
 - How is an entity classified with respect to its function, origin, location, and type?
 - How is an entity communicated with?
