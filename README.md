@@ -56,7 +56,7 @@ Where possible, any solutions work will be built in a modular way using existing
 	- How do I communicate with the entity (and security for communications)
 	- Who made the registration (trust or no-trust authentication)
 - How is discovery achieved?
-- Where does Discovery fit in the overall workflow?
+- Where does discovery fit in the overall workflow?
 
 Discovered Information may be further categorised as:
 - Mandatory or Optional
