@@ -16,7 +16,7 @@ The proponents fully intend to continue refining existing Internet-Drafts concur
 - Tasks: Legacy term kept for continuity with earlier drafts.
 - Jobs: Legacy term kept for continuity with earlier drafts.
 - Registration:
-- Discovery:
+- Discovery:    (The purpose of this work effort is limited to just this element)
 - Capability exchange / negotiation: 
 - Selection: 
 
