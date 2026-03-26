@@ -1,6 +1,7 @@
-# Discovery of Entities
+# Discovery of Agents, Workloads, and Named entities (DAWN)
+
 This document provides short description of a proposed Discovery IETF work item.
-This is not a BoF Request and not a draft Working Group Charter.
+At this stage, this is not a BoF Request and not a draft Working Group Charter.
 The intention is to capture the scope of a piece of work that the proponents believes is in IETF scope and needs urgent attention.
 Our hope is that Area Directors will help us dispatch this to a place to do the work:
 - an existing working group
@@ -128,7 +129,11 @@ This is a list of people who contributed to the discussions that led to this wor
 - Daniel King <daniel@olddog.co.uk>
 - Adrian Farrel <adrian@olddog.co.uk>
 
-## Relevant Internet-Drafts
+## Relevant DAWN Internet-Drafts
+
+**specific drafts will be listed here**
+
+## Related Internet-Drafts
 
 This section does not imply that any draft is *the* draft, but attempts to show that people are thinking about this topic already.
 - "AI Agent Discovery (AID) Problem Statement" <https://datatracker.ietf.org/doc/draft-mozley-aidiscovery/>
@@ -139,5 +144,4 @@ This section does not imply that any draft is *the* draft, but attempts to show 
 - "Agent Registration and Discovery Protocol (ARDP)" <https://datatracker.ietf.org/doc/draft-pioli-agent-discovery/>
 - "AI Agent Discovery and Invocation Protocol" <https://datatracker.ietf.org/doc/draft-cui-ai-agent-discovery-invocation/>
 - "DNS-based Service Discovery for Computing-Aware Traffic Steering (CATS)" <https://datatracker.ietf.org/doc/draft-liu-cats-dns-service-discovery/>
-
 
