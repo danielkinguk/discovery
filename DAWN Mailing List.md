@@ -8,3 +8,5 @@ Many distributed processing environments depend on the interaction between compo
 This list is for discussion of the scope, use cases, requirements, and solutions for discovery of entities using IETF technologies.
 
 While discovery of AI agents will play a big part in the discussion, the intention is to cover a broader scope.
+
+To contact the list owners, use the following email address: dawn-owner@ietf.org
