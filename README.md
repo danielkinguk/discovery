@@ -139,6 +139,10 @@ This is a list of people who contributed to the discussions that led to this wor
 - Daniel King <daniel@olddog.co.uk>
 - Adrian Farrel <adrian@olddog.co.uk>
 
+## Deliverables
+
+**A list of deliverables will be added here**
+
 ## Relevant DAWN Internet-Drafts
 
 **specific drafts will be listed here**
