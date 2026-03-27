@@ -124,7 +124,7 @@ This is a list of people who contributed to the discussions that led to this wor
 - Arashmid Akhavain <arashmid.akhavain@huawei.com>
 - Hesham Moussa <hesham.moussa@huawei.com>
 - Roland Schott <Roland.Schott@telekom.de>
-- Zaheduzzaman Sarker <zahed.sarker.ietf@gmail.com>
+- Zaheduzzaman Sarker <zaheduzzaman.sarker@nokia.com>
 - Jim Mozley <jmozley@infoblox.com>
 - Daniel King <daniel@olddog.co.uk>
 - Adrian Farrel <adrian@olddog.co.uk>
