@@ -9,17 +9,7 @@ Our hope is that Area Directors will help us dispatch this to a place to do the 
 
 The proponents fully intend to continue refining existing Internet-Drafts concurrent with any work-dispatch process.
 
-## Terminology 
-
-- Entity: A system component that communicates at a peer-to-peer or client-server level with another entity. Examples include, tools, skills, tasks, workloads, services, task owners, and AI agents.
-- Object: The records in the discovery system. Examples include, agent cards, task cards, resource cards, tool cards, and skill cards.
-- Function: The functional processing capability that an entity offers. Examples include, tasks, workloads, endpoints, jobs, services, tools.
-- Tasks: Legacy term kept for continuity with earlier drafts.
-- Jobs: Legacy term kept for continuity with earlier drafts.
-- Registration: The steps by which agents can register their existence. This should include attestation and other security mechanisms.
-- Discovery: A process by which an entity can find another entity or a set of entities of a type that can perform a desired function. **The purpose of this work effort is limited to just this element. It is described in more detail in the Problem Statement and the Functional Requirements, below.**
-- Capability exchange / negotiation: The processes by which agents can exchange details of what they can do, dynamic information about statuses (including workloads), and which particular features/functions they want to engage.
-- Selection: The mechanisms and policies by which an agent determines which other agents it will communicate with.
+Some explanation of terminology is provided after the problem statement that uses some of the terms.
 
 ## Problem Statement and Work Scope
 
@@ -46,6 +36,18 @@ This work effort seeks to solve the following questions:
 Issues of the larger architecture of how entities select each other and how they communicate are out of scope. How agents register and authenticate their registration are also out of scope. The solution should work independent of the discovery architecture and the system architecture into which the discovery system sits.
 
 Where possible, any solutions work will be built in a modular way using existing IETF protocols. However, no protocol solution choices will be made until the requirements (functional and behavioral) have been agreed.
+
+## Terminology 
+
+- Entity: A system component that communicates at a peer-to-peer or client-server level with another entity. Examples include, tools, skills, tasks, workloads, services, task owners, and AI agents.
+- Object: The records in the discovery system. Examples include, agent cards, task cards, resource cards, tool cards, and skill cards.
+- Function: The functional processing capability that an entity offers. Examples include, tasks, workloads, endpoints, jobs, services, tools.
+- Tasks: Legacy term kept for continuity with earlier drafts.
+- Jobs: Legacy term kept for continuity with earlier drafts.
+- Registration: The steps by which agents can register their existence. This should include attestation and other security mechanisms.
+- Discovery: A process by which an entity can find another entity or a set of entities of a type that can perform a desired function. **The purpose of this work effort is limited to just this element. It is described in more detail in the Problem Statement and the Functional Requirements, below.**
+- Capability exchange / negotiation: The processes by which agents can exchange details of what they can do, dynamic information about statuses (including workloads), and which particular features/functions they want to engage.
+- Selection: The mechanisms and policies by which an agent determines which other agents it will communicate with.
 
 ## Functional Requirements
 
