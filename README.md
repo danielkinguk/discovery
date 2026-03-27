@@ -99,7 +99,7 @@ Implementation and interoperability are essential cornerstones of IETF work. It 
 
 **Protocols**
 
-Entities wishing to discover other entities need to know what protocol to sue when talking to discovery enablers (servers).
+Entities wishing to discover other entities need to know what protocol to use when talking to discovery enablers (servers).
 It is possible that different scenarios will benefit from using different protocols. This question remains to be answered depending on investigation of those scenarios.
 
 **Objects**
