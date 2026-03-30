@@ -1,6 +1,6 @@
 # Discovery of Agents, Workloads, and Named entities (DAWN)
 
-This document provides short description of a proposed IETF work item.
+This document provides a short description of a proposed IETF work item.
 At this stage, this is not a BoF Request and not a draft Working Group Charter.
 The intention is to capture the scope of a piece of work that the proponents believes is in IETF scope and needs urgent attention.
 Our hope is that Area Directors will help us dispatch this to a place to do the work:
@@ -24,11 +24,11 @@ Discovery in this context is as simple as asking "Find me an entity to talk to."
 
 There is a functional layer before discovery that allows entities to register themselves for discovery. Various aspects of security are extremely important in this function. This element of the problem space is not in scope for the discovery work.
 
-There is a functional layer after discovery that determines which instance of a class of entity should be used. This process may examine location, reachability, load, and operational status. Those pieces of information have to be examinable, but they do not form part of the core discovery function, but may be implemented by a discovered intermediary aggregation point or broker. This element of the problem space is not in scope for the discovery work.
+There is a functional layer after discovery that determines which instance of a class of entity should be used. This process may examine location, reachability, load, version, and operational status. Those pieces of information have to be examinable, but they do not form part of the core discovery function, but may be implemented by a discovered intermediary aggregation point or broker. This element of the problem space is not in scope for the discovery work.
 
-The discovery problem space lead to considering the distinction between mandatory base information which is likely to be static or semi-static, and more dynamic information that could be changing frequently and which is likely to cause scaling and stability issues for a discovery system.
+The discovery problem space needs to consider the distinction between mandatory base information which is likely to be static or semi-static, and more dynamic information that could be changing frequently and which is likely to cause scaling and stability issues for a discovery system.
 
-Many discovery techniques exist today, and work has progressed beyond the discovery of simple web sites. This work effort will examine new types of entities and their special needs with respect to discovery and contrast them with state of the art discovery tools and mechanisms. Applicability will include the discovery of AI agents, but will also seek to generalise discovery to "entities" as defined here.
+Many discovery techniques exist today, and work has progressed beyond the discovery of simple web sites. This work effort will examine new types of entities and their special needs with respect to discovery and contrast them with state of the art discovery tools and mechanisms. Applicability will include the discovery of AI agents, but will also seek to generalise discovery to "entities" as defined here, leading to re-use of existing protocols and allowing for future use cases.
 
 This work effort seeks to solve the following questions:
 - How is an entity classified with respect to its function, origin, location, and type?
@@ -41,10 +41,10 @@ Issues of the larger architecture of how entities select each other and how they
 
 Where possible, any solutions work will be built in a modular way using existing IETF protocols. However, no protocol solution choices will be made until the requirements (functional and behavioral) have been agreed, and then this will require an analysis of the capabilities of existing protocols and what gaps need to be filled.
 
-## Terminology 
+## Terminology
 
 - Entity: A system component that communicates at a peer-to-peer or client-server level with another entity. Examples include, tools, skills, tasks, workloads, services, task owners, and AI agents.
-- Object: The records in the discovery system. Examples include, agent cards, task cards, resource cards, tool cards, and skill cards.
+- Properties: The properties of the discoverable entities. Examples include, communication protocols, agent cards, task cards, resource cards, tool cards, and skill cards.
 - Function: The functional processing capability that an entity offers. Examples include, tasks, workloads, endpoints, jobs, services, tools.
 - Tasks: Legacy term kept for continuity with earlier drafts.
 - Jobs: Legacy term kept for continuity with earlier drafts.
@@ -66,7 +66,7 @@ Where possible, any solutions work will be built in a modular way using existing
     - Type of entity
 	- What the entity does (functionality)?
 	- How much of this function can it do?
-	- How communication mechanisms excist for communication with the entity (and security for communications)?
+	- What communication mechanisms exist for communication with the entity (and security for communications)?
 	- Who made the registration (trust or no-trust authentication)?
 - How is discovery achieved?
 - Where does discovery fit in the overall workflow?
@@ -84,7 +84,7 @@ Authentication and authorisation of the discovery mechanisms will be important, 
 - Design, definition, and governance of the naming systems for entities
 - Trust, authentication, and authorisation of the entities
 - Responsibility
-- Capability and Negotiation 
+- Capability and Negotiation
 - Task Management
 - Agent-to-agent communication
 
@@ -103,11 +103,11 @@ Implementation and interoperability are essential cornerstones of IETF work. It 
 Entities wishing to discover other entities need to know what protocol to use when talking to discovery enablers (servers).
 It is possible that different scenarios will benefit from using different protocols. This question remains to be answered depending on investigation of those scenarios.
 
-**Objects**
+**Entity Properties**
 
-- Mandatory discoverable objects need to be standardised so that anyone examining a record can find key information and an indication of what the rest of the information is. 
-- It is posisble that optional discoverable objects will also be standardised for particular types or classes of entity.
-- However, other optional discoverable entities will remain the reponsibility of forums and vendors.
+- Mandatory discoverable entity properties need to be standardised so that anyone examining a record can find key information and an indication of what the rest of the information is.
+- It is possible that optional discoverable properties will also be standardised for particular types or classes of entity.
+- However, other optional object properties will remain the reponsibility of forums and vendors.
 
 ### What are the interoperability interfaces?
 
@@ -115,7 +115,7 @@ It is possible that different scenarios will benefit from using different protoc
 
 ## Coordination with other organisations
 
-This work is closely related to work done in other organisations and bodies. This work effort will seek to take input from other experts while attempting  to bring them together to coordinate on this issue.
+This work is closely related to work done in other organisations and bodies. This work effort will seek to take input from other experts while attempting to bring them together to coordinate on this issue.
 
 Outreach should take place to at least:
 - ITU-T SG17
