@@ -122,6 +122,28 @@
       transient or long-lived and may move between hosting
       environments.
 
+### Taxonomy of Entities
+
+|  Entity   | Identity |  Control   | Responsible |   Dynamic    |
+|   Type    | Binding  |  Ownership |    Party    |Characteristic|
++-----------+----------+------------+-------------+--------------+
+|    AI     |End device|Organization| Developer&  |    High      |
+|   Agent   |/Instance |    /User   |Deployer&User|              |
++-----------+----------+------------+-------------+--------------+
+|  Software | Instance |  Provider  |  Developer  |    Medium    |
+|  Service  | /Cluster |Organization| & Deployer  |              |
++-----------+----------+------------+-------------+--------------+
+|  Compute  | Variable |Submitter & |  Submitter  |    High      |
+|  Workload |    ID    |Orchestrator| & Deployer  |              |
++-----------+----------+------------+-------------+--------------+
+|  Network  | Node     | Provider   |   Operator  |    Low       |
+|  Function | /Instance|Organization|             |              |
++-----------+----------+------------+-------------+--------------+
+|Application| IP/Port  |   Owning   |  Developer  |    Medium    |
+|  Endpoint | /Instance|Organization| & Deployer  |              |
++-----------+----------+------------+-------------+--------------+
+{: #taxonomy title="Taxonomy of Entities"}
+
 ## Introduction
 
    Modern distributed systems increasingly rely on the dynamic
