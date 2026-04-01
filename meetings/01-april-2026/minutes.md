@@ -18,9 +18,9 @@ Minutes
 
 Actions:
 
-Arashmid: The plan is to have a draft of the problem statement and requirements document ready for review by the end of next week.
-Dan: to setup 00 version (Problem I-D and Requirement I-D) review call scheduled for Thursday, an hour earlier than this week.
-All: The goal is to submit these documents Friday 10th April.
-Adrian: Continue to update Med, and who will then champion to other IESG members and help with list creation.
-Dan and Adrian: Engage with Matt Larson (ICANN) and present DAWN scope and activity. 
-All: Identify other SDOs/open source projects to share information about DAWN and gather feedback. 
+* Arashmid: The plan is to have a draft of the problem statement and requirements document ready for review by the end of next week.
+* Dan: to setup 00 version (Problem I-D and Requirement I-D) review call scheduled for Thursday, an hour earlier than this week.
+* All: The goal is to submit these documents Friday 10th April.
+* Adrian: Continue to update Med, and who will then champion to other IESG members and help with list creation.
+* Dan and Adrian: Engage with Matt Larson (ICANN) and present DAWN scope and activity. 
+* All: Identify other SDOs/open source projects to share information about DAWN and gather feedback. 
