@@ -1,10 +1,11 @@
-
+---
 title: Problem Statement for the Discovery of Agents, Workloads, and Named Entities (DAWN)
 
-abbrev: DAWN Requirements
+abbrev: DAWN problem statement
 docname: draft-akhavain-moussa-dawn-problem-statement-00
 workgroup: 
 category: info
+ipr: trust200902
 
 
 stand_alone: yes
@@ -41,6 +42,11 @@ author:
     country: UK
     email: daniel@olddog.co.uk
 
+normative:
+
+informative:
+---
+
 --- abstract
 
 
@@ -58,7 +64,7 @@ This document describes the problem space that motivates the DAWN work.  It clar
 
 Entities in AI ecosystem collaborate to render AI service and follow the lifecycle shown below.
 
-~~~
+~~~~
 +---------------------------+     +--------------------------------------+
 |  AI entity                |     |  Entity system registration process  |
 |  (e.g. AI agent, task)    |---->|                                      |
@@ -95,8 +101,8 @@ Entities in AI ecosystem collaborate to render AI service and follow the lifecyc
                                   |             Monitoring               |
                                   +--------------------------------------+
 
-~~~
-{: #fig1 title="Figure 1: An example of AI entity lifecycle" artwork-align="centre"}
+~~~~
+{: #fig1 title="Figure 1: An example of AI entity lifecycle" artwork-align="center"}
 
 As shown in the above diagram, an AI entity will pass through a set of important functional blocks before it becomes active and start interacting with other AI entities in the ecosystem. This document focuses on the discovery problem space in the above diagram namely:
 "Discovery substrate access point" and "Discovery substrate".
