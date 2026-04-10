@@ -267,6 +267,8 @@ New agent types, skill taxonomies, and capability formats will emerge.  Discover
 
 # Relationship to Existing Work {#sec-existing}
 
+TBD
+
 # Security Considerations {#sec-security}
 
 This document describes a problem space, not a protocol.
@@ -282,6 +284,10 @@ Discovery may expose sensitive information about an organisation's entities and 
 Querying for entities may reveal the discovering entity's intentions or interests.  Discovery should minimise information leakage through the query process.
 
 Published entity properties, such as skills, capabilities, and organisational affiliations, may be sensitive. Entities and their operators should control the granularity and audience of published information.
+
+# Operational Consideration {#sec-opcon}
+
+TBD
 
 # IANA Considerations {#sec-IANA}
 
