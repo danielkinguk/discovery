@@ -162,7 +162,7 @@ Consider a task owner (e.g., an entity such as an end user, AI agent, model, dat
 
 4. The discovery substrate processes the above query and returns the relevant discoverable objects such as tasks, agents, resources, etc. to the entity that issued the query. It must be noted that the nature and structure of the query, the format of the discoverable objects (e.g., standardised object cards), and the discovery mechanism employed (e.g., simple name lookup or semantic matching) are key factors influencing the accuracy, volume, timeliness, etc. of the results.
 
-For example, the querying entity may need to provide details about its skills, capabilities, pricing, or other relevant attributes so the discovery substrate can match its request with an appropriate subset of registered entities in the system.
+   For example, the querying entity may need to provide details about its skills, capabilities, pricing, or other relevant attributes so the discovery substrate can match its request with an appropriate subset of registered entities in the system.
 
 5. Upon receiving the discovery results (e.g. a list of suitable entities), the querying entity (e.g. an AI agent) might need additional information before initiating its interaction with the discovered entities. For example, it might need to know more about the parent entity of the discovered entity whose name/ID can be potentially found in the discovered entity's discoverable object.
 
