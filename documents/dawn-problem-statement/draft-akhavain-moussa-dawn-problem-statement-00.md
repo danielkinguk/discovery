@@ -49,9 +49,6 @@ informative:
 
 --- abstract
 
-
-
-
 Interacting entities such as agents, tasks, users, workloads, data, compute, etc. in AI ecosystem/network are proliferating, yet there is no standardised way to discover what entities exist, what attributes such as skills, capabilities, physical characteristics, etc. they posses, what services they offer, or how to reach them across organisational boundaries.
    
 Discovery today relies on proprietary directories or manual configuration, creating fragmented ecosystems that prevent cross-domain collaboration. 
@@ -62,7 +59,7 @@ This document describes the problem space that motivates the DAWN work.  It clar
 
 ## Introduction
 
-Entities in AI ecosystem collaborate to render AI service and follow the lifecycle shown below.
+Entities in AI ecosystem collaborate to render AI service and follow the lifecycle shown in {{fig-lifecycle}}.
 
 ~~~~
 +---------------------------+     +--------------------------------------+
@@ -102,9 +99,9 @@ Entities in AI ecosystem collaborate to render AI service and follow the lifecyc
                                   +--------------------------------------+
 
 ~~~~
-{: #fig1 title="Figure 1: An example of AI entity lifecycle" artwork-align="center"}
+{: #fig-lifecycle title="An example of AI entity lifecycle" artwork-align="center"}
 
-As shown in the above diagram, an AI entity will pass through a set of important functional blocks before it becomes active and start interacting with other AI entities in the ecosystem. This document focuses on the discovery problem space in the above diagram namely:
+As shown in {{fig-lifecycle}} the above diagram, an AI entity will pass through a set of important functional blocks before it becomes active and start interacting with other AI entities in the ecosystem. This document focuses on the discovery problem space in the above diagram namely:
 "Discovery substrate access point" and "Discovery substrate".
 
 Entities increasingly need to discover, connect with, and collaborate with one another to deliver AI services. This discovery process is driven by the need to identify the most suitable set of entities that satisfy the requirements of a particular AI service. To achieve this, an entity must be able to find others based on attributes such as skills, capabilities, physical characteristics, names, and other relevant qualities they possess. Obviously, As static configuration is impractical at scale, an automated discovery of entities, their skills, and their capabilities becomes essential.
@@ -115,11 +112,9 @@ Assuming that trust has already been established between AI entities and the AI 
 
 This document describes the problem space and informs the development of requirements [draft-king-dawn-requirements] and in the future, solution proposals for DAWN.
 
-
 ## Terminology
 
 The following terms are used in this document. Full definitions are provided in [draft-king-dawn-requirements].
-
 
 - Entity: A system component that communicates at a peer-to-peer or client-server level with another entity within the AI ecosystem. Examples include, AI agents, tasks, tools, skills, task owners,workloads, and services.
 
