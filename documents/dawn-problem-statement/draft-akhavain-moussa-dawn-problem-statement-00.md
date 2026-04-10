@@ -164,7 +164,7 @@ The main motivation behind DAWN and tackle the discovery problem space within th
 
 
 ### Example of discovery lifecycle in AI ecosystem
-Consider a task owner (e.g., an entity such as an end user, AI agent, model, data owner, resource/compute owner) who intends to submit a task to the AI ecosystem and as shown in Figure 1, has already been processed and accepted by the entity registration block. The following describes the steps after which the entity becomes available for discovery.
+Consider a task owner (e.g., an entity such as an end user, AI agent, model, data owner, resource/compute owner) who intends to submit a task to the AI ecosystem and as shown in {{fig-lifecycle}}, has already been processed and accepted by the entity registration block. The following describes the steps after which the entity becomes available for discovery.
 
 1) Discovery substrate access point validates the task owner’s credentials and verifies that its associated discoverable object meets compliance requirements. The discoverable object is what the discovery substrate makes available/visible to system participants. It contains entity's different attributes and information that others need to initiate an interaction session with it once they discover the entity.
 
