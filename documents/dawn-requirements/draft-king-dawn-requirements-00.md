@@ -42,7 +42,8 @@ network boundaries.  Entities may include AI agents, software services,
 compute workloads, and other named resources that need to be found and
 characterised before interaction can begin.
 
-This document defines the requirements that a discovery mechanism for
+This document defines the requirements for Discovery of Agents, Workloads,
+and Named Entities (DAWN) and sets out the objectives that a discovery mechanism for
 such entities must satisfy.  It describes what information must be
 discoverable, what properties a discovery mechanism needs to support,
 and what constraints apply to discovery in decentralised environments.
@@ -81,14 +82,14 @@ protocols and tools, benefits from an established trust model, supports
 proven delegation and federation architectures, and allows organisations
 to independently publish discovery information.
 
-This document defines requirements that any DAWN discovery mechanism
-must satisfy.  It is informed by:
+This document defines requirements that any Discovery of Agents, Workloads,
+and Named Entities (DAWN) mechanism must satisfy.  It is informed by:
 
-o \[TBA 1\] DAWN Problem Statement I-D.
+- {{?I-D.akhavain-moussa-dawn-problem-statement}} DAWN Problem Statement I-D.
 
-o \[TBA 2\] DAWN Use Case I-D.
+- \[TBA 2\] DAWN Use Case I-D.
 
-o \[TBA 3\] Anything else relevant and available to reference.
+- \[TBA 3\] Anything else relevant and available to reference.
 
 {: #sec-scope}
 ## Scope
@@ -100,21 +101,21 @@ requirements are set out in {{sec-requirements}}.
 
 The following topics are explicitly out of scope:
 
-o Entity registration processes, including attestation and other
+- Entity registration processes, including attestation and other
   security mechanisms for registration;
 
-o Design, definition, and governance of naming systems for entities;
+- Design, definition, and governance of naming systems for entities;
 
-o Trust, authentication, and authorisation of entities themselves (as
+- Trust, authentication, and authorisation of entities themselves (as
   distinct from trust in discovery information);
 
-o Capability exchange and negotiation between entities;
+- Capability exchange and negotiation between entities;
 
-o Entity selection mechanisms and policies;
+- Entity selection mechanisms and policies;
 
-o Task management and orchestration;
+- Task management and orchestration;
 
-o Agent-to-agent communication protocols.
+- Agent-to-agent communication protocols.
 
 {: #sec-terms}
 # Terminology
@@ -453,15 +454,15 @@ requirements.
 Implementers of discovery mechanisms that satisfy these requirements
 should pay particular attention to the following concerns:
 
-o The integrity and authenticity of discovery information must be
+- The integrity and authenticity of discovery information must be
   protected to prevent poisoning attacks that could direct entities to
   malicious endpoints.
 
-o Access control mechanisms should be considered to prevent
+- Access control mechanisms should be considered to prevent
   unauthorised disclosure of entity properties, particularly in
   environments where entity metadata may be sensitive.
 
-o The discovery mechanism itself must not become a vector for
+- The discovery mechanism itself must not become a vector for
   denial-of-service attacks against the infrastructure on which it
   is built.
 
@@ -473,14 +474,14 @@ about entities.  Implementers should consider the privacy implications
 of exposing entity properties, capabilities, and organisational
 associations.  In particular:
 
-o Entities should be able to control what information is made publicly
+- Entities should be able to control what information is made publicly
   discoverable versus restricted to specific audiences.
 
-o The discovery mechanism should not require the disclosure of
+- The discovery mechanism should not require the disclosure of
   information beyond what is necessary for a discovering entity to
   determine whether interaction is appropriate.
 
-o Where entities represent individuals or process personal data,
+- Where entities represent individuals or process personal data,
   compliance with applicable data protection regulations should be
   considered.
 
@@ -488,5 +489,3 @@ o Where entities represent individuals or process personal data,
 
 The authors wish to acknowledge the contributions of participants in
 the DAWN discussions that shaped this document.
-
-TBA
