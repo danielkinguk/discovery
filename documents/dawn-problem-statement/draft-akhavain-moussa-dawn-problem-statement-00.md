@@ -7,7 +7,6 @@ workgroup:
 category: info
 ipr: trust200902
 
-
 stand_alone: yes
 pi: [toc, tocompact, tocindent, sortrefs, symrefs, compact]
 
@@ -20,7 +19,6 @@ kw:
   - workloads
 
 author:
-
   -
     ins: A. Akhavain
     name: Arashmid Akhavain
@@ -60,7 +58,7 @@ This document describes the problem space that motivates the DAWN work.  It clar
 
 --- middle
 
-## Introduction
+# Introduction {#sec-intro}
 
 Entities in AI ecosystem collaborate to render AI service and follow the lifecycle shown below.
 
@@ -115,8 +113,7 @@ Assuming that trust has already been established between AI entities and the AI 
 
 This document describes the problem space and informs the development of requirements [draft-king-dawn-requirements] and in the future, solution proposals for DAWN.
 
-
-## Terminology
+# Terminology {sec-terms}
 
 The following terms are used in this document. Full definitions are provided in [draft-king-dawn-requirements].
 
@@ -141,7 +138,7 @@ The following terms are used in this document. Full definitions are provided in 
 
 - Selection: The mechanisms and policies by which an agent determines which other agents it will communicate with. [Hesham]{Outside the scope of the problem space}
 
-## Motivation
+# Motivation {#sec-motives}
 
 The main motivation behind DAWN and tackle the discovery problem space within the AI ecosystem is driven by a few factors:
 
@@ -161,9 +158,7 @@ The main motivation behind DAWN and tackle the discovery problem space within th
 
    - Entities may have associated MDIs (e.g. task , capabilities, endpoints, policies), and that a discovery substrate/mechanism/vehicle is needed. The discovery substrate may implement unified mechanism or may support multiple discovery strategies depending on the scenario.
 
-
-
-### Example of discovery lifecycle in AI ecosystem
+## Example of discovery lifecycle in AI ecosystem {#sec-lifecycle}
 Consider a task owner (e.g., an entity such as an end user, AI agent, model, data owner, resource/compute owner) who intends to submit a task to the AI ecosystem and as shown in Figure 1, has already been processed and accepted by the entity registration block. The following describes the steps after which the entity becomes available for discovery.
 
 1) Discovery substrate access point validates the task owner’s credentials and verifies that its associated discoverable object meets compliance requirements. The discoverable object is what the discovery substrate makes available/visible to system participants. It contains entity's different attributes and information that others need to initiate an interaction session with it once they discover the entity.
@@ -180,15 +175,13 @@ For example, the querying entity may need to provide details about its skills, c
 
 The example above illustrates the broader concept of discovery within an AI ecosystem. Other factors such as entity's mobility can further complicate the problem space. The example, underscore the significance and complexity of the problem space that DAWN aims to address. It highlights why a structured problem definition, clear requirements, and well‑designed solutions are essential for enabling robust, scalable, and interoperable discovery across diverse entities and use cases. 
 
+# Functional Requirements {sec-func-req}
 
-## Functional Requirements
-
-### Discovering entities and query granularity 
+## Discovering entities and query granularity {#sec-disco-entity}
 
 Discovery in AI ecosystem should support different levels of granularity. Queries may range from broad capability-based searches (such as identifying all models with mathematical abilities) to more specific lookups. The discovery system should also enable entities to be found through the attributes reflected in their discoverable objects that capture aspects like their skill sets, functionality, name/ID, ratings, regional associations, and more.
 
-
-### Discovering response and minimum discoverable information.
+## Discovering response and minimum discoverable information {#sec-disco-rsp}
 
 Information an entity discovers about another entity must be meaningful and useful for delivering the required AI service. Accordingly, a response to a discovery query should include attributes that describe the discovered entity—such as what it can do, the skills it possesses, the protocols it supports, the security guarantees it claims to offer, the policies it can potentially enforce, its pricing for services, its current operational status (e.g., available, busy, or offline), communication means, etc.
 
@@ -196,66 +189,58 @@ Such information can be either embedded within the entity’s discoverable objec
 
 In either case, there is a need for a standardized structure for discoverable objects that provides the minimum set of information needed for the discovery substrate to return results that meaningfully support service delivery within the AI ecosystem.
    
-
-### Cross-Domain Collaboration
+## Cross-Domain Collaboration {#sec-cross-domain}
 
 Entities operating across organisational boundaries need to discover counterparts without depending on a shared infrastructure. For example, a customer-service agent in one organisation may need to find a logistics-tracking agent in another. Models in one administrative domain may need to find compute resources in another administrative domain for training. Similarly, a model or agent in one domain might need to use data in another domain for RAG based inference. Current platform-specific mechanisms do not interoperate, so entities remain invisible outside their own ecosystem.
 
 Administrative domains are typically unwilling to disclose their internal structures or detailed operational information to one another. In traditional networking, for instance, they use abstraction and aggregation techniques to share only high‑level insights about their operations. A standards‑based mechanism to support controlled information sharing while ensuring administrative domain interoperability without exposing sensitive internal details is potentially desirable.
 
-### Discovery and dynamic attributes in discoverable objects
+## Discovery and dynamic attributes in discoverable objects {#sec-disco-dyanmic}
 
 Entities whose discoverable objects contain dynamic attributes introduce distinct challenges for discovery.  Dynamic attributes such as location information, dataset samples, compute capacity, etc. can change at different rates. These dynamics introduce variability that static discovery systems are not designed to handle. Such dynamic attributes complicate the assumptions in traditional discovery approaches and demand careful consideration when defining the problem space.
 
-### Broker and Aggregator Discovery
+## Broker and Aggregator Discovery {#sec-broker}
 
 In large‑scale AI networks, entities may need to discover intermediary broker nodes that operate across multiple administrative domains and provide dynamic operational information such as availability, capabilities, or decision guidance via the use of mechanisms that support interoperable and standards‑compliant discovery procedures.
 
 In large‑scale AI networks, entities may need to discover intermediary broker nodes. These brokers often operate across multiple administrative domains with different jurisdictions. They also provide dynamic operational information, such as availability, capabilities, or decision guidance. 
 In these scenarios, the intermediary brokers might need to discover other brokers. This makes the broker nodes another type of entity with its own discoverable object in AI ecosystem. Discovery substrate needs to provide support for this capability via standards‑compliant procedures.
 
-### Human-Initiated Discovery
+## Human-Initiated Discovery {#sec-human}
 
 Operators need to discover and inspect entities for operational purposes: auditing deployed agents, verifying capability claims, or troubleshooting failures.  Discovery must be usable by humans through standard tooling, not only by automated systems.
 
-### Discovery and OAM ???
+## Discovery and OAM {#sec-oam}
 
+TBD
 
+# Current Approaches and Their Limitations {#sec-limits}
 
-## Current Approaches and Their Limitations
+## Proprietary Directories {#sec-proprietary}
 
-### Proprietary Directories
+Cloud providers and AI platforms maintain their own registries, tightly coupled to their ecosystem.  Entities registered in one platform are invisible to another, creating walled gardens.
 
-   Cloud providers and AI platforms maintain their own
-   registries, tightly coupled to their ecosystem.  Entities
-   registered in one platform are invisible to another,
-   creating walled gardens.
+## Static Configuration {#sec-config}
 
-### Static Configuration
+Manually configured endpoint lists cannot scale, cannot adapt to dynamic environments, and cannot convey the capability and trust metadata needed for cross-domain discovery.
 
-   Manually configured endpoint lists cannot scale, cannot
-   adapt to dynamic environments, and cannot convey the
-   capability and trust metadata needed for cross-domain
-   discovery.
+## DNS-SD and SRV Records {#sec-DNS}
 
-### DNS-SD and SRV Records
+TBD
 
-   TBA
+## Well-Known URIs {#sec-URI}
 
-### Well-Known URIs
+TBD
 
-   TBA
+## Ad Hoc Agent Discovery Proposals {#sec-adhoc}
 
-### Ad Hoc Agent Discovery Proposals
+TBD
 
-   TBA
+# Core Challenges {#sec-challenges}
 
-## Core Challenges
+## Discovering Skills and Capabilities at Scale {#sec-skills}
 
-### Discovering Skills and Capabilities at Scale
-
-   The central challenge is enabling entities to discover other
-   entities based on what they can do, such as:
+The central challenge is enabling entities to discover other entities based on what they can do, such as:
 
    o Agents
 
@@ -265,83 +250,55 @@ Operators need to discover and inspect entities for operational purposes: auditi
 
    o TBA
 
-   A discovery mechanism that supports structured, scalable
-   discovery of an entity's capabilities across
-   organisational boundaries is therefore required.
+A discovery mechanism that supports structured, scalable discovery of an entity's capabilities across organisational boundaries is therefore required.
 
-### Fragmented Discovery Ecosystem
+## Fragmented Discovery Ecosystem {#sec-fragments}
 
-   Each platform develops its own discovery approach.  This
-   fragmentation prevents entities from being discoverable
-   across boundaries and limits the value of interoperable
-   protocols such as A2A and MCP.
+Each platform develops its own discovery approach.  This fragmentation prevents entities from being discoverable across boundaries and limits the value of interoperable protocols such as A2A and MCP.
 
-### Trust in Discovery Information
+## Trust in Discovery Information {#sec-trust}
 
-   When discovery crosses organisational boundaries, the
-   discovering entity must verify that the information is
-   authentic.  Without authenticated discovery, entities are
-   vulnerable to poisoning attacks directing them to
-   malicious endpoints.  DNSSEC provides a foundation, but
-   discovery mechanisms must be designed to use it.
+When discovery crosses organisational boundaries, the discovering entity must verify that the information is authentic.  Without authenticated discovery, entities are vulnerable to poisoning attacks directing them to malicious endpoints.  DNSSEC provides a foundation, but discovery mechanisms must be designed to use it.
 
-### Scalability and Decentralisation
+## Scalability and Decentralisation {#sec-scale}
 
-   Discovery must operate at Internet scale without a single
-   centralised registry.  Each organisation must be able to
-   publish its entities' capabilities independently,
-   mirroring the DNS delegation model.
+Discovery must operate at Internet scale without a single centralised registry.  Each organisation must be able to publish its entities' capabilities independently, mirroring the DNS delegation model.
 
-### Static Versus Dynamic Properties
+## Static Versus Dynamic Properties {#sec-static}
 
-   Entity properties range from static (type, supported
-   protocols, skills) to dynamic (availability, load,
-   capacity).  A discovery mechanism must handle both without
-   causing stale results or excessive query load.
+Entity properties range from static (type, supported protocols, skills) to dynamic (availability, load, capacity).  A discovery mechanism must handle both without causing stale results or excessive query load.
 
-### Extensibility
+## Extensibility {#sec-extensible}
 
-   New agent types, skill taxonomies, and capability formats
-   will emerge.  Discovery must accommodate them without
-   changes to the core mechanism.
+New agent types, skill taxonomies, and capability formats will emerge.  Discovery must accommodate them without changes to the core mechanism.
 
-## Relationship to Existing Work
+# Relationship to Existing Work {#sec-existing}
 
-## Security Considerations
+# Security Considerations {#sec-security}
 
-   This document describes a problem space, not a protocol.
+This document describes a problem space, not a protocol.
 
-   Discovery information is a high-value target.  Poisoned
-   responses could direct entities to malicious endpoints.
-   Any mechanism must provide integrity and authenticity
-   guarantees.
+Discovery information is a high-value target.  Poisoned responses could direct entities to malicious endpoints. Any mechanism must provide integrity and authenticity guarantees.
 
-   Cross-domain discovery raises two distinct trust
-   questions: whether the discovery source is authoritative,
-   and whether the registered entity is what it claims to
-   be.
+Cross-domain discovery raises two distinct trust questions: whether the discovery source is authoritative, and whether the registered entity is what it claims to be.
 
-   Discovery may expose sensitive information about an
-   organisation's entities and capabilities.  Selective
-   visibility mechanisms are needed.
+Discovery may expose sensitive information about an organisation's entities and capabilities.  Selective visibility mechanisms are needed.
 
-## Privacy Considerations
+# Privacy Considerations {#sec-privacy}
 
-   Querying for entities may reveal the discovering entity's
-   intentions or interests.  Discovery should minimise
-   information leakage through the query process.
+Querying for entities may reveal the discovering entity's intentions or interests.  Discovery should minimise information leakage through the query process.
 
-   Published entity properties, such as skills, capabilities,
-   and organisational affiliations, may be sensitive.
-   Entities and their operators should control the
-   granularity and audience of published information.
+Published entity properties, such as skills, capabilities, and organisational affiliations, may be sensitive. Entities and their operators should control the granularity and audience of published information.
 
-## IANA Considerations
+# IANA Considerations {#sec-IANA}
 
-   This document makes no requests of IANA.
+This document makes no requests of IANA.
 
-## Informative References
+# Potential topics for the use case document
 
-## Authors' Addresses
+TBD
 
-### Potential topics for the use case document.
+#  Acknowledgements {#sec-ack}
+{:numbered="false"}
+
+TBD
