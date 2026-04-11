@@ -235,13 +235,10 @@ TBD
 
 The central challenge is enabling entities to discover other entities based on what they can do, such as:
 
-   o Agents
-
-   o Skills
-
-   o Capabilities
-
-   o TBA
+- Agents
+- Skills
+- Capabilities
+- TBA
 
 A discovery mechanism that supports structured, scalable discovery of an entity's capabilities across organisational boundaries is therefore required.
 
