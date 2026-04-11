@@ -47,7 +47,7 @@ informative:
 
 --- abstract
 
-Interacting entities such as agents, tasks, users, workloads, data, compute, etc. in AI ecosystem/network are proliferating, yet there is no standardised way to discover what entities exist, what attributes such as skills, capabilities, physical characteristics, etc. they posses, what services they offer, or how to reach them across organisational boundaries.
+Interacting entities such as agents, tasks, users, workloads, data, compute, etc., in AI ecosystem/network are proliferating, yet there is no standardised way to discover what entities exist, what attributes such as skills, capabilities, physical characteristics, etc., they posses, what services they offer, or how to reach them across organisational boundaries.
    
 Discovery today relies on proprietary directories or manual configuration, creating fragmented ecosystems that prevent cross-domain collaboration. 
 
@@ -103,7 +103,7 @@ As shown in {{fig-lifecycle}} the above diagram, an AI entity will pass through 
 
 Entities increasingly need to discover, connect with, and collaborate with one another to deliver AI services. This discovery process is driven by the need to identify the most suitable set of entities that satisfy the requirements of a particular AI service. To achieve this, an entity must be able to find others based on attributes such as skills, capabilities, physical characteristics, names, and other relevant qualities they possess. Obviously, As static configuration is impractical at scale, an automated discovery of entities, their skills, and their capabilities becomes essential.
 
-Discovery within an AI ecosystem can be multi-dimensional and complex. A discovery request may trigger a cascade of subsequent discovery requests by other AI entities, occurring either sequentially or in parallel and the process might become unbounded. In addition, the discovery step can be interactive. For example, an entity might be looking for another entity that might not be available at the time of request (e.g. the desired entity might be busy). Furthermore, entities might be looking for a variety of other entities with different cards/descriptors. Discovery might also be subjected to either a system wide or local policy and might span cross organisation. There also challenges w.r.t the nature of discovery request itself as will be explained later in this document.
+Discovery within an AI ecosystem can be multi-dimensional and complex. A discovery request may trigger a cascade of subsequent discovery requests by other AI entities, occurring either sequentially or in parallel and the process might become unbounded. In addition, the discovery step can be interactive. For example, an entity might be looking for another entity that might not be available at the time of request (e.g., the desired entity might be busy). Furthermore, entities might be looking for a variety of other entities with different cards/descriptors. Discovery might also be subjected to either a system wide or local policy and might span cross organisation. There also challenges w.r.t the nature of discovery request itself as will be explained later in this document.
 
 Assuming that trust has already been established between AI entities and the AI ecosystem in the steps prior to the discovery stage, the discovering entity must learn what the remote entity does, what attributes it posses, how to communicate with it, etc.
 
@@ -113,7 +113,7 @@ This document describes the problem space and informs the development of require
 
 The following terms are used in this document. Further definitions are provided in [draft-king-dawn-requirements].
 
-- Attributes: The term attributes refers to properties, features, capabilities, skills, etc. that an entity possess or may have access to such as skill type, communication language, capacity, task description, contact information, ID, etc. 
+- Attributes: The term attributes refers to properties, features, capabilities, skills, etc., that an entity possess or may have access to such as skill type, communication language, capacity, task description, contact information, ID, etc. 
 
 - Capability exchange / negotiation: The processes by which agents can exchange details of what they can do, dynamic information about statuses (including agents, tasks, and workloads), and which particular features/functions they want to engage. [Hesham]{This is a step outside the basic discovery step and may be carried out after entities discover the MDI that allow them to connect later on. Hence it is outside the scope of the problem space}
 
@@ -149,7 +149,7 @@ The main motivation behind DAWN and tackle the discovery problem space within th
 
 - Emergence of discoverable entities, discoverable objects, and discovery mechanism:  
 
-   - Entities may have associated MDIs (e.g. task , capabilities, endpoints, policies), and that a discovery substrate/mechanism/vehicle is needed. The discovery substrate may implement unified mechanism or may support multiple discovery strategies depending on the scenario.
+   - Entities may have associated MDIs (e.g., task , capabilities, endpoints, policies), and that a discovery substrate/mechanism/vehicle is needed. The discovery substrate may implement unified mechanism or may support multiple discovery strategies depending on the scenario.
 
 ## Example of discovery lifecycle in AI ecosystem {#sec-lifecycle}
 Consider a task owner (e.g., an entity such as an end user, AI agent, model, data owner, resource/compute owner) who intends to submit a task to the AI ecosystem and as shown in Figure 1, has already been processed and accepted by the entity registration block. The following describes the steps after which the entity becomes available for discovery.
@@ -158,13 +158,13 @@ Consider a task owner (e.g., an entity such as an end user, AI agent, model, dat
 
 2. Task owner submits its tasks to the system. Submitted tasks are entities themselves. They have their own discoverable object (task card in this case) which the discovery substrates makes available/visible to other entities in the AI ecosystem once submitted tasks pass through the entity registration block.
 
-3. A registered entity (e.g., an AI agent) then issues a discovery query to identify and/or locate suitable tasks it can perform, or to find other agents, resources, etc. it must interact with to complete a given task.
+3. A registered entity (e.g., an AI agent) then issues a discovery query to identify and/or locate suitable tasks it can perform, or to find other agents, resources, etc., it must interact with to complete a given task.
 
-4. The discovery substrate processes the above query and returns the relevant discoverable objects such as tasks, agents, resources, etc. to the entity that issued the query. It must be noted that the nature and structure of the query, the format of the discoverable objects (e.g., standardised object cards), and the discovery mechanism employed (e.g., simple name lookup or semantic matching) are key factors influencing the accuracy, volume, timeliness, etc. of the results.
+4. The discovery substrate processes the above query and returns the relevant discoverable objects such as tasks, agents, resources, etc., to the entity that issued the query. It must be noted that the nature and structure of the query, the format of the discoverable objects (e.g., standardised object cards), and the discovery mechanism employed (e.g., simple name lookup or semantic matching) are key factors influencing the accuracy, volume, timeliness, etc., of the results.
 
    For example, the querying entity may need to provide details about its skills, capabilities, pricing, or other relevant attributes so the discovery substrate can match its request with an appropriate subset of registered entities in the system.
 
-5. Upon receiving the discovery results (e.g. a list of suitable entities), the querying entity (e.g. an AI agent) might need additional information before initiating its interaction with the discovered entities. For example, it might need to know more about the parent entity of the discovered entity whose name/ID can be potentially found in the discovered entity's discoverable object.
+5. Upon receiving the discovery results (e.g., a list of suitable entities), the querying entity (e.g., an AI agent) might need additional information before initiating its interaction with the discovered entities. For example, it might need to know more about the parent entity of the discovered entity whose name/ID can be potentially found in the discovered entity's discoverable object.
 
 The example above illustrates the broader concept of discovery within an AI ecosystem. Other factors such as entity's mobility can further complicate the problem space. The example, underscore the significance and complexity of the problem space that DAWN aims to address. It highlights why a structured problem definition, clear requirements, and well‑designed solutions are essential for enabling robust, scalable, and interoperable discovery across diverse entities and use cases. 
 
@@ -190,7 +190,7 @@ Administrative domains are typically unwilling to disclose their internal struct
 
 ## Discovery and dynamic attributes in discoverable objects {#sec-disco-dyanmic}
 
-Entities whose discoverable objects contain dynamic attributes introduce distinct challenges for discovery.  Dynamic attributes such as location information, dataset samples, compute capacity, etc. can change at different rates. These dynamics introduce variability that static discovery systems are not designed to handle. Such dynamic attributes complicate the assumptions in traditional discovery approaches and demand careful consideration when defining the problem space.
+Entities whose discoverable objects contain dynamic attributes introduce distinct challenges for discovery.  Dynamic attributes such as location information, dataset samples, compute capacity, etc., can change at different rates. These dynamics introduce variability that static discovery systems are not designed to handle. Such dynamic attributes complicate the assumptions in traditional discovery approaches and demand careful consideration when defining the problem space.
 
 ## Broker and Aggregator Discovery {#sec-broker}
 
