@@ -359,22 +359,6 @@ REQ-SEC-5:
 : A discovery mechanism SHOULD support operation across trust boundaries
   without requiring a single global trust anchor.
 
-REQ-SEC-6:
-: A discovery mechanism SHOULD expose an indication of the trust basis
-  for the entity's registration (e.g., whether the registrant was
-  authenticated, attested, or unverified), without itself performing
-  entity authentication.
-
-REQ-SEC-7:
-: A discovery mechanism MUST support authentication of discovery
-  responses so that a discovering entity can verify that the information
-  it receives is from an authoritative source.
-
-REQ-SEC-8:
-: A discovery mechanism SHOULD support mechanisms for controlling access
-  to discovery information where required (e.g., differentiating between
-  publicly visible and internally visible information).
-
 {: #sec-arch}
 ## Scalability and Architecture
 
