@@ -88,6 +88,8 @@ and Named Entities (DAWN) mechanism must satisfy.  It is informed by:
 
 - {{?I-D.akhavain-moussa-dawn-problem-statement}} DAWN Problem Statement I-D.
 
+- {{!I-D.farrel-dawn-terminoloy}}
+
 {: #sec-scope}
 ## Scope
 
@@ -117,7 +119,7 @@ The following topics are explicitly out of scope:
 {: #sec-terms}
 # Terminology
 
-This document uses the following terms defined in {{I-D.farrel-dawn-terminology}}:
+This document uses the following terms defined in {{!I-D.farrel-dawn-terminology}}:
 
 - Agent
 
@@ -155,7 +157,9 @@ actors and scenarios, entity classification, entity properties, trust
 and security, scalability and architecture, discovery protocol, and
 extensibility.
 
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
+Although this is an informational requirements document, key words in 
+upper case are used for clarity of stating the requirements. The key
+words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
 "OPTIONAL" in this document are to be interpreted as described in
 BCP 14 {{!RFC2119}} {{!RFC8174}} when, and only when, they appear in all
