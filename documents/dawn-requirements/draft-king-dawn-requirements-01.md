@@ -117,97 +117,35 @@ The following topics are explicitly out of scope:
 {: #sec-terms}
 # Terminology
 
-The following terms are used throughout this document.  It is expected
-that these definitions will be consolidated into a common terminology
-document for the DAWN work.
+This document uses the following terms defined in {{I-D.farrel-dawn-terminology}}:
 
-Agent:
-: An entity that acts autonomously or semi-autonomously on behalf of a
-  user, organisation, or system.  An agent may initiate interactions
-  with other entities, make decisions, and perform tasks.  AI agents are
-  a specific class of agent that employ artificial intelligence
-  techniques.
+- Agent
 
-Capability:
-: A description of the functions, services, or actions that an entity
-  can perform.  Capabilities may be described using structured schemas
-  such as capability cards.
+- Capability
 
-Capability Card:
-: A structured, machine-readable description of an entity's
-  capabilities and interface.  Variants include agent cards, task cards,
-  resource cards, tool cards, and skill cards depending on the type of
-  entity.
+- Capability Card
 
-Capability Exchange:
-: The processes by which entities exchange details of what they can do,
-  dynamic status information, and which particular features or functions
-  they wish to engage.  Capability exchange and negotiation are out of
-  scope for this document.
+- Capability Exchange
 
-Discovered Entity:
-: An entity whose properties are returned as the result of a discovery
-  query.  A discovered entity may be a specific instance or a member of
-  a class of entities that can perform a desired function.
+- Discovering Entity
 
-Discovering Entity:
-: An entity (or its operator) that initiates the discovery process in
-  order to find other entities to interact with.
+- Discovery
 
-Discovery:
-: The process by which an entity or its operator locates other entities
-  that are capable of performing a desired function or providing a
-  desired service, and obtains sufficient information to initiate
-  interaction.
+- Discovery Mechanism
 
-Discovery Mechanism:
-: A protocol, system, or method used to perform discovery.  Examples
-  include DNS-based service discovery, directory services, and
-  distributed registries.
+- Entity
 
-Entity:
-: A system component that communicates with other entities in a
-  peer-to-peer or client-server relationship.  Entities include, but
-  are not limited to, AI agents, software services, compute workloads,
-  network functions, and application endpoints.
+- Function
 
-Function:
-: The functional processing capability that an entity offers.  Examples
-  include task execution, data transformation, inference, routing,
-  storage, and orchestration.
+- Named Entity
 
-Named Entity:
-: An entity that is identified by a stable name within a naming system.
-  The naming system may be hierarchical (e.g., the Domain Name System
-  (DNS)) or flat.
+- Properties
 
-Properties:
-: Discoverable characteristics of an entity.  Properties include, but
-  are not limited to, communication protocols, capability descriptions,
-  location, trust indicators, and operational status.
+- Selection
 
-Registrar:
-: An entity or system responsible for accepting and maintaining records
-  about entities that wish to be discoverable.  Registration itself is
-  out of scope for this document, but the requirements herein may
-  constrain how a registrar exposes information.
+- Trust Indicator
 
-Selection:
-: The mechanisms and policies by which an entity determines which
-  discovered entities it will interact with.  Selection is out of scope
-  for this document but depends on information obtained through
-  discovery.
-
-Trust Indicator:
-: Information associated with an entity that allows a discovering party
-  to assess the trustworthiness or provenance of the entity and its
-  advertised properties.  Examples include digital signatures,
-  certificates, and attestations.
-
-Workload:
-: A unit of compute or processing that is deployed and executed within a
-  hosting environment.  Workloads may be transient or long-lived and may
-  move between hosting environments.
+- Workload
 
 {: #sec-requirements}
 # Requirements
