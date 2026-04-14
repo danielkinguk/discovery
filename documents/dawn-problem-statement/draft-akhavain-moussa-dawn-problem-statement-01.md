@@ -146,7 +146,7 @@ The main motivation behind DAWN is to tackle the discovery problem space within 
 
    - Entities may have associated MDIs (e.g., task , capabilities, endpoints, policies), and that a discovery substrate/mechanism/vehicle is needed. The discovery substrate may implement unified mechanism or may support multiple discovery strategies depending on the scenario.
 
-## Example of discovery lifecycle in AI ecosystem {#sec-lifecycle}
+## Example of Discovery Lifecycle in AI Ecosystem {#sec-lifecycle}
 
 Consider a task owner (e.g., an entity such as an end user, AI agent, model, data owner, resource/compute owner) which intends to submit a task to the ecosystem and, as shown in Figure 1, has already been processed and accepted by the entity registration block. The following describes the steps after which the entity becomes available for discovery.
 
@@ -166,11 +166,11 @@ The example above illustrates the broader concept of discovery within an ecosyst
 
 # Functional Requirements {sec-func-req}
 
-## Discovering entities and query granularity {#sec-disco-entity}
+## Discovering Entities and Query Granularity {#sec-disco-entity}
 
 Discovery in ecosystem should support different levels of granularity. Queries may range from broad capability-based searches (such as identifying all models with mathematical abilities) to more specific lookups. The discovery system should also enable entities to be found through the attributes reflected in their discoverable objects that capture aspects like their skill sets, functionality, name/ID, ratings, regional associations, and more.
 
-## Discovering response and minimum discoverable information {#sec-disco-rsp}
+## Discovering Response and Minimum Discoverable Information {#sec-disco-rsp}
 
 Information an entity discovers about another entity must be meaningful and useful for delivering the required service. Accordingly, a response to a discovery query should include attributes that describe the discovered entity: such as what it can do, the skills it possesses, the protocols it supports, the security guarantees it claims to offer, the policies it can potentially enforce, its pricing for services, its current operational status (e.g., available, busy, or offline), communication means, etc.
 
@@ -184,7 +184,7 @@ Entities operating across organisational boundaries need to discover counterpart
 
 Administrative domains are typically unwilling to disclose their internal structures or detailed operational information to one another. In traditional networking, for instance, they use abstraction and aggregation techniques to share only high‑level insights about their operations. A standards‑based mechanism to support controlled information sharing while ensuring administrative domain interoperability without exposing sensitive internal details is potentially desirable.
 
-## Discovery and dynamic attributes in discoverable objects {#sec-disco-dyanmic}
+## Discovery and Dynamic Attributes in Discoverable Objects {#sec-disco-dyanmic}
 
 Entities whose discoverable objects contain dynamic attributes introduce distinct challenges for discovery.  Dynamic attributes such as location information, dataset samples, compute capacity, etc., can change at different rates. These dynamics introduce variability that static discovery systems are not designed to handle. Such dynamic attributes complicate the assumptions in traditional discovery approaches and demand careful consideration when defining the problem space.
 
@@ -285,7 +285,7 @@ TBD
 
 This document makes no requests of IANA.
 
-# Potential topics for the use case document
+# Potential Topics for the Use Case Document {#sec-usecases}
 
 TBD
 
