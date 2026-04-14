@@ -112,23 +112,19 @@ This document describes the problem space and informs the development of require
 
 # Terminology {sec-terms}
 
-The following terms are used in this document. Further definitions are provided in [draft-king-dawn-requirements].
+This document uses the following terms defined in {{I-D.farrel-dawn-terminology}}:
 
-- Attributes: The term attributes refers to properties, features, capabilities, skills, etc., that an entity possess or may have access to such as skill type, communication language, capacity, task description, contact information, ID, etc. 
+- Attributes
 
-- Capability exchange / negotiation: The processes by which agents can exchange details of what they can do, dynamic information about statuses (including agents, tasks, and workloads), and which particular features/functions they want to engage. [Hesham]{This is a step outside the basic discovery step and may be carried out after entities discover the MDI that allow them to connect later on. Hence it is outside the scope of the problem space}
+- Discoverable Object
 
-- Discoverable object: An informative object that is discoverable and captures necessary information that defines what an entity is, what attributes it possess, how to reach to the associated entity, etc. Examples include agent cards, task cards, resource cards, tool cards, and skill cards.
+- Discovery
 
-- Discoverable object validation: The process that verifies a discoverable object, ensures its compliance to standards, and make it available to the discovery substrate.
+- Discovery Mechanism
 
-- Discovery: A process by which an entity can find another entity or a set of entities of a type that can perform a desired function. The purpose of this work effort is limited to just this element. It is described in more detail in the Problem Statement and the Functional Requirements, below.
+- Entity
 
-- Entity: A system component that communicates at a peer-to-peer or client-server level with another entity within the AI ecosystem. Examples include, AI agents, tasks, tools, skills, task owners, workloads, and services.
-
-- Function: The functional processing capability that an entity offers. Examples include, tasks, workloads, endpoints, jobs, services, tools.
-
-- Minimum Discoverable Information (MDI): The minimum amount of information an entity needs to provide to become discoverable. Think of it as common header of a data structure.
+- Minimum Discoverable Information
   
 # Motivation {#sec-motives}
 
