@@ -108,11 +108,11 @@ Discovery within an AI ecosystem can be multi-dimensional and complex. A discove
 
 Assuming that trust has already been established between entities and within the ecosystem in the steps prior to the discovery stage, the discovering entity must learn what the remote entity does, what attributes it posses, how to communicate with it, etc.
 
-This document describes the problem space and informs the development of requirements set out in [draft-king-dawn-requirements] and future solution proposals for Discovery of Agents, Workloads, and Named Entities (DAWN).
+This document describes the problem space and informs the development of requirements set out in {{?I-D.king-dawn-requirements}} and future solution proposals for Discovery of Agents, Workloads, and Named Entities (DAWN).
 
 # Terminology {sec-terms}
 
-This document uses the following terms defined in {{I-D.farrel-dawn-terminology}}:
+This document uses the following terms defined in {{!I-D.farrel-dawn-terminology}}:
 
 - Attributes
 
