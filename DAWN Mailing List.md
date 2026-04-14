@@ -1,5 +1,11 @@
 # DAWN dawn@ietf.org
 
+## List details
+
+List address: dawn@ietf.org
+Archive: https://mailarchive.ietf.org/arch/browse/dawn/
+To subscribe: https://mailman3.ietf.org/mailman3/lists/dawn.ietf.org/
+
 ## Summary
 Discussion of Discovery of Agents, Workloads, and Named entities (DAWN)
 
