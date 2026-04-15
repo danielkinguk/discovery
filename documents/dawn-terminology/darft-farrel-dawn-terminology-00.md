@@ -89,15 +89,15 @@ protocols and tools, benefits from an established trust model, supports
 proven delegation and federation architectures, and allows organisations
 to independently publish discovery information.
 
-This document defines requirements that any Discovery of Agents, Workloads,
-and Named Entities (DAWN) mechanism must satisfy.  It is informed by:
+This document defines common terminology for use in documents that discuss
+Discovery of Agents, Workloads, and Named Entities (DAWN).
 
 {: #sec-terms}
 # Terminology
 
 The terms presented in this section are in alphabetic order for ease of
 reference.  For those wishing to read this document to gain an understanding
-of the DAWN scenerary, if it recommended to read the terms in the order presented
+of the DAWN scenery, if it recommended to read the terms in the order presented
 in {{term-table}}.
 
 ~~~~
@@ -272,3 +272,5 @@ issues that require operational consideration.
 
 The authors wish to acknowledge the contributions of participants in
 the DAWN discussions that shaped this document.
+
+Jim Mozley provided a useful review of this document.
