@@ -159,7 +159,7 @@ Capability Exchange:
   dynamic status information, and which particular features or functions
   they wish to engage.  Capability exchange and negotiation are out of
   scope for DAWN, but will form an essential part of selection and
-  operaton of agents.
+  operation of agents.
 
 Discoverable Object:
 : An information object that is discoverable and includes information that
