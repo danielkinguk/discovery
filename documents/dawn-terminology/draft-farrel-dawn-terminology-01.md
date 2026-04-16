@@ -48,8 +48,7 @@ author:
 
 The proliferation of distributed systems, Artificial Intelligence (AI)
 agents, cloud workloads, and network services has created a need for
-interoperable mechanisms to discover entities across administrative and
-network boundaries.  Entities may include AI agents, software services,
+interoperable mechanisms to discover entities. Entities may include AI agents, software services,
 compute workloads, and other named resources that need to be found and
 characterised before interaction can begin.
 
@@ -63,13 +62,14 @@ consistency of meaning across the space.
 {: #sec-intro}
 # Introduction
 
-Modern distributed systems increasingly rely on the dynamic composition
-of services, agents, and workloads that may not have pre-configured
+Distributed systems increasingly rely on the dynamic composition
+of services, agents, and workloads that may not have pre-configured connectivity
 relationships.  For example, an AI agent may need to find another agent
 with specific capabilities, a workload orchestrator may need to locate
 compute resources in a particular jurisdiction, or a service consumer
-may need to discover providers that support a required protocol version.
-Further use cases and scenarios are expected to be documented separately.
+may need to discover providers that support a required protocol or a data schema version.
+Further use cases and scenarios may be considered, but it is out of scope
+to enumerate them.
 
 In each case, an entity needs knowledge of remote entities before
 interaction can proceed: what they are, what they offer, and whether
@@ -131,9 +131,10 @@ in {{term-table}}.
 
 
 Agent:
-: An entity that acts autonomously or semi-autonomously on behalf of a
+: A software entity that acts autonomously or semi-autonomously on behalf of a
   user, organisation, or system.  An agent may initiate interactions
-  with other entities, make decisions, and perform tasks.  AI agents are
+  with other entities, make decisions, and perform tasks.
+:  AI agents are
   a specific class of agent that employ artificial intelligence
   techniques.
 
@@ -145,7 +146,7 @@ Attributes:
 
 Capability:
 : A description of the functions, services, or actions that an entity
-  can perform.  Capabilities may be described using structured schemas
+  can perform. Capabilities may be described using structured schemas
   such as capability cards.
 
 Capability Card:
@@ -154,10 +155,16 @@ Capability Card:
   resource cards, tool cards, and skill cards depending on the type of
   entity.
 
+Capability Exposure:
+: The processes by which entities expose their capabilities. Such exposure
+  may be part of the discovery or an interaction with
+  an entity see also, Capability Exchange).
+
 Capability Exchange:
 : The processes by which entities exchange details of what they can do,
   dynamic status information, and which particular features or functions
-  they wish to engage.  Capability exchange and negotiation are out of
+  they wish to engage.
+: Capability exchange and negotiation are out of
   scope for DAWN, but will form an essential part of selection and
   operation of agents.
 
@@ -168,11 +175,11 @@ Discoverable Object:
 
 Discoverable Object Validation:
 : The process that verifies a discoverable object, ensures its compliance
-  to standards, and makes it available to the discovery substrate.
+  to reference standards, and makes it available to the discovery substrate.
 
 Discovered Entity:
 : An entity whose properties are returned as the result of a discovery
-  query.  A discovered entity may be a specific instance or a member of
+  process. A discovered entity may be a specific instance or a member of
   a class of entities that can perform a desired function.
 
 Discovering Entity:
@@ -187,7 +194,7 @@ Discovery:
 
 Discovery Mechanism:
 : A protocol, system, or method used to perform discovery.  Examples
-  include DNS-based service discovery, directory services, and
+  include Domain Name System (DNS) based service discovery, directory services, and
   distributed registries.
 
 Entity:
@@ -197,8 +204,8 @@ Entity:
   software services, task owners, network functions, and application endpoints.
 
 Function:
-: The functional processing capability that an entity offers.  Examples
-  include task execution, data transformation, inference, routing,
+: The functional processing capability that an entity offers. Examples
+  include task execution, data transformation, inference, routing, steering,
   storage, and orchestration.
 
 Minimum Discoverable Information (MDI):
@@ -207,8 +214,7 @@ Minimum Discoverable Information (MDI):
 
 Named Entity:
 : An entity that is identified by a stable name within a naming system.
-  The naming system may be hierarchical (e.g., the Domain Name System
-  (DNS)) or flat.
+  The naming system may be hierarchical (e.g., DNS) or flat.
 
 Properties:
 : The discoverable characteristics of an entity.  Properties include, but
@@ -221,13 +227,15 @@ Registrar:
 
 Registration:
 : The steps by which agents can register their existence with a registrar.
-  This should include attestation and other security mechanisms.  Registration
+  This should include attestation and other security mechanisms.
+: Registration
   is out of scope for DAWN, but the information that can be discovered and the
   trust with which that information is treated are key to any complete system.
 
 Selection:
 : The mechanisms and policies by which an entity determines which
-  discovered entities it will interact with.  Selection is out of scope
+  discovered entities it will interact with.
+:  Selection is out of scope
   for DAWN, but depends on information obtained through discovery.
 
 Task:
