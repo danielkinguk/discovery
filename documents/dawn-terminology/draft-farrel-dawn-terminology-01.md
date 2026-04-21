@@ -157,14 +157,15 @@ Capability Card:
 
 Capability Exposure:
 : The processes by which entities expose their capabilities. Such exposure
-  may be part of the discovery or an interaction with
-  an entity see also, Capability Exchange).
+  may be part of the registration or discovery processes, or an achieved
+  through and interaction with an entity. (See also, Capability Exchange.)
 
 Capability Exchange:
 : The processes by which entities exchange details of what they can do,
   dynamic status information, and which particular features or functions
   they wish to engage.
-: Capability exchange and negotiation are out of
+  
+: Capability exposure, exchange, and negotiation are out of
   scope for DAWN, but will form an essential part of selection and
   operation of agents.
 
@@ -175,7 +176,7 @@ Discoverable Object:
 
 Discoverable Object Validation:
 : The process that verifies a discoverable object, ensures its compliance
-  to reference standards, and makes it available to the discovery substrate.
+  to referenced standards, and makes it available to the discovery substrate.
 
 Discovered Entity:
 : An entity whose properties are returned as the result of a discovery
@@ -281,4 +282,4 @@ issues that require operational consideration.
 The authors wish to acknowledge the contributions of participants in
 the DAWN discussions that shaped this document.
 
-Jim Mozley provided a useful review of this document.
+Jim Mozley and Med Boucadair provided useful reviews of this document.
