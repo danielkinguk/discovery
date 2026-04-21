@@ -327,7 +327,7 @@ REQ-ARCH-5:
 ## Discovery Protocol
 
 REQ-PROTO-1:
-: A discovery mechanism MUST define the protocol(s) used by discovering
+: A discovery mechanism MUST define the protocols used by discovering
   entities to communicate with discovery enablers (e.g., discovery
   servers, directories, or DNS resolvers).
 
