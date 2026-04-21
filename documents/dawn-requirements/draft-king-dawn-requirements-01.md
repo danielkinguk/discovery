@@ -392,6 +392,11 @@ Discovery mechanisms inherently involve the publication of information about ent
 
 - Where entities represent individuals or process personal data, compliance with applicable data protection regulations should be considered.
 
+{: #sec-operational}
+# Operational Considerations
+
+TBD
+
 # Acknowledgements
 
 The authors wish to acknowledge the contributions of participants in athe DAWN discussions that shaped this document.
