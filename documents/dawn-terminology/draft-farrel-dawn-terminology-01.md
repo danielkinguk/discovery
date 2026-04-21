@@ -122,9 +122,11 @@ in {{term-table}}.
 |              | Capability Card                  |
 |              | Trust Indicator                  |
 | Registration |                                  |
+|              | Capability Exposure              |
 |              | Registrar                        |
 |              | Discoverable Object Validation   |
 | Selection    |                                  |
+|              | Capability Exchange              |
 
 ~~~~
 {: #term-table title="Key DAWN Terms in a Readable Order" artwork-align="center"}
