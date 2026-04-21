@@ -110,7 +110,7 @@ Assuming that trust has already been established between entities and within the
 
 This document describes the problem space and informs the development of requirements set out in {{?I-D.king-dawn-requirements}} and future solution proposals for Discovery of Agents, Workloads, and Named Entities (DAWN).
 
-# Terminology {sec-terms}
+# Terminology {#sec-terms}
 
 This document uses the following terms defined in {{!I-D.farrel-dawn-terminology}}:
 
@@ -164,7 +164,7 @@ Consider a task owner (e.g., an entity such as an end user, AI agent, model, dat
 
 The example above illustrates the broader concept of discovery within an ecosystem. Other factors such as entity's mobility can further complicate the problem space. The example, underscore the significance and complexity of the problem space that DAWN aims to address. It highlights why a structured problem definition, clear requirements, and well‑designed solutions are essential for enabling robust, scalable, and interoperable discovery across diverse entities and use cases. 
 
-# Functional Requirements {sec-func-req}
+# Functional Requirements {#sec-func-req}
 
 ## Discovering Entities and Query Granularity {#sec-disco-entity}
 
