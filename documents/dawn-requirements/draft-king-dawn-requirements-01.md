@@ -149,6 +149,8 @@ This document uses the following terms defined in {{!I-D.farrel-dawn-terminology
 
 - Workload
 
+## Conventions and Definitions
+
 Although this is an informational requirements document, key words in 
 upper case are used for clarity of stating the requirements. The key
 words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
