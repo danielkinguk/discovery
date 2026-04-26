@@ -149,14 +149,6 @@ This document uses the following terms defined in {{!I-D.farrel-dawn-terminology
 
 - Workload
 
-{: #sec-requirements}
-# Requirements
-
-The requirements are organised into the following categories: discovery
-actors and scenarios, entity classification, entity properties, trust
-and security, scalability and architecture, discovery protocol, and
-extensibility.
-
 Although this is an informational requirements document, key words in 
 upper case are used for clarity of stating the requirements. The key
 words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
@@ -164,6 +156,14 @@ words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "OPTIONAL" in this document are to be interpreted as described in
 BCP 14 {{!RFC2119}} {{!RFC8174}} when, and only when, they appear in all
 capitals, as shown here.
+
+{: #sec-requirements}
+# Requirements
+
+The requirements are organised into the following categories: discovery
+actors and scenarios, entity classification, entity properties, trust
+and security, scalability and architecture, discovery protocol, and
+extensibility.
 
 {: #sec-disc}
 ## Discovery Actors and Scenarios
