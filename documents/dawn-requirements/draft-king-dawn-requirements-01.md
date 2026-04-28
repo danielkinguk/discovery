@@ -4,7 +4,7 @@ coding: utf-8
 title: Requirements for the Discovery of Agents, Workloads, and Named Entities (DAWN)
 
 abbrev: DAWN Requirements
-docname: draft-king-dawn-requirements-00
+docname: draft-king-dawn-requirements-01
 submissiontype: IETF
 workgroup: 
 category: info
@@ -44,10 +44,11 @@ compute workloads, and other named resources that need to be found and
 characterised before interaction can begin.
 
 This document defines the requirements for Discovery of Agents, Workloads,
-and Named Entities (DAWN) and sets out the objectives that a discovery mechanism for
-such entities must satisfy.  It describes what information must be
-discoverable, what properties a discovery mechanism needs to support,
-and what constraints apply to discovery in decentralised environments.
+and Named Entities (DAWN) and sets out the objectives that a discovery
+mechanism for such entities must satisfy.  It describes what information
+must be discoverable, what properties a discovery mechanism needs to
+support, and what constraints apply to discovery in decentralised
+environments.
 
 This document does not specify any particular discovery protocol or
 solution.
@@ -88,7 +89,9 @@ and Named Entities (DAWN) mechanism must satisfy.  It is informed by:
 
 - {{?I-D.akhavain-moussa-dawn-problem-statement}} DAWN Problem Statement I-D.
 
-- {{!I-D.farrel-dawn-terminoloy}}
+- {{?I-D.mozley-aidiscovery}} AI Agent Discovery Problem Statement I-D.
+
+- {{!I-D.farrel-dawn-terminology}}
 
 {: #sec-scope}
 ## Scope
@@ -97,6 +100,15 @@ The requirements in this document address what information must be
 discoverable about entities, what properties a discovery mechanism must
 support, and what architectural constraints apply.  The detailed
 requirements are set out in {{sec-requirements}}.
+
+These requirements are intended to be solution-neutral.  They do not
+require discovery information, endpoint information, capability
+descriptions, or capability cards to be carried directly in any
+particular protocol element or data record.  A discovery mechanism may
+return such information directly or provide a reference to another
+resource from which the information can be obtained, provided that the
+requirements for authenticity, integrity, interoperability, and
+usability are satisfied.
 
 The following topics are explicitly out of scope:
 
@@ -151,7 +163,7 @@ This document uses the following terms defined in {{!I-D.farrel-dawn-terminology
 
 ## Conventions and Definitions
 
-Although this is an informational requirements document, key words in 
+Although this is an informational requirements document, key words in
 upper case are used for clarity of stating the requirements. The key
 words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
 "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
@@ -227,11 +239,13 @@ REQ-PROP-1:
 
 REQ-PROP-2:
 : A discovery mechanism MUST support the discovery of communication
-  protocols and transport parameters needed to interact with an entity.
+  protocols and transport parameters needed to interact with an entity,
+  either directly or by reference to another resource.
 
 REQ-PROP-3:
 : A discovery mechanism MUST support the discovery of capability
-  descriptions for an entity.
+  descriptions for an entity, either directly or by reference to another
+  resource.
 
 REQ-PROP-4:
 : A discovery mechanism MUST distinguish between static properties
@@ -263,7 +277,8 @@ REQ-PROP-8:
 REQ-PROP-9:
 : A discovery mechanism MUST support the discovery of capability cards
   or equivalent structured, machine-readable descriptions of an
-  entity's interface and functions.
+  entity's interface and functions, either directly or by reference to
+  another resource.
 
 REQ-PROP-10:
 : A discovery mechanism MUST categorise each discoverable property as
@@ -274,6 +289,11 @@ REQ-PROP-11:
 : A discovery mechanism MUST indicate whether each property is static,
   mainly static, or dynamic, so that consumers can determine
   appropriate caching and refresh strategies.
+
+REQ-PROP-12:
+: A discovery mechanism SHOULD support the discovery of attestation,
+  provenance, policy, or risk-related information about an entity,
+  either directly or by reference to another resource.
 
 {: #sec-sec}
 ## Trust and Security
@@ -300,6 +320,16 @@ REQ-SEC-5:
 : A discovery mechanism SHOULD support operation across trust boundaries
   without requiring a single global trust anchor.
 
+REQ-SEC-6:
+: A discovery mechanism MUST be designed to limit its use as a vector
+  for abuse, including amplification, scraping, denial-of-service, or
+  unauthorised disclosure of discovery information.
+
+REQ-SEC-7:
+: A discovery mechanism SHOULD support auditability of publication and
+  discovery operations where required by deployment policy, regulation,
+  or operational practice.
+
 
 {: #sec-arch}
 ## Scalability and Architecture
@@ -324,6 +354,12 @@ REQ-ARCH-4:
 REQ-ARCH-5:
 : A discovery mechanism SHOULD support discovery across heterogeneous
   network environments, including cloud, edge, and enterprise networks.
+
+REQ-ARCH-6:
+: A discovery mechanism MUST NOT assume that discovered entities have
+  stable, symmetric, or publicly routable network paths.  It SHOULD
+  support discovery of information needed to use relays, proxies, or
+  rendezvous mechanisms where direct connectivity is infeasible.
 
 {: #sec-proto}
 ## Discovery Protocol
@@ -363,6 +399,12 @@ REQ-EXT-3:
 : A discovery mechanism SHOULD allow domain-specific or
   industry-specific extensions to entity properties.
 
+REQ-EXT-4:
+: A discovery mechanism SHOULD support schema lifecycle information,
+  such as deprecation status, sunset timing, and compatibility
+  information, so that consumers can handle backward-compatible
+  evolution of entity properties and capability descriptions.
+
 {: #sec-iana}
 # IANA Considerations
 
@@ -371,34 +413,58 @@ This document does not make any requests of IANA.
 {: #sec-security}
 # Security Considerations
 
-This document defines requirements for entity discovery mechanisms.  It does not define a protocol and therefore does not introduce specific security vulnerabilities.  However, the requirements in {{sec-sec}} place security constraints on any solution that satisfies these
-requirements.
+This document defines requirements for entity discovery mechanisms.  It
+does not define a protocol and therefore does not introduce specific
+security vulnerabilities.  However, the requirements in {{sec-sec}} place
+security constraints on any solution that satisfies these requirements.
 
-Implementers of discovery mechanisms that satisfy these requirements should pay particular attention to the following concerns:
+Implementers of discovery mechanisms that satisfy these requirements
+should pay particular attention to the following concerns:
 
-- The integrity and authenticity of discovery information must be protected to prevent poisoning attacks that could direct entities to malicious endpoints.
+- The integrity and authenticity of discovery information must be
+  protected to prevent poisoning attacks that could direct entities to
+  malicious endpoints.
 
 - Access control mechanisms should be considered to prevent
-  unauthorised disclosure of entity properties, particularly in environments where entity metadata may be sensitive.
+  unauthorised disclosure of entity properties, particularly in
+  environments where entity metadata may be sensitive.
 
-- The discovery mechanism itself must not become a vector for denial-of-service attacks against the infrastructure on which it is built.
+- The discovery mechanism itself must not become a vector for
+  denial-of-service attacks against the infrastructure on which it is
+  built.
 
 {: #sec-privacy}
 # Privacy Considerations
 
-Discovery mechanisms inherently involve the publication of information about entities.  Implementers should consider the privacy implications of exposing entity properties, capabilities, and organisational associations.  In particular:
+Discovery mechanisms inherently involve the publication of information
+about entities.  Implementers should consider the privacy implications
+of exposing entity properties, capabilities, and organisational
+associations.  In particular:
 
-- Entities should be able to control what information is made publicly discoverable versus restricted to specific audiences.
+- Entities should be able to control what information is made publicly
+  discoverable versus restricted to specific audiences.
 
-- The discovery mechanism should not require the disclosure of information beyond what is necessary for a discovering entity to determine whether interaction is appropriate.
+- The discovery mechanism should not require the disclosure of
+  information beyond what is necessary for a discovering entity to
+  determine whether interaction is appropriate.
 
-- Where entities represent individuals or process personal data, compliance with applicable data protection regulations should be considered.
+- Where entities represent individuals or process personal data,
+  compliance with applicable data protection regulations should be
+  considered.
 
 {: #sec-operational}
 # Operational Considerations
 
-TBD
+Discovery mechanisms that satisfy these requirements will need to be
+deployable across public and private networks, across organisational
+boundaries, and across heterogeneous operational environments.  Operators
+should consider publication workflows, update and withdrawal procedures,
+caching and refresh behaviour, observability, operational policy, and
+the impact of discovery traffic on the infrastructure used to support
+the mechanism.
 
 # Acknowledgements
 
-The authors wish to acknowledge the contributions of participants in athe DAWN discussions that shaped this document.
+The authors wish to acknowledge the contributions of participants in the
+DAWN discussions that shaped this document, including Jim Mozley and
+Balazs Nemethi.
