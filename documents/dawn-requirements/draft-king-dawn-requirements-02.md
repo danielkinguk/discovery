@@ -147,6 +147,8 @@ This document uses the following terms defined in {{!I-D.farrel-dawn-terminology
 
 - Discovery Mechanism
 
+- Discvery Scope
+
 - Entity
 
 - Function
@@ -205,6 +207,18 @@ REQ-DISC-5:
 : A discovery mechanism SHOULD support discovery of intermediary
   aggregation points or brokers that can provide further dynamic
   information about entities.
+
+REQ-DISC-6: 
+: A discovery mechanism MUST allow a discovering entity to express
+  the discovery scope of a discovery operation in one or more
+  dimension.
+
+REQ-DISC-7: 
+: A discovery mechanism SHOULD provide a way to indicate whether
+  the requested discovery scope has been fully searched, whether a
+  discovery scope boundary has been reached, and whether the returned
+  results have been truncated or limited by policy, scale, or
+  operational constraints.
 
 {: #sec-class}
 ## Entity Classification
@@ -329,7 +343,6 @@ REQ-SEC-7:
 : A discovery mechanism SHOULD support auditability of publication and
   discovery operations where required by deployment policy, regulation,
   or operational practice.
-
 
 {: #sec-arch}
 ## Scalability and Architecture
@@ -466,5 +479,5 @@ the mechanism.
 # Acknowledgements
 
 The authors wish to acknowledge the contributions of participants in the
-DAWN discussions that shaped this document, including Jim Mozley and
-Balazs Nemethi.
+DAWN discussions that shaped this document, including Jim Mozley,
+Balazs Nemethi, and Chenguang Du.
