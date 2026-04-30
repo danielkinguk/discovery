@@ -115,6 +115,7 @@ in {{term-table}}.
 |              | Discoverable Object              |
 |              | Minimum Discoverable Information |
 |              | Discovery Mechanism              |
+|              | Disovery Scope                   |
 | Capability   |                                  |
 |              | Function                         |
 |              | Attributes                       |
@@ -200,6 +201,9 @@ Discovery Mechanism:
   include Domain Name System (DNS) based service discovery, directory services, and
   distributed registries.
 
+Discovery Scope:
+: The explicit domain over which discovery is performed. Discovery scope may be specified in one or more dimensions, including but not limited to administrative identifiers (e.g., DNS domain names, AS numbers), trust domains, topological or distance metrics, geographic or jurisdictional boundaries, and temporal constraints. Discovery scope bounds the search space and supports scalability, relevance, and policy enforcement.
+
 Entity:
 : A system component that communicates with other entities in a
   peer-to-peer or client-server relationship.  Entities include, but
@@ -284,4 +288,4 @@ issues that require operational consideration.
 The authors wish to acknowledge the contributions of participants in
 the DAWN discussions that shaped this document.
 
-Jim Mozley and Med Boucadair provided useful reviews of this document.
+Jim Mozley, Med Boucadair, and Chenguang Du provided useful reviews of this document.
