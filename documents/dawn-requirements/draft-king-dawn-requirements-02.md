@@ -94,7 +94,7 @@ and Named Entities (DAWN) mechanism must satisfy.  It is informed by:
 - {{!I-D.farrel-dawn-terminology}}
 
 {: #sec-scope}
-## Scope
+## Scope of this Document
 
 The requirements in this document address what information must be
 discoverable about entities, what properties a discovery mechanism must
@@ -110,7 +110,7 @@ resource from which the information can be obtained, provided that the
 requirements for authenticity, integrity, interoperability, and
 usability are satisfied.
 
-The following topics are explicitly out of scope:
+The following topics are explicitly out of scope of this document:
 
 - Entity registration processes, including attestation and other
   security mechanisms for registration;
