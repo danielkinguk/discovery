@@ -150,11 +150,11 @@ Gap Analysis:
 
 Information Model:
 : A structured information model describing what can be discovered for
-  generic entities across all categories of use case. This will make a
-  discoverable properties for particular classes of entity or categories
-  of use case. Other optional object properties will remain the
-  reponsibility of external forums and vendors, so the information model
-  must be aumentable.
+  generic entities across all categories of use case. This will be
+  augmentable to include discoverable properties for particular classes
+  of entity or categories of use case. Other optional object properties 
+  will remain the reponsibility of external forums and vendors, so the 
+  information model must be aumentable.
 
 Security and Policy Architecture:
 : An architecture document that describes how security and policy
