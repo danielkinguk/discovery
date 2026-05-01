@@ -127,37 +127,30 @@ Additionally out of scope for DAWN are:
 
 The DAWN working group will work on the following deliverables:
 
-Terminology:
-: A short document that sets out agreed common terms for use in the
+- Terminology: A short document that sets out agreed common terms for use in the
   other DAWN documents.
 
-Problem Statement:
-: An explanation of the discovery problem being addressed by DAWN and
+- Problem Statement: An explanation of the discovery problem being addressed by DAWN and
   the classes of entity that DAWN is attempting to serve.
 
-Use Cases:
-: This document will not attempt to describe individual use cases in
+- Use Cases: This document will not attempt to describe individual use cases in
   detail, but will develop broad categories of use case that may help
   steer solution development to address general problems rather than
   specific niches.
 
-Requirements:
-: The requirements that a discovery solution MUST/SHOULD/MAY address.
+- Requirements: The requirements that a discovery solution MUST/SHOULD/MAY address.
 
-Gap Analysis:
-: A gap analysis / applicability statement to cover existing protocols
+- Gap Analysis: A gap analysis / applicability statement to cover existing protocols
   with reference to the requirements set out in the requirements document.
 
-Information Model:
-: A structured information model describing what can be discovered for
+- Information Model: A structured information model describing what can be discovered for
   generic entities across all categories of use case. This will be
   augmentable to include discoverable properties for particular classes
   of entity or categories of use case. Other optional object properties 
-  will remain the reponsibility of external forums and vendors, so the 
-  information model must be aumentable.
+  will remain the responsibility of external forums and vendors, so the 
+  information model must be augmentable.
 
-Security and Policy Architecture:
-: An architecture document that describes how security and policy
+- Security and Policy Architecture: An architecture document that describes how security and policy
   enforcement can be integrated into the discovery system.
 
 The working group may also work on a broader architecture that shows how
