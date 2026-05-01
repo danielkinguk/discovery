@@ -156,7 +156,7 @@ Information Model:
   must be aumentable.
 
 Security and Policy Architecture:
-: An architecture document that describes how how security and policy
+: An architecture document that describes how security and policy
   enforcement can be specified and integrated into the discovery system.
 
 The working group may also work on a broader architecture that shows how
