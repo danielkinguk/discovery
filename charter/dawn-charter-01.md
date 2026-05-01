@@ -47,15 +47,16 @@ request including:
 - What mechanisms exist to facilitate communication with that entity?
 - Is the information about the entity trustable?
 
-The DAWN working group seeks to provide information to a requester so
-that it can resolve the following questions:
+The DAWN working group seeks to resolve the following questions as part
+of resolving the discussions of entity discovery:
 - How is an entity classified with respect to its function, origin,
   location, and type?
-- How is an entity communicated with?
+- How can an entity be communicated with by another entity?
 - What is the base set of information that is held for each entity?
 - How is the information extensible on a per class-of-entity basis?
-- Can this problem be solved in a centralised and distributed way with
-  consideration of scaling, consolidation, regulation, etc.)?
+- Can discovery be solved in different ways (centralised, partially
+  distributed - i.e., with delegation - or fully distributed) with
+  proper consideration of scaling, consolidation, regulation, etc.)?
 
 The DAWN working group will:
 
