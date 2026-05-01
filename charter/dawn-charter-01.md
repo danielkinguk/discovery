@@ -81,8 +81,12 @@ The DAWN working group will:
   The aim will be to derive general solutions that are applicable across
   all classes of entity (current and future) allowing for future use cases.
 
-- Any solution developed should work independent of the discovery architecture
-  and the system architecture into which the discovery system sits.
+- Ensure that security is central to the architecture and solution such
+  that security information that is registered for an entity can be
+  referenced or published in discovery mechanisms, so that discovered
+  information can be attested, so that the discovery relationship can
+  be authenticated, and so that discovered information can be kept
+  private in flight.
 
 Where possible, any solutions work will be built in a modular way using existing
 IETF protocols. However, no protocol solution choices will be made until the
@@ -95,8 +99,7 @@ to be filled.
 There are functional layers that suround and interact with discovery:
 
 - There is a functional layer before discovery that allows entities to
-  register themselves for discovery. Various aspects of security are 
-  extremely important in this function. This element of the problem
+  register themselves for discovery. This element of the problem
   space is not in scope for DAWN.
 
 - There is a functional layer after discovery that determines which 
