@@ -21,8 +21,10 @@ publish discovery information.
 
 Providing a decentralised and interoperable discovery mechanism is
 essential to protecting the openness of the Internet and protecting
-against dominance by a single or a small number of providers. Integral
-to this is building a governance system for the registration of entities.
+against dominance by a single or a small number of providers. It will
+also facilitate interoperability between systems of entities from 
+different sources. Integral to this is building a governance system
+for the registration of entities.
 
 This BoF seeks to build consensus around establishing a working group
 to develop requirements, information models, and protocol solutions for
