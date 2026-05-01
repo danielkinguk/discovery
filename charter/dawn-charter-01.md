@@ -153,7 +153,7 @@ The DAWN working group will work on the following deliverables:
 - Security and Policy Architecture: An architecture document that describes how security and policy
   enforcement can be integrated into the discovery system.
 
-The working group may also work on a broader architecture that shows how
+The working group may also work on a broader architecture and a protocol framework overview that show how
 discovery fits into an ecosystem (including registration, instance selection,
 and entity-to-entity communication), but it is expected that this work will
 be coordinated with other relevant working groups.
