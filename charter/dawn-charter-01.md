@@ -97,7 +97,7 @@ to be filled.
 
 ## Out of Scope
 
-There are functional layers that suround and interact with discovery:
+There are functional layers that surround and interact with discovery:
 
 - There is a functional layer before discovery that allows entities to
   register themselves for discovery. This element of the problem
@@ -164,7 +164,7 @@ the requirements and gap analysis documents listed above, and that
 extensions to existing an IETF protocol should be done in coordination with
 the working group that owns the protocol. While use-case-specific solutions
 or solution extensions will be considered, generalised solutions that are
-applicable to the broad problem-space will be prefered. 
+applicable to the broad problem-space will be preferred. 
 
 ## Coordination with Other Working Groups and Organisations
 
