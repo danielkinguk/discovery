@@ -168,7 +168,9 @@ It is anticipated that the DAWN working group will also develop protocol
 solutions documents. However, this work should not progress faster than 
 the requirements and gap analysis documents listed above, and that 
 extensions to existing an IETF protocol should be done in coordination with
-the working group that owns the protocol.
+the working group that owns the protocol. While use-case-specific solutions
+or solution extensions will be considered, generalised solutions that are
+applicable to the broad problem-space will be prefered. 
 
 ## Coordination with Other Working Groups and Organisations
 
