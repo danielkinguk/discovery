@@ -24,7 +24,7 @@ approaches do not scale across organisational boundaries and create
 fragmented ecosystems where entities cannot find entities managed by
 other organisations.
 
-An interoperable discovery mechanism is needed that builds on existing
+An interoperable and generic discovery mechanism is needed that builds on existing
 protocols and tools, benefits from an established trust model, supports
 proven delegation and federation architectures, and allows organisations
 to independently publish discovery information.
