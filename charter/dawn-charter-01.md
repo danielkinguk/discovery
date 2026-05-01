@@ -157,7 +157,7 @@ Information Model:
 
 Security and Policy Architecture:
 : An architecture document that describes how security and policy
-  enforcement can be specified and integrated into the discovery system.
+  enforcement can be integrated into the discovery system.
 
 The working group may also work on a broader architecture that shows how
 discovery fits into an ecosystem (including registration, instance selection,
