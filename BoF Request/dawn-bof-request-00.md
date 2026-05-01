@@ -13,7 +13,7 @@ In each case, an entity needs knowledge of remote entities before
 interaction can proceed: what they are, what they offer, and whether
 they can be trusted. Such knowledge could be obtained through static
 configuration, but this approach is impractical at scale and across
-organisational boundaries. An automated and interroperable discovery
+organisational boundaries. An automated and interoperable discovery
 mechanism is needed that builds on existing protocols and tools,
 benefits from an established trust model, supports proven delegation
 and federation architectures, and allows organisations to independently
@@ -107,7 +107,7 @@ To allow evaluation of your proposal, please include the following items:
    0. Administrivia and purpose of the BoF 
    1. Scene-setting and terminology
    2. Problem statement
-   3. Overview of categories of sse cases
+   3. Overview of categories of use cases
    4. Solution requirements
    5. Vast potential solution space
    6. Potential charter 
