@@ -57,68 +57,45 @@ entity discovery.
 
 To allow evaluation of your proposal, please include the following items:
 
-- Any protocols or practices that already exist in this space:
-
+- Any protocols or practices that already exist in this space
    - Semi-private AI agent-to-agent ecosystems include forms of discovery
-     such as may be seen in:
-
+     such as may be seen in
       - Agent-to-Agent protocol (A2A) from Google
-
          - See https://a2a-protocol.org/
-
       - AGNTCY from Cisco
-
          - See https://agntcy.org/
-
       - MCP from the Linux Foundation
-
          - See https://modelcontextprotocol.io/
-
          - See "Discovery of Model Context Protocol Servers via DNS TXT Records" (draft-morrison-mcp-dns-discovery)
-
       - ATP from Nankai University
-
          - See "Agent Transfer Protocol (ATP)" (draft-li-atp)
-
       - AT protocol (ATPROTO) from Bluesky
-
          - See https://atproto.com/
-
    - DNS already performs a similar discovery mechanism and several 
-     proposals exist to make it applicable, such as:
-
+     proposals exist to make it applicable, such as
       - DNS-AID (draft-mozleywilliams-dnsop-dnsaid)
-
          - See https://dns-aid.org/
-
       - Agent Identity and Discovery (AID) (draft-nemethi-aid-agent-identity-discovery)
-
          - See https://agentcommunity.org/
-
       - DNS-Native AI Agent Naming and Resolution (draft-cui-dns-native-agent-naming-resolution)
-
       - AgentDNS: A Root Domain Naming System for LLM Agents (draft-liang-agentdns)
-
-    - An alternative to DNS is proposed as:
-
+    - An alternative to DNS is proposed as
       - Agent Registration and Discovery Protocol (ARDP) from Roberto Pioli.
         See draft-pioli-agent-discovery.
 
-- Which (if any) modifications to existing protocols or practices are required:
+- Which (if any) modifications to existing protocols or practices are required.
 
    - It would be up to the working group to determine what requirements need
      to be addressed, which protocol(s) form the best starting point, and 
      what extensions are needed.
 
-     - Regardless of the solution chosen, a common Information Madel will be
-       needed to structure the discovered information.
+    - Regardless of the solution chosen, a common Information Madel will be
+      needed to structure the discovered information.
 
-- Which (if any) entirely new protocols or practices are required:
-
+- Which (if any) entirely new protocols or practices are required
    - See previous answers.
 
-- Open source projects (if any) implementing this work:
-
+- Open source projects (if any) implementing this work
    - See previous answers.
 
 ## Agenda
@@ -140,7 +117,7 @@ To allow evaluation of your proposal, please include the following items:
 
    - Draft charter: https://github.com/danielkinguk/discovery/tree/main/charter
 
-   - Relevant Internet-Drafts:
+   - Relevant Internet-Drafts
       - Terminology
          - https://datatracker.ietf.org/doc/draft-farrel-dawn-terminology/
       - Problem Statement
