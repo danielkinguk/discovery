@@ -175,7 +175,7 @@ the working group that owns the protocol.
 This work is closely related to work done in other working groups and
 organisations. The DAWN working group will seek to take input from other
 experts while attempting to bring them together to coordinate on this
-issue. This should include ITU-T SG17.
+issue. This should include ITU-T SG17 and the Linux Foundation.
 
 Within the IETF, DAWN will coordinate with WIMSE for consideration of
 "workloads", CORE for consideration of "endpoints", and any working group
