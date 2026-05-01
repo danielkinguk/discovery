@@ -72,7 +72,7 @@ The DAWN working group will:
   stability issues for a discovery system.
 
 - Examine all types of entity and their special needs with respect to
-  discovery, and contrast them with the state-of-the-art discovery tools
+  discovery, and contrast them with state-of-the-art discovery tools
   and mechanisms.
   
 - Consider the specific applicability to the discovery of AI agents, but
