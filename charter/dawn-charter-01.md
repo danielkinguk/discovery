@@ -120,7 +120,7 @@ Additionally out of scope for DAWN are:
 - Design, definition, and governance of the naming systems for entities.
 - Trust, authentication, and authorisation of the entities.
 - Capability exchange and negotiation between entities.
-- Agent-to-agent communication.
+- Entity-to-entity communication.
 
 ## Deliverables
 
