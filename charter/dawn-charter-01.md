@@ -82,7 +82,7 @@ The DAWN working group will:
   The aim will be to derive general solutions that are applicable across
   all classes of entity (current and future) allowing for future use cases.
 
-- Ensure that security is central to the architecture and solution such
+- Ensure that security is central to the discovery architecture and solution such
   that security information that is registered for an entity can be
   referenced or published in discovery mechanisms, so that discovered
   information can be attested, so that the discovery relationship can
