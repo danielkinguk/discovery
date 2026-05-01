@@ -174,11 +174,11 @@ experts while attempting to bring them together to coordinate on this
 issue. This should include ITU-T SG17, 3GPP, and the Linux Foundation.
 
 Within the IETF, DAWN will coordinate with WIMSE for consideration of
-"workloads", CORE for consideration of "endpoints", and any working group
-established to consider AI agent-to-agent communications. Additionally,
-the DAWN working group will only work on extensions to an IETF protocol
-if the working group responsible for the protocol agrees that the work
-should be done in DAWN.
+"workloads", CORE for consideration of "endpoints", CATS for discovery of
+computing services, and any working group established to consider AI
+agent-to-agent communications. Additionally, the DAWN working group will
+only work on extensions to an IETF protocol if the working group responsible
+for the protocol agrees that the work should be done in DAWN.
 
 ## Milestones
 
