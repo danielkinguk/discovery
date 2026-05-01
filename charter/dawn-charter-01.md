@@ -103,12 +103,14 @@ There are functional layers that suround and interact with discovery:
   space is not in scope for DAWN.
 
 - There is a functional layer after discovery that determines which 
-  instance of a class of entity should be used. This process may examine
+  instance of a class of entity should be used. This process may consider
   location, reachability, load, version, and operational status. Those
-  pieces of information have to be examinable, but they do not form part
-  of the core discovery function, but may be implemented by a discovered
-  intermediary aggregation point or broker. This element of the problem
-  space is not in scope for DAWN.
+  pieces of information have to be available for consideration, but they
+  do not form part of the core discovery function: they may be implemented
+  by a discovered intermediary aggregation point or broker or learned
+  through direct communication with entities in the form of capability
+  exchange and negotiation.. This element of the problem space is not in
+  scope for DAWN.
 
 Issues of the larger architecture of how entities select each other and
 how they communicate are out of scope. How agents register and authenticate
