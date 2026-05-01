@@ -13,7 +13,8 @@ resources in a particular jurisdiction, or a service consumer may need
 to discover providers that support a required protocol version.
 
 In each case, an entity needs knowledge of remote entities before 
-interaction can proceed: what they are, what they offer, and whether
+interaction can proceed: what they are, what they offer, what options
+they offer for entity-to-entity communication, and whether
 they can be trusted. Such knowledge could be obtained through static
 configuration, but this approach is impractical at scale and across
 organisational boundaries. Automated discovery mechanisms are needed.
