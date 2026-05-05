@@ -109,8 +109,8 @@ To allow evaluation of your proposal, please include the following items:
    2. Problem statement
    3. Overview of categories of use cases
    4. Solution requirements
-   5. Vast potential solution space
-   6. Potential charter 
+   5. Potential solution space
+   6. Draft charter 
    7. Open discussion
 
 ## Links to the mailing list, draft charter if any (for WG-forming BoF), relevant Internet-Drafts, etc.
