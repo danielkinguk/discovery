@@ -124,10 +124,11 @@ To allow evaluation of your proposal, please include the following items:
          - https://datatracker.ietf.org/doc/draft-farrel-dawn-terminology/
       - Problem Statement
          - https://datatracker.ietf.org/doc/draft-akhavain-moussa-dawn-problem-statement/
+         - https://datatracker.ietf.org/doc/draft-mozley-aidiscovery/
       - Requirements
          - https://datatracker.ietf.org/doc/draft-king-dawn-requirements/
       - Potential Solutions
-         - https://datatracker.ietf.org/doc/draft-mozley-aidiscovery/
+         - https://datatracker.ietf.org/doc/draft-mozleywilliams-dnsop-dnsaid/
          - https://datatracker.ietf.org/doc/draft-nemethi-aid-agent-identity-discovery
          - https://datatracker.ietf.org/doc/draft-cui-dns-native-agent-naming-resolution
          - https://datatracker.ietf.org/doc/draft-liang-agentdns
