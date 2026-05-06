@@ -20,15 +20,25 @@ configuration, but this approach is impractical at scale and across
 organisational boundaries. Automated discovery mechanisms are needed.
 
 Up to now, where automated discovery exists, it is typically handled
-through proprietary directories or platform-specific mechanisms. Such
-approaches do not scale across organisational boundaries and create
-fragmented ecosystems where entities cannot find entities managed by
+through proprietary directories, platform-specific mechanisms, or
+protocols designed for specific solution spaces. Such approaches do 
+not scale across organisational boundaries and create fragmented
+ecosystems where entities cannot find other entities managed by
 other organisations.
 
-An interoperable and generic discovery mechanism is needed that builds on existing
-protocols and tools, benefits from an established trust model, supports
-proven delegation and federation architectures, and allows organisations
-to independently publish discovery information.
+Further, existing discovery mechanisms, particularly those used for service
+or endpoint discovery, provide only limited information such as basic
+identity and reachability. In general, more advanced entity discovery use
+cases may require discovery of richer descriptive properties such as the
+tasks an entity is able to handle, supported interaction modes and protocols,
+lifecycle properties such as synchronous or asynchronous operation, context
+requirements, and whether the entity may invoke other tools, services, or
+agents, rather than only executing fixed pre-programmed functions.
+
+An interoperable and generic discovery mechanism is needed that builds
+on existing protocols and tools, benefits from an established trust model,
+supports proven delegation and federation architectures, and allows
+organisations to independently publish discovery information.
 
 Providing a decentralised and interoperable discovery mechanism is 
 essential to protecting the openness of the Internet and protecting
