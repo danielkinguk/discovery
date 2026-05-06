@@ -13,11 +13,19 @@ In each case, an entity needs knowledge of remote entities before
 interaction can proceed: what they are, what they offer, and whether
 they can be trusted. Such knowledge could be obtained through static
 configuration, but this approach is impractical at scale and across
-organisational boundaries. An automated and interoperable discovery
-mechanism is needed that builds on existing protocols and tools,
-benefits from an established trust model, supports proven delegation
-and federation architectures, and allows organisations to independently
-publish discovery information.
+organisational boundaries. Existing discovery mechanisms, particularly 
+those used for service or endpoint discovery, provide only limited
+information such as basic identity and reachability. More advanced 
+entity discovery use cases may require discovery of richer descriptive
+properties such as the tasks an entity is able to handle, supported
+interaction modes and protocols, lifecycle properties, and whether 
+the entity may invoke other tools, services, or agents, rather than
+only executing fixed pre-programmed functions.
+
+An automated and interoperable discovery mechanism is needed that builds
+on existing protocols and tools, benefits from an established trust model,
+supports proven delegation and federation architectures, and allows
+organisations to independently publish discovery information.
 
 Providing a decentralised and interoperable discovery mechanism is
 essential to protecting the openness of the Internet and protecting
