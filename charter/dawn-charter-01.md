@@ -63,7 +63,8 @@ of resolving the discussions of entity discovery:
 - How is an entity classified with respect to its function, origin,
   location, and type?
 - How can an entity be communicated with by another entity?
-- What is the base set of information that is held for each entity?
+- What is the common base set of information that is held for all
+  entity types?
 - How is the information extensible on a per class-of-entity basis?
 - Can discovery be solved in different ways (centralised, partially
   distributed - i.e., with delegation - or fully distributed) with
@@ -78,10 +79,11 @@ The DAWN working group will:
   and temporal constraints. Discovery scope bounds the search space and
   supports scalability, relevance, and policy enforcement.
 
-- Examine the distinction between mandatory base information which is
-  likely to be static or semi-static, and more dynamic information that
-  could be changing frequently and which is likely to cause scaling and
-  stability issues for a discovery system.
+- Specify the mandatory base information common across all entity types.
+
+- Examine the distinction between static or semi-static information, and
+  more dynamic information that could be changing frequently and which is
+  likely to cause scaling and stability issues for a discovery system.
 
 - Examine all types of entity and their special needs with respect to
   discovery, and contrast them with state-of-the-art discovery tools
