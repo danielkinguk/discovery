@@ -41,10 +41,7 @@ entity discovery.
 ## Required Details
 
 - Status: WG forming
-- Responsible AD: Unclear!
-   - Could be ART (where entities mainly live)
-   - Could be INT (where existing discovery through DNS lives)
-   - Could be OPS (where DNSOP and DNSdispatch are found)
+- Responsible AD: Éric Vynke
 - BOF proponents: 
    - Adrian Farrel <adrian@olddog.co.uk>
    - Nic Williams <nwilliams@infoblox.com>
