@@ -129,7 +129,7 @@ their registration are also out of scope.
 
 Additionally out of scope for DAWN are:
 - Design, definition, and governance of the naming systems for entities.
-- Trust, authentication, and authorisation of the entities.
+- Trust, authentication, and authorisation of the entities in their entity-to-entity communications.
 - Capability exchange and negotiation between entities.
 - Entity-to-entity communication.
 
