@@ -286,7 +286,7 @@ TBD
 
 This document describes a problem space, not a protocol.
 
-Discovery information is a high-value target.  Poisoned responses could direct entities to malicious endpoints. Any mechanism must provide integrity and authenticity guarantees.
+Discovery information is a high-value target.  Poisoned responses could direct entities to malicious endpoints. Any mechanism must provide integrity and authenticity guarantees. Specific security-related requirements for any solution are captured in {{?I-D.king-dawn-requirements}}.
 
 Cross-domain discovery raises two distinct trust questions: whether the discovery source is authoritative, and whether the registered entity is what it claims to be.
 
