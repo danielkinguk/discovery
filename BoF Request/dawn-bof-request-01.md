@@ -107,15 +107,14 @@ To allow evaluation of your proposal, please include the following items:
 
    Draft agenda:
 
-   0. Administrivia and purpose of the BoF (Chairs and ADs) [10 : 10/120]
-   1. Scene-setting and terminology (Adrian) [10 : 20/120]
-   2. Problem statement (Arashmid) [10 : 30/120]
-   3. Overview of categories of use cases (Kehan) [10 : 40/120]
-   4. Solution requirements (Dan) [10 : 50/120]
-   5. Potential solution space (Jim) [10 : 60/120] 
-   6. Draft charter (Adrian) [10 : 70/120]
-   7. Open discussion (All) [40 : 110/120]
-   8. Wrap-up / Next steps (Chairs and ADs) [10 : 120/120]
+   1. Administrivia and purpose of the BoF (Chairs and ADs) [5 : 5/120]
+   2. Scene-setting, terminology, and problem statement (Arashmid) [15 : 20/120]
+   3. Overview of categories of use cases (Kehan) [10 : 30/120]
+   4. Solution requirements (Dan) [10 : 40/120]
+   5. Potential solution space (Jim) [10 : 50/120] 
+   6. Draft charter (Jim) [10 : 60/120]
+   7. Open discussion (All) [55 : 115/120]
+   8. Wrap-up / Next steps (Chairs and ADs) [5 : 120/120]
 
 ## Links to the mailing list, draft charter if any (for WG-forming BoF), relevant Internet-Drafts, etc.
 
