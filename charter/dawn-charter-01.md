@@ -33,7 +33,11 @@ cases may require discovery of richer descriptive properties such as the
 tasks an entity is able to handle, supported interaction modes and protocols,
 lifecycle properties such as synchronous or asynchronous operation, context
 requirements, and whether the entity may invoke other tools, services, or
-agents, rather than only executing fixed pre-programmed functions.
+agents, rather than only executing fixed pre-programmed functions. For example,
+when discovering an AI agent, it will may be necessary to discover what functional
+goals is delivers, what protocol to use to communicate with it, how many tokens
+it can support, whether it is reactive or proactive, whether it depends on a 
+particular model, and what data it needs as input.
 
 An interoperable and generic discovery mechanism is needed that builds
 on existing protocols and tools, benefits from an established trust model,
