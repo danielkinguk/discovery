@@ -21,7 +21,7 @@ properties such as the tasks an entity is able to undertake, supported
 interaction modes and protocols, and lifecycle properties.
 
 An automated and interoperable discovery mechanism is needed that builds
-on existing protocols and tools, benefits from an established trust model,
+on existing protocols and tools, benefits from established trust models,
 supports proven delegation and federation architectures, and allows
 organisations to independently publish discovery information.
 
