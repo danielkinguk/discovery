@@ -31,9 +31,8 @@ or endpoint discovery, provide only limited information such as basic
 identity and reachability. In general, more advanced entity discovery use
 cases may require discovery of richer descriptive properties such as the
 tasks an entity is able to undertake, supported interaction modes and protocols,
-lifecycle properties such as synchronous or asynchronous operation, context
-requirements, and whether the entity may invoke other tools, services, or
-agents, rather than only executing fixed pre-programmed functions. For example,
+lifecycle properties such as synchronous or asynchronous operation, and context
+requirements. For example,
 when discovering an AI agent, it will may be necessary to discover what functional
 goals is delivers, what protocol to use to communicate with it, how many tokens
 it can support, whether it is reactive or proactive, whether it depends on a 
