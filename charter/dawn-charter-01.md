@@ -12,7 +12,7 @@ capabilities, a workload orchestrator may need to locate compute
 resources in a particular jurisdiction, or a service consumer may need
 to discover providers that support a required protocol version.
 
-In each case, an entity needs knowledge of remote entities before 
+In each case, an entity needs knowledge of other entities before 
 interaction can proceed: what they are, what they offer, what options
 they offer for entity-to-entity communication, and whether
 they can be trusted. Such knowledge could be obtained through static
