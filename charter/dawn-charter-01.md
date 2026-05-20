@@ -30,7 +30,7 @@ Further, existing discovery mechanisms, particularly those used for service
 or endpoint discovery, provide only limited information such as basic
 identity and reachability. In general, more advanced entity discovery use
 cases may require discovery of richer descriptive properties such as the
-tasks an entity is able to handle, supported interaction modes and protocols,
+tasks an entity is able to undertake, supported interaction modes and protocols,
 lifecycle properties such as synchronous or asynchronous operation, context
 requirements, and whether the entity may invoke other tools, services, or
 agents, rather than only executing fixed pre-programmed functions. For example,
