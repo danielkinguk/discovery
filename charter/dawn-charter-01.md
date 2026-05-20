@@ -12,7 +12,7 @@ capabilities, a workload orchestrator may need to locate compute
 resources in a particular jurisdiction, or a service consumer may need
 to discover providers that support a required protocol version.
 
-In each case, an entity needs knowledge of remote entities before 
+In each case, an entity needs knowledge of other entities before 
 interaction can proceed: what they are, what they offer, what options
 they offer for entity-to-entity communication, and whether
 they can be trusted. Such knowledge could be obtained through static
@@ -30,20 +30,25 @@ Further, existing discovery mechanisms, particularly those used for service
 or endpoint discovery, provide only limited information such as basic
 identity and reachability. In general, more advanced entity discovery use
 cases may require discovery of richer descriptive properties such as the
-tasks an entity is able to handle, supported interaction modes and protocols,
-lifecycle properties such as synchronous or asynchronous operation, context
-requirements, and whether the entity may invoke other tools, services, or
-agents, rather than only executing fixed pre-programmed functions.
+tasks an entity is able to undertake, supported interaction modes and protocols,
+lifecycle properties such as synchronous or asynchronous operation, and context
+requirements. For example,
+when discovering an AI agent, it will may be necessary to discover what functional
+goals is delivers, what protocol to use to communicate with it, how many tokens
+it can support, whether it is reactive or proactive, whether it depends on a 
+particular model, and what data it needs as input.
 
 An interoperable and generic discovery mechanism is needed that builds
-on existing protocols and tools, benefits from an established trust model,
+on existing protocols and tools, benefits from established trust models,
 supports proven delegation and federation architectures, and allows
-organisations to independently publish discovery information.
+organisations to independently publish discovery information. Such a mechanism
+may need to be bootstrapped from key configuration parameters (such as what 
+type of entity to search for) and relies on a common understanding of the data
+models used to publish discoverable information.
 
 Providing a decentralised and interoperable discovery mechanism is 
 essential to protecting the openness of the Internet and protecting
-against dominance by a single or a small number of providers. Integral
-to this is building a governance system for the registration of entities.
+against dominance by a single or a small number of providers. 
 
 The Discovery of Agents, Workloads, and Named entities (DAWN) working
 group is chartered to develop requirements, information models, and
@@ -102,7 +107,8 @@ The DAWN working group will:
   private in flight.
 
 Where possible, any solutions work will be built in a modular way using existing
-IETF protocols. However, no protocol solution choices will be made until the
+IETF protocols. However, no protocol solution choices leading to the adoption of
+solutions documents addressing the DAWN problem space will be made until the
 requirements (functional and behavioral) have been agreed, and then this will
 require an analysis of the applicability of existing protocols and what gaps need
 to be filled. 

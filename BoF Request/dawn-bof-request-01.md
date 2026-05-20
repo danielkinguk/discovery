@@ -9,7 +9,7 @@ to operate correctly, the components must be able to discover each
 other. For complete generality, we call these components "entities".
 Entities may be tasks, workloads, endpoints, services, AI agents, etc.
 
-In each case, an entity needs knowledge of remote entities before 
+In each case, an entity needs knowledge of other entities before 
 interaction can proceed: what they are, what they offer, and whether
 they can be trusted. Such knowledge could be obtained through static
 configuration, but this approach is impractical at scale and across
@@ -17,13 +17,11 @@ organisational boundaries. Existing discovery mechanisms, particularly
 those used for service or endpoint discovery, provide only limited
 information such as basic identity and reachability. More advanced 
 entity discovery use cases may require discovery of richer descriptive
-properties such as the tasks an entity is able to handle, supported
-interaction modes and protocols, lifecycle properties, and whether 
-the entity may invoke other tools, services, or agents, rather than
-only executing fixed pre-programmed functions.
+properties such as the tasks an entity is able to undertake, supported
+interaction modes and protocols, and lifecycle properties.
 
 An automated and interoperable discovery mechanism is needed that builds
-on existing protocols and tools, benefits from an established trust model,
+on existing protocols and tools, benefits from established trust models,
 supports proven delegation and federation architectures, and allows
 organisations to independently publish discovery information.
 
@@ -57,8 +55,8 @@ entity discovery.
 - Length of session: 2 hours
 - Conflicts (whole Areas and/or WGs)
    - Chair Conflicts: TBD
-   - Technology Overlap: ADD, DELEG, DNSSD, DNSOP, AIPROTO-BoF, WIMSE, CORE
-   - Key Participant Conflict: MPLS, CATS, TEAS, PCE, GREEN, NMRG, SCONE, ANIMA
+   - Technology Overlap: ADD, DELEG, DNSSD, DNSOP, ACP-BoF, AUDIT-BoF, WIMSE, CORE
+   - Key Participant Conflict: MPLS, CATS, TEAS, PCE, GREEN, NMRG, SCONE, ANIMA, TSVWG, CCAMP, SPRING, FANN-BoF
 
 ## Information for IAB/IESG
 
@@ -107,16 +105,16 @@ To allow evaluation of your proposal, please include the following items:
 
 ## Agenda
 
-   Very early draft:
+   Draft agenda:
 
-   0. Administrivia and purpose of the BoF 
-   1. Scene-setting and terminology
-   2. Problem statement
-   3. Overview of categories of use cases
-   4. Solution requirements
-   5. Potential solution space
-   6. Draft charter 
-   7. Open discussion
+   1. Administrivia and purpose of the BoF (Chairs and ADs) [5 : 5/120]
+   2. Scene-setting, terminology, and problem statement (Arashmid) [15 : 20/120]
+   3. Overview of categories of use cases (Kehan) [10 : 30/120]
+   4. Solution requirements (Dan) [10 : 40/120]
+   5. Potential solution space (Jim) [10 : 50/120] 
+   6. Draft charter (Jim) [10 : 60/120]
+   7. Open discussion (All) [55 : 115/120]
+   8. Wrap-up / Next steps (Chairs and ADs) [5 : 120/120]
 
 ## Links to the mailing list, draft charter if any (for WG-forming BoF), relevant Internet-Drafts, etc.
 

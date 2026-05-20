@@ -220,7 +220,9 @@ Operators need to discover and inspect entities for operational purposes: auditi
 
 ## Discovery and OAM {#sec-oam}
 
-TBD
+Management and diagnostics for a discovery system are fundamental for successful deployment. It should be possible for operational managers to determine the behavior and the reasons for the behavior of the discovery system. Tooling to enable this function should be integral to the design of any solution and specific requirements for operational considerations can be found in {{?I-D.king-dawn-requirements}}.
+
+Some guidance (specific to DNS, but more generally applicable to any discovery system) can be found in {{!RFC6168}}.
 
 # Current Approaches and Their Limitations {#sec-limits}
 
@@ -253,7 +255,7 @@ The central challenge is enabling entities to discover other entities based on w
 - Entities
 - Skills
 - Capabilities
-- TBA
+- TBD
 
 A discovery mechanism that supports structured, scalable discovery of an entity's capabilities across organisational boundaries is therefore required.
 
@@ -285,7 +287,7 @@ TBD
 
 This document describes a problem space, not a protocol.
 
-Discovery information is a high-value target.  Poisoned responses could direct entities to malicious endpoints. Any mechanism must provide integrity and authenticity guarantees.
+Discovery information is a high-value target.  Poisoned responses could direct entities to malicious endpoints. Any mechanism must provide integrity and authenticity guarantees. Specific security-related requirements for any solution are captured in {{?I-D.king-dawn-requirements}}.
 
 Cross-domain discovery raises two distinct trust questions: whether the discovery source is authoritative, and whether the registered entity is what it claims to be.
 
@@ -312,4 +314,4 @@ TBD
 #  Acknowledgements {#sec-ack}
 {:numbered="false"}
 
-Thanks to Adrian Farrel for review comments.
+Thanks to Adrian Farrel and Linda Dunbar for review comments.
