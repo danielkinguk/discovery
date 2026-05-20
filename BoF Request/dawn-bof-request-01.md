@@ -55,8 +55,8 @@ entity discovery.
 - Length of session: 2 hours
 - Conflicts (whole Areas and/or WGs)
    - Chair Conflicts: TBD
-   - Technology Overlap: ADD, DELEG, DNSSD, DNSOP, AIPROTO-BoF, WIMSE, CORE
-   - Key Participant Conflict: MPLS, CATS, TEAS, PCE, GREEN, NMRG, SCONE, ANIMA
+   - Technology Overlap: ADD, DELEG, DNSSD, DNSOP, ACP-BoF, AUDIT-BoF, WIMSE, CORE
+   - Key Participant Conflict: MPLS, CATS, TEAS, PCE, GREEN, NMRG, SCONE, ANIMA, TSVWG, CCAMP, SPRING, FANN-BoF
 
 ## Information for IAB/IESG
 
