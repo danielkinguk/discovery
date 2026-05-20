@@ -102,7 +102,8 @@ The DAWN working group will:
   private in flight.
 
 Where possible, any solutions work will be built in a modular way using existing
-IETF protocols. However, no protocol solution choices will be made until the
+IETF protocols. However, no protocol solution choices leading to the adoption of
+solutions documents addressing the DAWN problem space will be made until the
 requirements (functional and behavioral) have been agreed, and then this will
 require an analysis of the applicability of existing protocols and what gaps need
 to be filled. 
