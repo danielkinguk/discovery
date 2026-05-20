@@ -344,6 +344,11 @@ REQ-SEC-7:
   discovery operations where required by deployment policy, regulation,
   or operational practice.
 
+REQ-SEC-8:
+: A discovery mechanisms MUST support SecOps mechanisms {{?draft-parsons-opsawg-security-operations}}
+  in paricular to log attempts at discovery and provide digital forensics to track anuathorised
+  attempts to gain access to entities.
+
 {: #sec-arch}
 ## Scalability and Architecture
 
