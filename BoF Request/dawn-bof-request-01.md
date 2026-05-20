@@ -108,11 +108,11 @@ To allow evaluation of your proposal, please include the following items:
    Draft agenda:
 
    1. Administrivia and purpose of the BoF (Chairs and ADs) [5 : 5/120]
-   2. Scene-setting, terminology, and problem statement (Arashmid) [15 : 20/120]
-   3. Overview of categories of use cases (Kehan) [10 : 30/120]
-   4. Solution requirements (Dan) [10 : 40/120]
-   5. Potential solution space (Jim) [10 : 50/120] 
-   6. Draft charter (Jim) [10 : 60/120]
+   2. Scene-setting, terminology, and problem statement (Arashmid Akhavain) [15 : 20/120]
+   3. Overview of categories of use cases (Kehan Yao) [10 : 30/120]
+   4. Solution requirements (Dan King) [10 : 40/120]
+   5. Potential solution space (Jim Mozley) [10 : 50/120] 
+   6. Draft charter (Jim Mozley) [10 : 60/120]
    7. Open discussion (All) [55 : 115/120]
    8. Wrap-up / Next steps (Chairs and ADs) [5 : 120/120]
 
