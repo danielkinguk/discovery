@@ -132,7 +132,7 @@ The main motivation behind DAWN is to tackle the discovery problem space within 
 
 - Discovery use cases in real‑world
 
-   - Many practical scenarios require discovery, not only for entity‑to‑entity, but also entty‑to‑tools, entity‑to‑task, task-to-entity, and other forms of entity interaction.
+   - Many practical scenarios require discovery, not only for agent‑to‑agent, but also agent‑to‑tools, agent‑to‑task, task-to-agent, and other forms of entity interaction.
 
 - Limitations of traditional discovery methods  
 
@@ -154,7 +154,7 @@ Consider a task owner (e.g., an entity such as an end user, AI agent, model, dat
 
 2. Task owner submits its tasks to the system. Submitted tasks are entities themselves. They have their own discoverable object (task card in this case) which the discovery substrates makes available/visible to other entities in the ecosystem once submitted tasks pass through the entity registration block.
 
-3. A registered entity (e.g., an AI agent) then issues a discovery query to identify and/or locate suitable tasks it can perform, or to find other entities, resources, etc., it must interact with to complete a given task.
+3. A registered entity (e.g., an AI agent) then issues a discovery query to identify and/or locate suitable tasks it can perform, or to find other agents, resources, etc., it must interact with to complete a given task.
 
 4. The discovery substrate processes the above query and returns the relevant discoverable objects such as tasks, agents, resources, etc., to the entity that issued the query. It must be noted that the nature and structure of the query, the format of the discoverable objects (e.g., standardised object cards), and the discovery mechanism employed (e.g., simple name lookup or semantic matching) are key factors influencing the accuracy, volume, timeliness, etc., of the results.
 
@@ -165,24 +165,64 @@ Consider a task owner (e.g., an entity such as an end user, AI agent, model, dat
 The example above illustrates the broader concept of discovery within an ecosystem. Other factors such as entity's mobility can further complicate the problem space. The example, underscore the significance and complexity of the problem space that DAWN aims to address. It highlights why a structured problem definition, clear requirements, and well‑designed solutions are essential for enabling robust, scalable, and interoperable discovery across diverse entities and use cases. 
 
 # Applicability
-The challenges outlined in the Motivation section underscore the need for mechanisms that allow entities and other discoverable entities to dynamically locate and interact within a decentralised ecosystem. DAWN is applicable in scenarios where discovery serves as a key enabler for autonomous operation, collaboration, and adaptive decision-making. In such systems, entities may need to find other entities or entities, while task owners including agents, users, or services may advertise tasks that suitable entities can discover and execute. Data sources can make datasets discoverable to support reasoning or training by AI agents and models. Compute resources may advertise their capabilities, serving as rendezvous points for entities, models, and datasets to facilitate training workflows. Similarly, models may advertise their functionality to allow users or entities to discover them for inference tasks. The following subsections provides more details, illustrating the contexts in which DAWN provides value and a consistent foundation for the functional requirements and design considerations.
+The challenges outlined in the Motivation section underscore the need for mechanisms that allow agents and other discoverable entities to dynamically locate and interact within a decentralised ecosystem. DAWN is applicable in scenarios where discovery serves as a key enabler for autonomous operation, collaboration, and adaptive decision-making. In such systems, agents may need to find other agents or entities, while task owners including agents, users, or services may advertise tasks that suitable agents can discover and execute. Data sources can make datasets discoverable to support reasoning or training by agents and models. Compute resources may advertise their capabilities, serving as rendezvous points for agents, models, and datasets to facilitate training workflows. Similarly, models may advertise their functionality to allow users or agents to discover them for inference tasks. The following subsections provides more details, illustrating the contexts in which DAWN provides value and a consistent foundation for the functional requirements and design considerations.
 
-## Entities discovering Entities
-Entities frequently need to locate other entities to coordinate actions, share information, or engage in collaborative workflows. In some situations, an entity may already be aware of a counterpart possessing the required skills or capabilities. In other cases, entities must actively query the system to discover suitable peers by specifying the skills or attributes they are looking for. DAWN provides a framework to support both modes of discovery, enabling dynamic, capability-driven interactions in decentralised and heterogeneous environments.
+## Agent Discovering Agents
+Agents frequently need to locate other agents to coordinate actions, share information, or engage in collaborative workflows. In some situations, an agent may already be aware of a counterpart possessing the required skills or capabilities. In other cases, agents must actively query the system to discover suitable peers by specifying the skills or attributes they are looking for. DAWN provides a framework to support both modes of discovery, enabling dynamic, capability-driven interactions in decentralised and heterogeneous environments.
 
-DAWN enables entities to advertise their presence, capabilities, and status, facilitating peer-to-peer interactions in dynamic, multi-entity ecosystems. This is particularly relevant in large-scale deployments, multi-domain environments, or systems where entities may join or leave unpredictably.
+DAWN enables agents to advertise their presence, capabilities, and status, facilitating peer-to-peer interactions in dynamic, multi-agent ecosystems. This is particularly relevant in large-scale deployments, multi-domain environments, or systems where agents may join or leave unpredictably.
 
-## Entities discovering tasks
-In addition to discovering other entities, entities may need to locate tasks that require attention or contribution within a system. Tasks can be advertised by users, other entities, or services, along with information such as required skills, priority, or dependencies. Since entities are aware of their own capabilities, they can match their skill sets against advertised tasks and proactively apply for or claim tasks for which they are suitable. DAWN provides mechanisms to make tasks discoverable, enabling entities to query, filter, and select tasks efficiently, supporting autonomous orchestration, dynamic workflow formation, and load distribution across heterogeneous environments.
+## Agents Discovering Tasks
+In addition to discovering other agents, agents may need to locate tasks that require attention or contribution within a system. Tasks can be advertised by users, other agents, or services, along with information such as required skills, priority, or dependencies. Since agents are aware of their own capabilities, they can match their skill sets against advertised tasks and proactively apply for or claim tasks for which they are suitable. DAWN provides mechanisms to make tasks discoverable, enabling agents to query, filter, and select tasks efficiently, supporting autonomous orchestration, dynamic workflow formation, and load distribution across heterogeneous environments.
 
-## Entities/models discovering data
-Entities and models often require access to data distributed across multiple systems or administrative domains to perform training, inference, or reasoning tasks. This includes datasets, knowledge bases, or document repositories that may be advertised as discoverable entities with information such as format, availability, and access requirements. In Retrieval-Augmented Generation (RAG) scenarios, entities or models need to dynamically locate relevant external knowledge sources or documents to supplement generative reasoning, enabling more accurate and context-aware responses. Additionally, data in these environments may be dynamic, changing over time as new information is added or existing data is updated. DAWN provides mechanisms for discovering, tracking, and querying such evolving data sources, allowing entities and models to identify relevant information in real time while respecting access controls and provenance information.
+## Agents/Models Discovering Data
+Agents and models often require access to data distributed across multiple systems or administrative domains to perform training, inference, or reasoning tasks. This includes datasets, knowledge bases, or document repositories that may be advertised as discoverable entities with information such as format, availability, and access requirements. In Retrieval-Augmented Generation (RAG) scenarios, agents or models need to dynamically locate relevant external knowledge sources or documents to supplement generative reasoning, enabling more accurate and context-aware responses. Additionally, data in these environments may be dynamic, changing over time as new information is added or existing data is updated. DAWN provides mechanisms for discovering, tracking, and querying such evolving data sources, allowing agents and models to identify relevant information in real time while respecting access controls and provenance information.
 
-## Entities/models and data discovering compute
-Entities and models often require access to compute resources to perform tasks such as training, fine-tuning, or indexing. These resources may be distributed across multiple systems or administrative domains, and their availability, capacity, or configuration can change over time. In this context, compute resources can serve as rendezvous points, allowing entities, models, and datasets to converge and interact efficiently. DAWN provides mechanisms for entities, models, and data sources to discover compute resources that meet their requirements, including hardware capabilities, scheduling constraints, and current availability. By enabling dynamic identification of suitable compute nodes, DAWN supports elastic scaling of training workloads, efficient utilisation of heterogeneous infrastructure, and adaptive collaboration in decentraliced and changing environments.
+## Agents/Models and Data Discovering Compute
+Agents and models often require access to compute resources to perform tasks such as training, fine-tuning, or indexing. These resources may be distributed across multiple systems or administrative domains, and their availability, capacity, or configuration can change over time. In this context, compute resources can serve as rendezvous points, allowing agents, models, and datasets to converge and interact efficiently. DAWN provides mechanisms for agents, models, and data sources to discover compute resources that meet their requirements, including hardware capabilities, scheduling constraints, and current availability. By enabling dynamic identification of suitable compute nodes, DAWN supports elastic scaling of training workloads, efficient utilisation of heterogeneous infrastructure, and adaptive collaboration in decentraliced and changing environments.
 
-## Discovering models for inference
-Users, agents, and services (i.e., entities) may need to leverage pre-trained models for inference in tasks such as prediction, recommendation, or decision-making. Models may be distributed across various systems or administrative domains, and their availability, capabilities, or performance characteristics can evolve over time. DAWN supports mechanisms to discover models that are most suitable for different contexts. This enables users, agents, services, etc. to dynamically adapt to newly available models, take advantage of improvements, and ensure interoperability in heterogeneous and evolving environments.
+## Discovering Models for Inference
+Users, agents, and services may need to leverage pre-trained models for inference in tasks such as prediction, recommendation, or decision-making. Models may be distributed across various systems or administrative domains, and their availability, capabilities, or performance characteristics can evolve over time. DAWN supports mechanisms to discover models that are most suitable for different contexts. This enables users, agents, services, etc. to dynamically adapt to newly available models, take advantage of improvements, and ensure interoperability in heterogeneous and evolving environments.
+
+## Taxonomy of Entities
+
+It is useful to categorise some common entity types to show the different behaviors that may be seen in discovery systems. This can help derive common behaviors across all types of entity.
+
+{{taxonomy}} presents a table of entity types. This is not an exclusive list and it is expected that more entity types will continue to be added as new use cases are developed. The table shows:
+
+Identity Binging:
+: TBD
+
+Control Ownership:
+: TBD
+
+Responsible Party:
+: TBD
+
+Dynamic Characteristic:
+: TBD
+
+~~~~
+|  Entity   | Identity |  Control   | Responsible |   Dynamic    |
+|   Type    | Binding  |  Ownership |    Party    |Characteristic|
++-----------+----------+------------+-------------+--------------+
+|    AI     |End device|Organization| Developer&  |    High      |
+|   Agent   |/Instance |    /User   |Deployer&User|              |
++-----------+----------+------------+-------------+--------------+
+|  Software | Instance |  Provider  |  Developer  |    Medium    |
+|  Service  | /Cluster |Organization| & Deployer  |              |
++-----------+----------+------------+-------------+--------------+
+|  Compute  | Variable |Submitter & |  Submitter  |    High      |
+|  Workload |    ID    |Orchestrator| & Deployer  |              |
++-----------+----------+------------+-------------+--------------+
+|  Network  | Node     | Provider   |   Operator  |    Low       |
+|  Function | /Instance|Organization|             |              |
++-----------+----------+------------+-------------+--------------+
+|Application| IP/Port  |   Owning   |  Developer  |    Medium    |
+|  Endpoint | /Instance|Organization| & Deployer  |              |
++-----------+----------+------------+-------------+--------------+
+~~~~
+{: #taxonomy title="Taxonomy of Entities"}
 
 # Functional Requirements {#sec-func-req}
 
@@ -200,7 +240,7 @@ In either case, there is a need for a standardized structure for discoverable ob
    
 ## Cross-Domain Collaboration {#sec-cross-domain}
 
-Entities operating across organisational boundaries need to discover counterparts without depending on a shared infrastructure. For example, a customer-service agent in one organisation may need to find a logistics-tracking agent in another. Models in one administrative domain may need to find compute resources in another administrative domain for training. Similarly, a model or entity in one domain might need to use data in another domain for retrieval-augmented generation (RAG) based inference. Current platform-specific mechanisms do not interoperate, so entities remain invisible outside their own ecosystem.
+Entities operating across organisational boundaries need to discover counterparts without depending on a shared infrastructure. For example, a customer-service agent in one organisation may need to find a logistics-tracking agent in another. Models in one administrative domain may need to find compute resources in another administrative domain for training. Similarly, a model or agent in one domain might need to use data in another domain for retrieval-augmented generation (RAG) based inference. Current platform-specific mechanisms do not interoperate, so entities remain invisible outside their own ecosystem.
 
 Administrative domains are typically unwilling to disclose their internal structures or detailed operational information to one another. In traditional networking, for instance, they use abstraction and aggregation techniques to share only high‑level insights about their operations. A standards‑based mechanism to support controlled information sharing while ensuring administrative domain interoperability without exposing sensitive internal details is potentially desirable.
 
@@ -216,7 +256,7 @@ In large‑scale networks, entities may need to discover intermediary broker nod
 
 ## Human-Initiated Discovery {#sec-human}
 
-Operators need to discover and inspect entities for operational purposes: auditing deployed entities, verifying capability claims, or troubleshooting failures.  Discovery must be usable by humans through standard tooling, not only by automated systems.
+Operators need to discover and inspect entities for operational purposes: auditing deployed agents, verifying capability claims, or troubleshooting failures.  Discovery must be usable by humans through standard tooling, not only by automated systems.
 
 ## Discovery and OAM {#sec-oam}
 
@@ -242,7 +282,7 @@ TBD
 
 TBD
 
-## Ad Hoc Entity Discovery Proposals {#sec-adhoc}
+## Ad Hoc Agent Discovery Proposals {#sec-adhoc}
 
 TBD
 
@@ -252,7 +292,7 @@ TBD
 
 The central challenge is enabling entities to discover other entities based on what they can do, such as:
 
-- Entities
+- Agents
 - Skills
 - Capabilities
 - TBD
@@ -277,7 +317,7 @@ Entity properties range from static (type, supported protocols, skills) to dynam
 
 ## Extensibility {#sec-extensible}
 
-New entity types, skill taxonomies, and capability formats will emerge.  Discovery must accommodate them without changes to the core mechanism.
+New agent types, skill taxonomies, and capability formats will emerge.  Discovery must accommodate them without changes to the core mechanism.
 
 # Relationship to Existing Work {#sec-existing}
 
