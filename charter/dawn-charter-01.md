@@ -49,8 +49,7 @@ models used to publish discoverable information.
 
 Providing a decentralised and interoperable discovery mechanism is 
 essential to protecting the openness of the Internet and protecting
-against dominance by a single or a small number of providers. Integral
-to this is building a governance system for the registration of entities.
+against dominance by a single or a small number of providers. 
 
 The Discovery of Agents, Workloads, and Named entities (DAWN) working
 group is chartered to develop requirements, information models, and
