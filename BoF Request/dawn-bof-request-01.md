@@ -94,7 +94,7 @@ To allow evaluation of your proposal, please include the following items:
      to be addressed, which protocol(s) form the best starting point, and 
      what extensions are needed.
 
-    - Regardless of the solution chosen, a common Information Madel will be
+    - Regardless of the solution chosen, a common Information Model will be
       needed to structure the discovered information.
 
 - Which (if any) entirely new protocols or practices are required
