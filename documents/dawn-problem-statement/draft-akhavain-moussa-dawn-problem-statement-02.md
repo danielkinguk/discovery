@@ -184,6 +184,45 @@ Agents and models often require access to compute resources to perform tasks suc
 ## Discovering models for inference
 Users, agents, and services may need to leverage pre-trained models for inference in tasks such as prediction, recommendation, or decision-making. Models may be distributed across various systems or administrative domains, and their availability, capabilities, or performance characteristics can evolve over time. DAWN supports mechanisms to discover models that are most suitable for different contexts. This enables users, agents, services, etc. to dynamically adapt to newly available models, take advantage of improvements, and ensure interoperability in heterogeneous and evolving environments.
 
+## Taxonomy of Entities
+
+It is useful to categorise some common entity types to show the different behaviors that may be seen in discovery systems. This can help derive common behaviors across all types of entity.
+
+{{taxonomy}} presents a table of entity types. This is not an exclusive list and it is expected that more entity types will continue to be added as new use cases are developed. The table shows:
+
+Identity Binging:
+: TBD
+
+Control Ownership:
+: TBD
+
+Responsible Party:
+: TBD
+
+Dynamic Characteristic:
+: TBD
+
+~~~~
+|  Entity   | Identity |  Control   | Responsible |   Dynamic    |
+|   Type    | Binding  |  Ownership |    Party    |Characteristic|
++-----------+----------+------------+-------------+--------------+
+|    AI     |End device|Organization| Developer&  |    High      |
+|   Agent   |/Instance |    /User   |Deployer&User|              |
++-----------+----------+------------+-------------+--------------+
+|  Software | Instance |  Provider  |  Developer  |    Medium    |
+|  Service  | /Cluster |Organization| & Deployer  |              |
++-----------+----------+------------+-------------+--------------+
+|  Compute  | Variable |Submitter & |  Submitter  |    High      |
+|  Workload |    ID    |Orchestrator| & Deployer  |              |
++-----------+----------+------------+-------------+--------------+
+|  Network  | Node     | Provider   |   Operator  |    Low       |
+|  Function | /Instance|Organization|             |              |
++-----------+----------+------------+-------------+--------------+
+|Application| IP/Port  |   Owning   |  Developer  |    Medium    |
+|  Endpoint | /Instance|Organization| & Deployer  |              |
++-----------+----------+------------+-------------+--------------+
+~~~~
+{: #taxonomy title="Taxonomy of Entities"}
 
 # Functional Requirements {#sec-func-req}
 
