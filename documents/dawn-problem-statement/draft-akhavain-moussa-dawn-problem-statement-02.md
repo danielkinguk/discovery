@@ -42,6 +42,10 @@ author:
     email: daniel@olddog.co.uk
 
 normative:
+   RFC6763:
+   RFC8615:
+   RFC9460:
+
 
 informative:
 ---
@@ -266,13 +270,17 @@ Cloud providers, AI platforms, and other entity systems maintain their own regis
 
 Manually configured endpoint lists cannot scale, cannot adapt to dynamic environments, and cannot convey the capability and trust metadata needed for cross-domain discovery.
 
-## DNS-SD and SRV Records {#sec-DNS}
+## DNS-based Discovery {#sec-DNS}
 
-TBD
+DNS-based discovery mechanisms mainly include DNS-SD {{RFC6763}} and the more recent SVCB/HTTPS records {{RFC 9460}}. DNS-SD uses PTR, SRV, and TXT records to enumerate services and convey basic attributes. SVCB enhances endpoint and protocol negotiation capabilities (e.g., port, ALPN) through key-value parameters. Both rely on the DNS delegation model and support decentralized publication.
+
+**Limitations**: DNS-based discovery mechanisms have certain limitations in expressiveness: the key-value model struggles to carry complex nested capability structures and composite queries. Moreover, because of the DNS domain-based query model, performing global attribute searches without prior knowledge of the target domain name requires additional preprocessing, and frequently changing dynamic attributes may incur significant query overhead. Regarding the trust model, the support for entity-level verifiable credentials in cross-domain scenarios remains insufficient. Considering existing deployment realities, SVCB, as a relatively new standard, will require a gradual transition before it is widely deployed across the global DNS infrastructure. These limitations suggest that DNS-based discovery mechanisms may not fully meet the needs of typical DAWN scenarios such as cross-domain capability filtering, dynamic resource state queries, and global semantic search.
 
 ## Well-Known URIs {#sec-URI}
 
-TBD
+{{RFC8615}} defines the /.well-known/ URI prefix for publishing site-level metadata on a web server. Organizations can place static JSON files (e.g., /.well-known/entity.json) at standardized paths to describe the entities available within the domain, their capabilities, and access methods. This mechanism is simple to deploy, compatible with HTTPS, supports decentralized publication, and can carry rich, structured metadata, offering strong expressiveness.
+
+**Limitations**:  However, when used alone, Well-Known URIs are primarily designed for static metadata publication. Dynamic attributes are difficult to reflect in a timely manner. Frequent updates to maintain freshness introduce cache consistency and race condition issues. It is hard to search globally for entities by capability without prior knowledge of the target domain names, and the mechanism may also become inefficient in scenarios with a large number of entities. In practice, Well-Known URIs are often used in combination with DNS-based discovery mechanisms: a client first uses DNS (e.g., SRV or SVCB records) to locate the service endpoint of the target domain, and then accesses the Well-Known URI on that endpoint to retrieve detailed capability descriptions of the entities. However, even when combined, the approach still faces challenges in terms of system overhead, the tension between uniformity and fine-grained control, deployment complexity, and trust model.
 
 ## Ad Hoc Agent Discovery Proposals {#sec-adhoc}
 
