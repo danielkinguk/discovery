@@ -112,6 +112,7 @@ in {{term-table}}.
 |              | Discovering Entity               |
 |              | Discovered Entity                |
 | Discovery    |                                  |
+|              | Discovery Information            |
 |              | Discoverable Object              |
 |              | Minimum Discoverable Information |
 |              | Discovery Mechanism              |
@@ -195,6 +196,11 @@ Discovery:
   that are capable of performing a desired function or providing a
   desired service, and obtains sufficient information to initiate
   interaction.
+
+Discovery Information:
+: The information returned by a discovery mechanism that allows the 
+   discovering entity to decide whether later interaction is possible
+   and desireable.
 
 Discovery Mechanism:
 : A protocol, system, or method used to perform discovery.  Examples
