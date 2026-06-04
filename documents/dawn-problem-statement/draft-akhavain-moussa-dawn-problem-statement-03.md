@@ -4,7 +4,7 @@ title: Problem Statement for the Discovery of Agents, Workloads, and Named Entit
 abbrev: DAWN problem statement
 docname: draft-akhavain-moussa-dawn-problem-statement-03
 submissiontype: IETF
-workgroup: 
+workgroup:
 category: info
 ipr: trust200902
 
@@ -49,8 +49,8 @@ informative:
 --- abstract
 
 Interacting entities such as agents, tasks, users, workloads, data, compute, etc., in AI ecosystem/network are proliferating, yet there is no standardised way to discover what entities exist, what attributes such as skills, capabilities, physical characteristics, etc., they posses, what services they offer, or how to reach them across organisational boundaries.
-   
-Discovery today relies on proprietary directories or manual configuration, creating fragmented ecosystems that prevent cross-domain collaboration. 
+  
+Discovery today relies on proprietary directories or manual configuration, creating fragmented ecosystems that prevent cross-domain collaboration.
 
 This document describes the problem space that motivates Discovery of Agents, Workloads, and Named Entities (DAWN).  It clarifies the scope of work within entity ecosystems, identifies why current approaches are insufficient, and outlines the challenges a standardised discovery mechanism must address. It does not propose a specific solution or protocol.
 
@@ -125,7 +125,7 @@ This document uses the following terms defined in {{!I-D.farrel-dawn-terminology
 - Entity
 
 - Minimum Discoverable Information
-  
+
 # Motivation {#sec-motives}
 
 The main motivation behind DAWN is to tackle the discovery problem space within the entity ecosystem. It is driven by a few factors:
@@ -134,15 +134,15 @@ The main motivation behind DAWN is to tackle the discovery problem space within 
 
    - Many practical scenarios require discovery, not only for agent‑to‑agent, but also agent‑to‑tools, agent‑to‑task, task-to-agent, and other forms of entity interaction.
 
-- Limitations of traditional discovery methods  
+- Limitations of traditional discovery methods
 
    - Existing discovery mechanisms are not designed to natively handle scenarios where entities are dynamic, mobile, cross-domain, or when they have complex attributes.
 
-- Current approaches are ad-hoc, entity specific, and and do not scale:  
+- Current approaches are ad-hoc, entity specific, and and do not scale:
 
    - Even in today's implementations (e.g., MCP‑based systems or A2A‑based systems), discovery tends to be contained and handled through simple mechanisms such as name lookup, search engines, or static agent cards/tool cards. These approaches work only in small, closed environments. They do not address challenges such as inter‑domain discovery, dynamic endpoint association, chained discovery queries, blind or exploratory search sessions, or large‑scale environments. In addition, they do not address the need of other discoverable entities such as task, workloads, etc.
 
-- Emergence of discoverable entities, discoverable objects, and discovery mechanism:  
+- Emergence of discoverable entities, discoverable objects, and discovery mechanism:
 
    - Entities may have associated MDIs (e.g., task , capabilities, endpoints, policies), and that a discovery substrate/mechanism/vehicle is needed. The discovery substrate may implement unified mechanism or may support multiple discovery strategies depending on the scenario.
 
@@ -162,7 +162,7 @@ Consider a task owner (e.g., an entity such as an end user, AI agent, model, dat
 
 5. Upon receiving the discovery results (e.g., a list of suitable entities), the querying entity (e.g., an AI agent) might need additional information before initiating its interaction with the discovered entities. For example, it might need to know more about the parent entity of the discovered entity whose name/ID can be potentially found in the discovered entity's discoverable object.
 
-The example above illustrates the broader concept of discovery within an ecosystem. Other factors such as entity's mobility can further complicate the problem space. The example, underscore the significance and complexity of the problem space that DAWN aims to address. It highlights why a structured problem definition, clear requirements, and well‑designed solutions are essential for enabling robust, scalable, and interoperable discovery across diverse entities and use cases. 
+The example above illustrates the broader concept of discovery within an ecosystem. Other factors such as entity's mobility can further complicate the problem space. The example, underscore the significance and complexity of the problem space that DAWN aims to address. It highlights why a structured problem definition, clear requirements, and well‑designed solutions are essential for enabling robust, scalable, and interoperable discovery across diverse entities and use cases.
 
 # Applicability
 The challenges outlined in the Motivation section underscore the need for mechanisms that allow entities and other discoverable entities to dynamically locate and interact within a decentralised ecosystem. DAWN is applicable in scenarios where discovery serves as a key enabler for autonomous operation, collaboration, and adaptive decision-making. In such systems, entities may need to find other entities or entities, while task owners including agents, users, or services may advertise tasks that suitable entities can discover and execute. Data sources can make datasets discoverable to support reasoning or training by AI agents and models. Compute resources may advertise their capabilities, serving as rendezvous points for entities, models, and datasets to facilitate training workflows. Similarly, models may advertise their functionality to allow users or entities to discover them for inference tasks. The following subsections provides more details, illustrating the contexts in which DAWN provides value and a consistent foundation for the functional requirements and design considerations.
@@ -187,23 +187,44 @@ Users, agents, and services (i.e., entities) may need to leverage pre-trained mo
 
 ## Taxonomy of Entities
 
-It is useful to categorise some common entity types to show the different behaviours that may be seen in discovery systems. This can help derive common behaviours across all types of entity.
+Classifying entities along multiple dimensions helps derive common as well as specific requirements in discovery processes and protocols for different types of entities.
 
-{{taxonomy}} presents a table of entity types. This is not an exclusive list and it is expected that more entity types will continue to be added as new use cases are developed. The table shows:
+The following aspects are listed. This is not an exclusive list and it is expected that the list will evolve iteratively as new use cases are developed. Primary dimensions include:
 
-Identity Binding:
-: TBD
+- Identity Binding:  
+  Describes the relationship between an entity's identifier and its runtime deployment artifact (e.g., a single instance, cluster, physical device, IP/port, etc.). This determines the persistence of the identifier as well as the lifecycle and reachability characteristics of the resolved target object. Discovery mechanisms need to consider these characteristics when designing caching policies, refresh frequencies, and re-discovery conditions. 
 
-Control Ownership:
-: TBD
+  For example: An AI agent may be bound to a dynamic service instance in a cloud computing environment, or it may be bound to a specific physical mobile device. The former may have an ephemeral identifier that changes across sessions, while the latter has a persistent identifier.
 
-Responsible Party:
-: TBD
+- Control Ownership:
+  The administrative entity that has authority over the entity's lifecycle, configuration, and policy. This determines who publishes discovery information and who can update or withdraw it.
 
-Dynamic Characteristic:
-: TBD
+  For example: A computing workload may be owned by the user who submits it (control ownership lies with the user), while a network function deployed by a service provider is owned by that provider's organization.
+
+- Responsible Party:
+  The party that is operationally accountable for the entity's behaviour, including security, correctness, and policy compliance. This may differ from the control owner. This dimension relates to trust and attestation requirements in discovery.
+
+  For example: In a Retrieval-Augmented Generation (RAG) scenario, the data source that is discovered and retrieved is the responsibility of its data owner. Meanwhile, the AI agent that consumes that data and generates new results is the responsibility of its agent provider.
+
+- Dynamic Characteristic:
+  The rate and predictability of change in the entity's discoverable properties (e.g., location, availability, load). This influences how discovery information should be published and cached.
+
+  For example: The current load of a computing workload changes rapidly (high dynamism). In contrast, a deployed network function change rarely (low dynamism), allowing long-lived caching.
+
+- Discovery Payload Richness
+  The level of detail and structure of discovery information that an entity can publish or that a query can expect to retrieve. This determines whether discovery information is embedded directly in the response or provided via references, and it also affects query language capabilities and caching granularity.
+
+  For example: A simple network function may only advertise its IP address and port (minimal). An AI agent may publish a full capability card listing its skills, input/output schemas, and authentication method (rich).
+
+- Cross-domain Visibility
+  Which administrative domains are permitted to discover an entity, and what level of discovery information is exposed to each domain. This impacts the discovery mechanism to support access control, inter-domain authentication, and selective publication of information.
+
+  For example: An AI agent's capabilities may be discoverable across domains to enable collaboration, but the backend computing services that execute the agent's tasks are only discoverable within the same administrative domain for security or policy reasons.
+
+The following presents a table of entity types. This is not an exclusive list and it is expected that more entity types will continue to be added as new use cases are developed. The table shows:
 
 ~~~~
++-----------+----------+------------+-------------+--------------+
 |  Entity   | Identity |  Control   | Responsible |   Dynamic    |
 |   Type    | Binding  |  Ownership |    Party    |Characteristic|
 +-----------+----------+------------+-------------+--------------+
@@ -235,10 +256,10 @@ Discovery in ecosystem should support different levels of granularity. Queries m
 
 Information an entity discovers about another entity must be meaningful and useful for delivering the required service. Accordingly, a response to a discovery query should include attributes that describe the discovered entity: such as what it can do, the skills it possesses, the protocols it supports, the security guarantees it claims to offer, the policies it can potentially enforce, its pricing for services, its current operational status (e.g., available, busy, or offline), communication means, etc.
 
-Such information can be either embedded within the entity's discoverable object or retrieved through a subsequent interaction outside the discovery substrate (for example, after discovery, an interview‑style exchange may be conducted using the communication method indicated by the entity). 
+Such information can be either embedded within the entity's discoverable object or retrieved through a subsequent interaction outside the discovery substrate (for example, after discovery, an interview‑style exchange may be conducted using the communication method indicated by the entity).
 
 In either case, there is a need for a standardized structure for discoverable objects that provides the minimum set of information needed for the discovery substrate to return results that meaningfully support service delivery within the AI ecosystem.
-   
+
 ## Cross-Domain Collaboration {#sec-cross-domain}
 
 Entities operating across organisational boundaries need to discover counterparts without depending on a shared infrastructure. For example, a customer-service agent in one organisation may need to find a logistics-tracking agent in another. Models in one administrative domain may need to find compute resources in another administrative domain for training. Similarly, a model or agent in one domain might need to use data in another domain for retrieval-augmented generation (RAG) based inference. Current platform-specific mechanisms do not interoperate, so entities remain invisible outside their own ecosystem.
