@@ -168,7 +168,7 @@ Capability Exchange:
 : The processes by which entities exchange details of what they can do,
   dynamic status information, and which particular features or functions
   they wish to engage.
-  
+
 : Capability exposure, exchange, and negotiation are out of
   scope for DAWN, but will form an essential part of selection and
   operation of agents.
@@ -198,7 +198,7 @@ Discovery:
   interaction.
 
 Discovery Information:
-: The information returned by a discovery mechanism that allows the 
+: The information returned by a discovery mechanism that allows the
    discovering entity to decide whether later interaction is possible
    and desireable.
 
@@ -294,4 +294,5 @@ issues that require operational consideration.
 The authors wish to acknowledge the contributions of participants in
 the DAWN discussions that shaped this document.
 
-Jim Mozley, Med Boucadair, and Chenguang Du provided useful reviews of this document.
+Jim Mozley, Med Boucadair, and Chenguang Du, and Daniel King provided
+useful reviews of this document.
