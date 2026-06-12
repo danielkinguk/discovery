@@ -207,8 +207,10 @@ The following analysis is based on evaluations of the various discovery solution
       - Using such limitations, public pointers can be scraped to build maps of entities and activity patterns within DAWN leading to a major privacy concern.
 
    - DAWN suitability: Although DNS is excellent for bootstrap pointers (telling a consumer where to look) and for federation/bootstrapping at internet scale, its suitability to DAWN is "Partial" for the following reasons 
-      - DNS is fundamentally a lookup system - it assumes the consumer knows the name or key to query. That model does not fit DAWN's need for high‑level, descriptive search (e.g., "find agents that can translate legal contracts and accept a $budget"), which often requires indexing, semantic search, or registries that return multiple matches for a description; 
-      - DNS is suitable as a first hop in DAWN patterns but insufficient alone for rich, privacy‑sensitive, or descriptive discovery.
+      - DNS is fundamentally a lookup system - it assumes the consumer knows the name or key to query. That model does not fit DAWN's need for high‑level, descriptive search (e.g., "find agents that can translate legal contracts and accept a $budget"), which often requires indexing, semantic search, or registries that return multiple matches for a description;
+      - The DNS key-value model struggles to carry complex nested capability structures and composite queries, introducing limitations in expressiveness.
+      - These limitations suggest that DNS-based discovery mechanisms may not fully meet the needs of typical DAWN scenarios such as cross-domain capability filtering, dynamic resource state queries, and global semantic search.
+      - However, DNS is suitable as a first hop in DAWN patterns and covers a subset of discovery types that shall be supported by DAWN.
    
    - Security, Privacy, and DAWN suitability score: **1/3**
        - Scalability and interoperability are supported. However, security, privacy, information rich and semantic searches, multi-cast operation, and multi-type of entity support are still missing.
@@ -291,7 +293,7 @@ The following analysis is based on evaluations of the various discovery solution
       - Cost: High - building/integrating an index and gateway logic is substantial.
       - Impact: Enables DAWN‑style high‑level queries without exposing LAN multicast to the internet.
 
-   - Overall Mitigation score: **MEDIUM**
+   - Overall Mitigation score: **LOW TO MEDIUM**
 
 ## SSDP/UPnP
 
@@ -346,7 +348,7 @@ The following analysis is based on evaluations of the various discovery solution
       - Cost: High - federation, attestation formats, and access controls require coordination and infrastructure.  
       - Impact: preserves provenance and privacy while enabling descriptive, cross‑domain discovery.
 
-   - Overall Mitigation score: **HIGH**
+   - Overall Mitigation score: **MEDIUM**
 
 ## DNS-AID
 
@@ -440,35 +442,24 @@ The following analysis is based on evaluations of the various discovery solution
  - **Mitigations grouped by goal**
 
    - Mitigations for Descriptor hosting and integrity
-
       - Require signed service/site/task descriptors and signed announcements; publish verification keys via operator PKI, JWK sets, or DID documents; enforce signature verification in controllers and selectors before acting on any announcement or descriptor.
-
       - Cost: Medium - Needs signing libraries, descriptor schema work, KMS integration, and client verification logic.
-
       - Impact: Prevents forged announcements, ensures provenance, and enables non‑repudiation for placement and steering decisions.
 
 
    - Mitigation for Privacy and anti‑enumeration
-
       - Aggregate and redact metrics, limit audience via RBAC and tokens, apply rate limits to discovery APIs, and use differential privacy or noise injection for telemetry exported beyond the operator domain.
-
       - Cost: Medium - Requires metric aggregation pipelines, access control systems, and policy enforcement.
-
       - Impact: Reduces profiling, commercial leakage, and mass scraping while preserving steering utility.
 
    - Mitigation for Cross‑domain descriptive search
       - Publish signed, minimal pointers or attestations from CATS into a separate indexed or federated catalog that supports descriptive queries. The catalog returns candidate IDs or attestations which clients resolve back to CATS‑announced sites under controlled access and verification.
-
       - Cost: High - Building a catalog, federation protocols, attestation formats, and access controls requires substantial engineering and governance.
-
       - Impact:  Enables DAWN‑style descriptive discovery while preserving operator control, provenance, and privacy.
 
    - Mitigation for Freshness and revocation
-
       - Include explicit validity windows in announcements and descriptors, provide status and revocation endpoints, and use push pub/sub to propagate revocations and state changes. Enforce short lifetimes for highly dynamic metrics and ephemeral offers.
-
       - Cost: Medium to High - Requires revocation/status infrastructure, pub/sub channels, and more frequent control‑plane updates.
-
       - Impact: Reduces stale placements, limits the window for compromised information, and improves correctness for time‑sensitive tasks.
 
    - Mitigation for Cross‑domain descriptive search (federation and provenance)
@@ -476,7 +467,7 @@ The following analysis is based on evaluations of the various discovery solution
       - Cost: High - Federation requires attestation formats, trust management, legal agreements, and operational coordination.
       - Impact: Preserves provenance and trust across domains and enables controlled cross‑domain discovery and placement.
 
-- overall mitigation score: **HIGH**
+- overall mitigation score: **MEDIUM TO HIGH**
 
 ## MCP
 **to be completed**
@@ -561,7 +552,7 @@ List includes: Consul, etcd, Eureka, Kubernetes Service DNS, service meshes.
       - Cost: High – Requires attestation formats, trust‑management systems, governance agreements, and operational coordination.  
       - Impact: Preserves provenance and trust across domains and enables controlled cross‑domain discovery and resolution.
 
-   - overall mitigation score: **HIGH**
+   - overall mitigation score: **MEDIUM TO HIGH**
 
 ## Search & crawling
 
@@ -581,8 +572,71 @@ List includes: Vendor app stores, plugin registries, dataset catalogs.
 
 ## Manual/configuration-based discovery
 
-**to be completed**
+- **Summary**: Manual or configuration‑based discovery refers to environments where entities, endpoints, or services are discovered through static configuration rather than automated mechanisms. Examples include manually entering IP addresses, URLs, service endpoints, credentials, or metadata into configuration files, orchestration systems, or device settings. This approach is common in tightly controlled deployments, legacy systems, embedded environments, and small‑scale networks where automation is unnecessary or undesirable.
 
+- **How it works**: Operators or administrators explicitly configure discovery parameters depending on the scenario under consideration. These parameters may include static addresses or identifiers, service endpoints or URLs, credentials or tokens, routing or workflow rules, and metadata describing capabilities or roles. Manual configuration is typically used in environments where entities are known in advance and where dynamic discovery is unnecessary or intentionally avoided. If physical or logical connectivity changes, operators must update the configuration accordingly. The resulting discovery information is embedded into static structures such as lookup tables, configuration files, orchestration manifests, or device‑level settings. Clients do not perform discovery; they simply read the configured information and act on it. 
+
+- **Security, Privacy, and DAWN suitability Considerations:**
+   
+   - Security
+      - Strengths:
+         - Manual configuration avoids many attack surfaces associated with automated discovery protocols.
+         - Operators maintain full control over what is reachable, reducing exposure to unsolicited or untrusted entities.
+         - Static configurations can be protected through existing access‑control and configuration‑management systems.
+
+      - Weaknesses:
+         - Stale or incorrect configurations can persist indefinitely and misroute traffic or expose sensitive endpoints.
+         - Manual errors can introduce vulnerabilities, misconfigurations, or unintended trust relationships.
+         - No built‑in authentication, integrity, or provenance for configured entries; trust is entirely operator‑dependent.
+         - Does not scale to dynamic or adversarial environments where entities appear, disappear, or change frequently.
+
+   - Privacy
+      - Risks:
+         - Static lists can leak operational structure if shared or replicated across domains.
+         - Manual distribution of configuration files increases the risk of accidental disclosure.
+         - Entrusting configuration of private information into the hands of operators reduces control over information leakage.
+      - Controls:
+         - Strong access control on configuration repositories and deployment pipelines.
+         - Regular audits to remove stale entries and sensitive metadata.
+         - Encryption of configuration files at rest and in transit and while updating configurations.
+   - DAWN suitability:  Minimal (static and non‑scalable)
+      - Manual discovery is suitable only for small, static, operator‑controlled environments where entities are known in advance.
+      - It does not support DAWN‑style public, multi‑entity, descriptive discovery.
+      - It lacks semantic search, capability matching, cross‑domain interoperability, and dynamic updates.
+      - It assumes a trusted operator domain and does not provide mechanisms for discovery across administrative boundaries.
+      - It lacks flexibility, ease of operation, and is costly to maintain information freshness.
+      - Manual discovery may serve as a fallback or bootstrap mechanism to discovery substrate componenets and fixed elements, but it cannot function as a general discovery mechanism for DAWN to provide its intended discovery services.
+
+   - Security, Privacy, and DAWN suitability score: **1/3**
+      - Manual or configuration‑based discovery provides predictable, operator‑controlled behavior, but it lacks scalability, interoperability, and dynamic adaptability. It offers minimal built‑in security or privacy protections and does not support DAWN‑style multi‑entity as it is often used within small networks, lacks descriptive and/or cross‑domain discovery. It is suitable only for small, static, trusted environments and cannot serve as a general discovery mechanism for DAWN.
+
+- **Mitigations grouped by goal**
+   - Mitigations for Descriptor hosting and integrity
+      - Mitigation: Requires signed configuration bundles or signed metadata files. Store verification keys in operator PKI or configuration‑management systems, and enforce signature verification before applying any configuration.
+      - Cost: Medium - Requires signing tools, key‑management integration, and validation logic in deployment pipelines.
+      - Impact: Prevents tampering, ensures provenance, and reduces the risk of misconfiguration due to unauthorized edits.
+
+   - Mitigation for Privacy and anti‑enumeration
+      - Mitigation: Redact sensitive metadata, apply RBAC to configuration repositories, enforce least‑privilege access, and avoid distributing full topology or endpoint lists to unnecessary components.
+      - Cost: Medium - Requires access‑control systems, audit processes, and policy enforcement.
+      - Impact: Reduces leakage of internal structure and prevents unauthorized enumeration of services.
+
+   - Mitigation for Cross‑domain descriptive search
+     - Mitigation: Do not rely on manual configuration for cross‑domain discovery. Instead, publish minimal signed pointers or references into a catalog that supports descriptive queries. Manual entries should only reference catalog endpoints, not full service lists.
+     - Cost: High - Requires catalog infrastructure, attestation formats, and federation rules.
+     - Impact: Enables DAWN‑style discovery while keeping manual configuration limited to trusted bootstrap information.
+
+   - Mitigation for Freshness and revocation
+      - Mitigation: Include explicit validity periods in configuration bundles, require periodic refresh, and use automated alerts when configurations become stale. Provide revocation channels for compromised or outdated entries.
+      - Cost: Medium to High - Requires monitoring, versioning, and revocation infrastructure.
+      - Impact: Reduces stale configurations, improves correctness, and limits exposure to outdated or compromised information.
+
+   - Mitigation for Cross‑domain descriptive search (federation and provenance)
+      - Mitigation: Exchange signed attestations rather than raw configuration data between operators. Require provenance chains and trust anchors for each federation member, and enforce explicit consent for sharing configuration‑derived metadata.
+      - Cost: High - Requires attestation formats, trust‑management systems, and governance agreements.
+      - Impact: Preserves provenance and trust across domains and enables controlled cross‑domain discovery.
+
+   - Overall mitigation score: **MEDIUM TO HIGH**
 # Security Considerations
 
 TBC
@@ -595,9 +649,6 @@ TBC
 
    This document makes no requests of IANA.
 
-# Potential topics for the use case document.
-
-TBC
 
 # Acknowledgements
 
