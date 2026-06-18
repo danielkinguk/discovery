@@ -3,8 +3,12 @@
 This is a rough list of many work items that may be considered relevant to DAWN.
 
 It is categorised on two axes: 
-   - IETF I-D exists or not
+   - IETF I-D exists or work is external to the IETF
    - DNS-based or not
+
+Note that there can be some overlap, e.g.:
+   - Work is mainly in an external body, but there is an I-D that describes all or part of it
+   - Work assumes some base discovery using DNS, but does most of the solution in a different protocol
 
 The order of presentation has no import.
 
@@ -30,6 +34,8 @@ Anyone may submit an I-D to the IETF. These I-Ds are not endorsed by the IETF an
         - https://datatracker.ietf.org/doc/draft-noss-jeftovic-groundmark-core/
    - Discovery of Model Context Protocol Servers via DNS TXT Records
         - https://datatracker.ietf.org/doc/draft-morrison-mcp-dns-discovery/
+   - Agent Transfer Protocol (ATP)
+        - https://datatracker.ietf.org/doc/draft-li-atp/
    
 ### Non-DNS solutions in Internet-Drafts
 
@@ -56,9 +62,18 @@ Anyone may submit an I-D to the IETF. These I-Ds are not endorsed by the IETF an
    - SD Agent: Selective Disclosure for Agent Discovery and Identity Management
         - https://datatracker.ietf.org/doc/draft-nandakumar-agent-sd-jwt/
           
-## Proposed solutions not (yet) in Internet-Drafts
+## Proposed solutions external to the IETF
 
-### DNS-based solutions not in Internet-Drafts
+### DNS-based solutions external to the IETF
 
-### Non-DNS solutions not in Internet-Drafts
+   - Agent-to-Agent protocol (A2A) from Google
+        - https://a2a-protocol.org/
+   - MCP from the Linux Foundation
+        - https://modelcontextprotocol.io/
+   - AT protocol (ATPROTO) from Bluesky
+        - https://atproto.com/
 
+### Non-DNS solutions external to the IETF
+
+   - AGNTCY from Cisco
+        - https://agntcy.org/
