@@ -28,91 +28,37 @@ publish discovery information.
 
 ## Scope
 
-Discovery in the DAWN context is as simple as requesting, "Find me an
-entity to talk to." However, there is a lot of detail underlying this
-request including:
-- What functionality do we want an entity to provide for us?
-- What mechanisms exist to facilitate communication with that entity?
-- Is the information about the entity trustable?
+Discovery in the DAWN context is limited to being able to "find me an
+entity to talk to" within a collaborating organization.  This includes
+communication about the following attributes:
 
-The DAWN working group seeks to resolve the following questions as part
-of resolving the discussions of entity discovery:
-- How is an entity classified with respect to its function, origin,
-  location, and type?
-- How can an entity be communicated with by another entity?
-- What is the common base set of information that is held for all
-  entity types?
-- How is the information extensible on a per class-of-entity basis?
-- Can discovery be solved in different ways (centralised, partially
-  distributed - i.e., with delegation - or fully distributed) with
-  proper consideration of scaling, consolidation, regulation, etc.)?
+- What is the entity's type and classification?
+- What functionality does a discovered entity provide?
+- What communication and security protocols does the entity support?
+- What is the minimum requirements for information exchange?
+- How is the interoperable information schema extensible?
+- What attestation evidence and results are available, if any, for the entity? 
 
-The DAWN working group will:
+Where possible, any solutions work will be built in a modular way
+using existing IETF protocols that provide support for any needed
+communication, authentication and privacy. The WG will consider the
+DNS as a likely initial protocol upon which to build a discovery
+protocol.
 
-- Consider discovery scopes to describe the domain over which discovery
-  is performed. Discovery scope may be specified in one or more dimensions,
-  including but not limited to administrative identifiers, trust domains,
-  topological or distance metrics, geographic or jurisdictional boundaries,
-  and temporal constraints. Discovery scope bounds the search space and
-  supports scalability, relevance, and policy enforcement.
-
-- Specify the mandatory base information common across all entity types.
-
-- Examine the distinction between static or semi-static information, and
-  more dynamic information that could be changing frequently and which is
-  likely to cause scaling and stability issues for a discovery system.
-
-- Examine all types of entity and their special needs with respect to
-  discovery, and contrast them with state-of-the-art discovery tools
-  and mechanisms.
-  
-- Consider the specific applicability to the discovery of AI agents, but
-  will also seek to generalise discovery to the broader context of entities.
-  The aim will be to derive general solutions that are applicable across
-  all classes of entity (current and future) allowing for future use cases.
-
-- Ensure that security is central to the discovery architecture and solution such
-  that security information that is registered for an entity can be
-  referenced or published in discovery mechanisms, so that discovered
-  information can be attested, so that the discovery relationship can
-  be authenticated, and so that discovered information can be kept
-  private in flight.
-
-Where possible, any solutions work will be built in a modular way using existing
-IETF protocols. However, no protocol solution choices leading to the adoption of
-solutions documents addressing the DAWN problem space will be made until the
-requirements (functional and behavioral) have been agreed, and then this will
-require an analysis of the applicability of existing protocols and what gaps need
-to be filled. 
+Although initially focused on discovery of AI agents, the WG is
+expected to produce results that are general and reusable within other
+discovery contexts whenever possible.
 
 ## Out of Scope
 
-There are functional layers that surround and interact with discovery:
+Specifically out of scope of the DAWN WG, at least during its initial
+launch, includes:
 
-- There is a functional layer before discovery that allows entities to
-  register themselves for discovery. This element of the problem
-  space is not in scope for DAWN.
-
-- There is a functional layer after discovery that determines which 
-  instance of a class of entity should be used. This process may consider
-  location, reachability, load, version, and operational status. Those
-  pieces of information have to be available for consideration, but they
-  do not form part of the core discovery function: they may be implemented
-  by a discovered intermediary aggregation point or broker or learned
-  through direct communication with entities in the form of capability
-  exchange and negotiation.. This element of the problem space is not in
-  scope for DAWN.
-
-Issues of the larger architecture of how entities select each other and
-how they communicate are out of scope. How agents register and authenticate
-their registration are also out of scope.
-
-Additionally out of scope for DAWN are:
-- Design, definition, and governance of the naming systems for entities.
-- Trust, authentication, and authorisation of the entities in their entity-to-entity communications.
-- Capability exchange and negotiation between entities.
-- Establishing the relationship between entities and their local gateways.
-- Entity-to-entity communication.
+- Entity registration within discovery servers
+- Discovery of discovery servers.
+- Bulk transfer of larger capabilities beyond the minimal
+  establishment requirements.
+- All communication between entities beyond the initial discovery process.
 
 ## Deliverables
 
@@ -156,10 +102,6 @@ extensions to existing an IETF protocol should be done in coordination with
 the working group that owns the protocol. While use-case-specific solutions
 or solution extensions will be considered, generalised solutions that are
 applicable to the broad problem-space will be preferred. 
-
-Although initially focused on discovery of AI agents, the WG is
-expected to produce results that are reusable within other contexts
-whenever possible.
 
 ## Coordination with Other Working Groups and Organisations
 
