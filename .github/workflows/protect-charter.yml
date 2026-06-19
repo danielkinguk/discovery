@@ -1,0 +1,27 @@
+name: Protect charter file
+
+on:
+  pull_request:
+    paths:
+      - 'charter/dawn-charter-01.md'
+    types: [opened, synchronize, reopened, ready_for_review, edited]
+
+jobs:
+  restrict-charter-edits:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - name: Allow only designated authors for charter PRs
+        env:
+          AUTHOR: ${{ github.actor }}
+          ALLOWED: "AdrianFarrel hardaker danielkinguk"
+        run: |
+          echo "PR author: $AUTHOR"
+          if [[ " $ALLOWED " == *" $AUTHOR "* ]]; then
+            echo "✅ Author is allowed to modify charter file."
+            exit 0
+          fi
+          echo "❌ Only AdrianFarrel, hardaker, or danielkinguk may submit PRs that modify charter/dawn-charter-01.md"
+          exit 1
