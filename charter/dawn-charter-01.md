@@ -60,63 +60,31 @@ launch, includes:
   establishment requirements.
 - All communication between entities beyond the initial discovery process.
 
+Future DAWN or other WG charters may consider taking on these tasks.
+
 ## Deliverables
 
-The DAWN working group will work on the following deliverables:
+The DAWN working group will work on the following deliverables,
+roughly in this order:
 
-- Terminology: A short document that sets out agreed common terms for use in the
-  other DAWN documents.
+- Terminology: A document defining common DAWN terminology for use in
+  the other DAWN documents (Informational).
 
-- Problem Statement: An explanation of the discovery problem being addressed by DAWN and
-  the classes of entity that DAWN is attempting to serve.
+- Discovery Architecture: A document describing the problem space,
+  requirements and the resulting DAWN architecture (Informational).
 
-- Use Cases: This document will not attempt to describe individual use cases in
-  detail, but will develop broad categories of use case that may help
-  steer solution development to address general problems rather than
-  specific niches.
+- Use Cases: A document describing broad use case categories
+  (Optional, Informational).
 
-- Requirements: The requirements that a discovery solution MUST/SHOULD/MAY address.
-
-- Gap Analysis: A gap analysis / applicability statement to cover existing protocols
-  with reference to the requirements set out in the requirements document.
-
-- Information Model: A structured information model describing what can be discovered for
-  generic entities across all categories of use case. This will be
-  augmentable to include discoverable properties for particular classes
-  of entity or categories of use case. Other optional object properties 
-  will remain the responsibility of external forums and vendors, so the 
-  information model must be augmentable.
-
-- Security and Policy Architecture: An architecture document that describes how security and policy
-  enforcement can be integrated into the discovery system.
-
-The working group may also work on a broader architecture and a protocol framework overview that show how
-discovery fits into an ecosystem (including registration, instance selection,
-and entity-to-entity communication), but it is expected that this work will
-be coordinated with other relevant working groups.
-
-It is anticipated that the DAWN working group will also develop protocol
-solutions documents. However, this work should not progress faster than 
-the requirements and gap analysis documents listed above, and that 
-extensions to existing an IETF protocol should be done in coordination with
-the working group that owns the protocol. While use-case-specific solutions
-or solution extensions will be considered, generalised solutions that are
-applicable to the broad problem-space will be preferred. 
+- Protocol: A specification defining the protocol developed within the
+  DAWN WG for communicating entity discovery and capability information.
 
 ## Coordination with Other Working Groups and Organisations
 
-This work is closely related to work done in other working groups and
-organisations. The DAWN working group will seek to take input from other
-experts while attempting to bring them together to coordinate on this
-issue. This should include ITU-T SG17, 3GPP, and the Linux Foundation.
-
-Within the IETF, DAWN will coordinate with WIMSE for consideration of
-"workloads", CORE for consideration of "endpoints", CATS for discovery of
-computing services, and any working group established to consider AI
-agent-to-agent communications. Additionally, the DAWN working group will
-only work on extensions to an IETF protocol if the working group responsible
-for the protocol agrees that the work should be done in DAWN.
+The DAWN working group will seek to coordinate with other WGs and
+external standards bodies as necessary.  These may include WISME,
+CORE, CATS, ITU-T SG17, 3GPP, and the Linux Foundation.
 
 ## Milestones
 
-TBD nearer the time of a BoF
+TBD
