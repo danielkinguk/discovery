@@ -3,7 +3,7 @@
 This is a working list of solution proposals and related projects that may be
 relevant to DAWN.
 
-Last reviewed: 2026-06-19.
+Last reviewed: 2026-06-19 23:14 BST.
 
 The list is intended to show the breadth of current activity and to help DAWN
 participants track potentially relevant work. Inclusion is descriptive only. It
