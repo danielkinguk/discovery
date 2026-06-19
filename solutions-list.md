@@ -1,14 +1,26 @@
 # List of Solutions Relevant to DAWN
 
-This is a rough list of many work items that may be considered relevant to DAWN.
+This is a working list of solution proposals and related projects that may be
+relevant to DAWN.
 
-It is categorised on two axes: 
+Last reviewed: 2026-06-19.
+
+The list is intended to show the breadth of current activity and to help DAWN
+participants track potentially relevant work. Inclusion is descriptive only. It
+does not imply endorsement by the IETF, by any DAWN work effort, or by this
+repository.
+
+It is categorised on two axes:
    - IETF I-D exists or work is external to the IETF
    - DNS-based or not
 
 Note that there can be some overlap, e.g.:
    - Work is mainly in an external body, but there is an I-D that describes all or part of it
    - Work assumes some base discovery using DNS, but does most of the solution in a different protocol
+   - Work may address functions adjacent to discovery, such as registration, identity, naming, runtime communication, directories, retrieval, or trust resolution
+
+Current Internet-Draft versions, expiry dates, and status should be checked on
+the Datatracker before citation.
 
 The order of presentation has no import.
 
@@ -20,7 +32,7 @@ Anyone may submit an I-D to the IETF. These I-Ds are not endorsed by the IETF an
 
    - DNS for AI Discovery (DNS-AID)
         - https://datatracker.ietf.org/doc/draft-mozleywilliams-dnsop-dnsaid/
-   - Agent Identity and Discovery (AID) 
+   - Agent Identity and Discovery (AID)
         - https://datatracker.ietf.org/doc/draft-nemethi-aid-agent-identity-discovery
    - DNS-Native AI Agent Naming and Resolution
         - https://datatracker.ietf.org/doc/draft-cui-dns-native-agent-naming-resolution
