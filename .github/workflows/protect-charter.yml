@@ -16,7 +16,7 @@ jobs:
       - name: Allow only designated authors for charter PRs
         env:
           AUTHOR: ${{ github.actor }}
-          ALLOWED: "AdrianFarrel hardaker danielkinguk"
+          ALLOWED: "AdrianFarrel hardaker"
         run: |
           echo "PR author: $AUTHOR"
           if [[ " $ALLOWED " == *" $AUTHOR "* ]]; then
