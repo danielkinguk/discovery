@@ -2,57 +2,29 @@
 
 Many distributed processing environments depend on the interaction 
 between components that do not have pre-configured capability, 
-location, or reachability relationships. In order for these systems
+location, or reachability relationships. In order for these components
 to operate correctly, the components must be able to discover each 
 other. For complete generality, we call these components "entities".
 Entities may be tasks, workloads, endpoints, services, AI agents, etc.
 
-For example, an AI agent may need to find another agent with specific
-capabilities, a workload orchestrator may need to locate compute
-resources in a particular jurisdiction, or a service consumer may need
-to discover providers that support a required protocol version.
+The principle use case of this working group will be focusing on how
+an AI agent can find another AI agent with specific capabilities, or
+how a workload orchestrator can to locate compute resources in a
+particular jurisdiction, or how a service consumer can discover
+providers that support a required protocol version.  In each case, an
+entity needs knowledge of any other entity's specific properties
+before proceeding: what type of entity are they, what services do they
+offer, what communication protocols options are available, and what
+information schemes they support.  Additional metadata may be
+communicated as well, such as how many tokens it can support, whether
+it is reactive or proactive, whether it depends on a particular model,
+and what data it needs as input
 
-In each case, an entity needs knowledge of other entities before 
-interaction can proceed: what they are, what they offer, what options
-they offer for entity-to-entity communication, and whether
-they can be trusted. Such knowledge could be obtained through static
-configuration, but this approach is impractical at scale and across
-organisational boundaries. Automated discovery mechanisms are needed.
-
-Up to now, where automated discovery exists, it is typically handled
-through proprietary directories, platform-specific mechanisms, or
-protocols designed for specific solution spaces. Such approaches do 
-not scale across organisational boundaries and create fragmented
-ecosystems where entities cannot find other entities managed by
-other organisations.
-
-Further, existing discovery mechanisms, particularly those used for service
-or endpoint discovery, provide only limited information such as basic
-identity and reachability. In general, more advanced entity discovery use
-cases may require discovery of richer descriptive properties such as the
-tasks an entity is able to undertake, supported interaction modes and protocols,
-lifecycle properties such as synchronous or asynchronous operation, and context
-requirements. For example,
-when discovering an AI agent, it will may be necessary to discover what functional
-goals is delivers, what protocol to use to communicate with it, how many tokens
-it can support, whether it is reactive or proactive, whether it depends on a 
-particular model, and what data it needs as input.
-
-An interoperable and generic discovery mechanism is needed that builds
-on existing protocols and tools, benefits from established trust models,
-supports proven delegation and federation architectures, and allows
-organisations to independently publish discovery information. Such a mechanism
-may need to be bootstrapped from key configuration parameters (such as what 
-type of entity to search for) and relies on a common understanding of the data
-models used to publish discoverable information.
-
-Providing a decentralised and interoperable discovery mechanism is 
-essential to protecting the openness of the Internet and protecting
-against dominance by a single or a small number of providers. 
-
-The Discovery of Agents, Workloads, and Named entities (DAWN) working
-group is chartered to develop requirements, information models, and
-protocol solutions for entity discovery.
+To support these goals, an interoperable and generic discovery
+mechanism is needed that builds on existing protocols and tools,
+benefits from established trust models, supports proven delegation and
+federation architectures, and allows organisations to independently
+publish discovery information.
 
 ## Scope
 
@@ -184,6 +156,10 @@ extensions to existing an IETF protocol should be done in coordination with
 the working group that owns the protocol. While use-case-specific solutions
 or solution extensions will be considered, generalised solutions that are
 applicable to the broad problem-space will be preferred. 
+
+Although initially focused on discovery of AI agents, the WG is
+expected to produce results that are reusable within other contexts
+whenever possible.
 
 ## Coordination with Other Working Groups and Organisations
 
