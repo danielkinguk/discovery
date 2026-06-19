@@ -1,7 +1,6 @@
 # List of Solutions Relevant to DAWN
 
-This is a working list of solution proposals and related projects that may be
-relevant to DAWN.
+This is a working list of solution proposals and related projects that may be relevant to DAWN.
 
 Last reviewed: 2026-06-19 23:14 BST.
 
