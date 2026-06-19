@@ -3,6 +3,8 @@
 This is a working list of solution proposals and related projects that may be
 relevant to DAWN.
 
+Last reviewed: 2026-06-19.
+
 The list is intended to show the breadth of current activity and to help DAWN
 participants track potentially relevant work. Inclusion is descriptive only. It
 does not imply endorsement by the IETF, by any DAWN work effort, or by this
@@ -85,5 +87,8 @@ Anyone may submit an I-D to the IETF. These I-Ds are not endorsed by the IETF an
 
 ### Non-DNS solutions external to the IETF
 
+   - Agentic Resource Discovery (ARD) from Google/ARDS project
+        - https://agenticresourcediscovery.org/
+        - https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/
    - AGNTCY from Cisco
         - https://agntcy.org/
