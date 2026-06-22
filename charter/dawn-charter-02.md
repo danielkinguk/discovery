@@ -45,9 +45,10 @@ communication, authentication and privacy. The WG will consider the
 DNS as a likely initial protocol upon which to build a discovery
 protocol.
 
-Although initially focused on discovery of AI agents, the WG is
-expected to produce results that are general and reusable within other
-discovery contexts whenever possible.
+Although initially focused on discovery of AI agents, agentic tools,
+and agentic skills, the WG is expected to produce results that are
+general and reusable within other discovery contexts whenever
+possible.
 
 ## Out of Scope
 
