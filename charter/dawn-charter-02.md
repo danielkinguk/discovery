@@ -83,7 +83,7 @@ roughly in this order:
 ## Coordination with Other Working Groups and Organisations
 
 The DAWN working group will seek to coordinate with other WGs and
-external standards bodies as necessary.  These may include WISME,
+external standards bodies as necessary.  These may include WIMSE,
 CORE, CATS, ITU-T SG17, 3GPP, and the Linux Foundation.
 
 ## Milestones
