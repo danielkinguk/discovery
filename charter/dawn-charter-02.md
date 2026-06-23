@@ -41,10 +41,10 @@ communication about the following attributes:
 
 Where possible, any solutions work will be built in a modular way
 using existing IETF protocols that provide support for any needed
-communication, authentication and privacy. The WG will consider the
-DNS as a likely initial protocol upon which to build a discovery
-protocol. Alternative existing IETF protocols that support discovery
-may also be considered depending on the use case.
+communication, authentication and privacy. The WG will consider existing 
+solutions under IETF or other organizations (e.g., Linux foundation) that
+address DAWN problem space as initial starting point upon which discovery 
+protocols would be built.  
 
 Although initially focused on discovery of AI agents, agentic tools,
 and agentic skills, the WG is
@@ -85,7 +85,7 @@ roughly in this order:
 
 The DAWN working group will seek to coordinate with other WGs and
 external standards bodies as necessary.  These may include WIMSE,
-CORE, CATS, DNSOP, ITU-T SG17, 3GPP, and the Linux Foundation.
+CORE, CATS, DNS-related WGs, ITU-T SG17, 3GPP, and the Linux Foundation.
 
 ## Milestones
 
