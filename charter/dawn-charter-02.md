@@ -42,9 +42,9 @@ communication about the following attributes:
 Where possible, any solutions work will be built in a modular way
 using existing IETF protocols that provide support for any needed
 communication, authentication and privacy. The WG will consider existing 
-solutions under IETF or other organizations (e.g., Linux foundation) that
-address DAWN problem space as initial starting point upon which discovery 
-protocols would be built.  An initial candidate protocol is potentially the DNS.
+IETF solutions, such as DNS, or solutions porposed under other organizations
+(e.g., Linux foundation) that address DAWN problem space as initial starting 
+point upon which discovery protocols would be built. 
 
 Although initially focused on discovery of AI agents, agentic tools,
 and agentic skills, the WG is
