@@ -47,6 +47,8 @@ Anyone may submit an I-D to the IETF. These I-Ds are not endorsed by the IETF an
         - https://datatracker.ietf.org/doc/draft-morrison-mcp-dns-discovery/
    - Agent Transfer Protocol (ATP)
         - https://datatracker.ietf.org/doc/draft-li-atp/
+   - Agent Name Service (ANS)
+        - https://datatracker.ietf.org/doc/draft-narajala-courtney-ansv2/
    
 ### Non-DNS solutions in Internet-Drafts
 
