@@ -49,6 +49,8 @@ Anyone may submit an I-D to the IETF. These I-Ds are not endorsed by the IETF an
         - https://datatracker.ietf.org/doc/draft-li-atp/
    - DNS-Anchored Durable Identity for AI Agents (DNSid)
         - https://datatracker.ietf.org/doc/draft-ihsanullah-dnsid/
+   - Action Reference: A Deterministic Identifier for Agent Actions
+        - https://datatracker.ietf.org/doc/draft-etcheverry-action-ref/
    
 ### Non-DNS solutions in Internet-Drafts
 
