@@ -29,7 +29,7 @@ publish discovery information.
 ## Scope
 
 Discovery in the DAWN context is limited to being able to "find me an
-entity to talk to" within a collaborating organization.  This includes
+entity to talk to" within collaborating organizations.  This includes
 communication about the following attributes:
 
 - What is the entity's type and classification?
@@ -45,7 +45,8 @@ communication, authentication and privacy. The WG will consider the
 DNS as a likely initial protocol upon which to build a discovery
 protocol.
 
-Although initially focused on discovery of AI agents, the WG is
+Although initially focused on discovery of AI agents, agentic tools,
+and agentic skills, the WG is
 expected to produce results that are general and reusable within other
 discovery contexts whenever possible.
 
@@ -82,7 +83,7 @@ roughly in this order:
 ## Coordination with Other Working Groups and Organisations
 
 The DAWN working group will seek to coordinate with other WGs and
-external standards bodies as necessary.  These may include WISME,
+external standards bodies as necessary.  These may include WIMSE,
 CORE, CATS, ITU-T SG17, 3GPP, and the Linux Foundation.
 
 ## Milestones
