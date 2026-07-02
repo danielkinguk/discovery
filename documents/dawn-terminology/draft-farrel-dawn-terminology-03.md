@@ -92,6 +92,29 @@ to independently publish discovery information.
 This document defines common terminology for use in documents that discuss
 Discovery of Agents, Workloads, and Named Entities (DAWN).
 
+(: #sec-scope}
+## Discovery Scope
+
+It will be helpful to understand the broader discovery ecosystem. Information must 
+be registered to the discovery system, may be managed and updated, can then be 
+discovered by other entities. But the discoverable information must be balanced as
+a compromise between too much detail which will overload the discovery process, and
+too little information which would make discovery suboptimal.
+
+Additional detailed information may be exchanged between entities and this part of the
+process may also include negotiaton of capabilities. 
+
+In the end, this means that the "discovery ecosystem" can be broken down into at least the
+following functions:
+
+- Registration and management of an entity to be discovered.
+- Search based on a formalised encoding of search criteria.
+- Discovery lookup based on a minimum viable data set (protocol, identifying properties) with return of a minimum set of discoverable information (including reachability).
+- Reading of additional information.
+- Capability exchange and negotiation.
+
+From an implementation perspective, some of these functional components might be included within the same module, and it is possible that some elements might be achieved using the same protocols. However, for the sake of this document and the DAWN work, only the discovery lookup is in scope.
+
 {: #sec-terms}
 # Terminology
 
@@ -161,17 +184,17 @@ Capability Card:
 
 Capability Exposure:
 : The processes by which entities expose their capabilities. Such exposure
-  may be part of the registration or discovery processes, or an achieved
-  through and interaction with an entity. (See also, Capability Exchange.)
+  may be part of the registration or management of discovery information prior to the discovery processes, or achieved
+  through an interaction with an entity. (See also, Capability Exchange.)
 
 Capability Exchange:
-: The processes by which entities exchange details of what they can do,
+: The processes by which entities exchange details between each other of what they can do,
   dynamic status information, and which particular features or functions
   they wish to engage.
   
-: Capability exposure, exchange, and negotiation are out of
-  scope for DAWN, but will form an essential part of selection and
-  operation of agents.
+: Capability exposure, exchange, and negotiation are out of scope for DAWN, but
+  will form an essential part of the entity ecosystem enabling the selection and
+  operation of entities.
 
 Discoverable Object:
 : An information object that is discoverable and includes information that
@@ -199,8 +222,10 @@ Discovery:
 
 Discovery Information:
 : The information returned by a discovery mechanism that allows the 
-   discovering entity to decide whether later interaction is possible
-   and desireable.
+  discovering entity to decide whether later interaction is possible
+  and desireable. This should be considered in terms of the Minimum 
+  Discoverable Information (q.v.) and compared with the broader set of
+  information that forms part of the Capabilities Exchange (q.v.).
 
 Discovery Mechanism:
 : A protocol, system, or method used to perform discovery.  Examples
@@ -208,7 +233,12 @@ Discovery Mechanism:
   distributed registries.
 
 Discovery Scope:
-: The explicit domain over which discovery is performed. Discovery scope may be specified in one or more dimensions, including but not limited to administrative identifiers (e.g., DNS domain names, AS numbers), trust domains, topological or distance metrics, geographic or jurisdictional boundaries, and temporal constraints. Discovery scope bounds the search space and supports scalability, relevance, and policy enforcement.
+: The explicit domain over which discovery is performed. Discovery scope may be 
+  specified in one or more dimensions, including but not limited to administrative
+  identifiers (e.g., DNS domain names, AS numbers), trust domains, topological or
+  distance metrics, geographic or jurisdictional boundaries, and temporal
+  constraints. Discovery scope bounds the search space and supports scalability,
+  relevance, and policy enforcement.
 
 Entity:
 : A system component that communicates with other entities in a
