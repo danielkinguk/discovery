@@ -325,7 +325,7 @@ users, other entities, or services, along with information such as
 required skills, priority, or dependencies. Since entities are aware of
 their own capabilities, they can match their skill sets against
 advertised needs and proactively apply for or claim the opportunity to
-fulfull the need for which they are suitable. DAWN provides mechanisms
+fulfill the need for which they are suitable. DAWN provides mechanisms
 to make needs (e.g., Tasks) discoverable, enabling entities to query,
 filter, and select tasks efficiently, supporting autonomous
 orchestration, dynamic workflow formation, and load distribution across
@@ -443,7 +443,7 @@ developed. Primary dimensions include:
 - Cross-domain Visibility: The level of access control, entity discovery
   permissions, amount of information exposed, and selective publication
   of information are aspects that need to be considered when operating
-  in multi-administrative domain environements.
+  in multi-administrative domain environments.
 
 For example: An AI agent's capabilities may be discoverable across
 domains to enable collaboration, but the backend computing services that
@@ -534,7 +534,7 @@ information sharing while ensuring administrative domain
 interoperability without exposing sensitive internal details is
 potentially desirable.
 
-## Discovery and Dynamic Attributes in Discoverable Objects {#sec-disco-dyanmic}
+## Discovery and Dynamic Attributes in Discoverable Objects {#sec-disco-dynamic}
 
 Entities whose discoverable objects contain dynamic attributes introduce
 distinct challenges for discovery. Dynamic attributes such as location
@@ -658,7 +658,7 @@ registry. Each organisation must be able to have governance over its
 published discoverable objects associated with its entities', enabling
 features such as independently adding new entities, updating information
 of currently published entities, removing discoverable objects of its
-pubished entities, monitoring status of published entities, retriving
+published entities, monitoring status of published entities, retrieving
 utility statistics...etc.
 
 ## Static Versus Dynamic Properties {#sec-static}
@@ -715,7 +715,7 @@ to determine:
 - Why a discovery query succeeded or failed.
 - Which attributes influenced discovery results.
 - Whether stale, inconsistent, or conflicting information exists.
-- What causes delay in disocvery responses.
+- What causes delay in discovery responses.
 
 Discovery information can change over time as entities are created,
 modified, relocated, become unavailable, or are removed. This may cause
@@ -729,7 +729,7 @@ tracking information such as:
 - Propagation delays.
 - Historical state changes for audit and troubleshooting purposes.
 
-Operators should be ableto monitor the freshness and propagation of such
+Operators should be able to monitor the freshness and propagation of such
 information while balancing update frequency against operational
 overhead.
 
@@ -800,17 +800,17 @@ This document makes no requests of IANA.
 - Capability-Oriented Discovery, where an entity needs to discover
   another entity that can provide a function or capability.
 - Chained Discovery, where a task requires the discovery of multiple
-  entites either in pararell or in series.
+  entities either in parallel or in series.
 - Resource-Oriented Discovery, where discovery identifies resources
   needed such as agents, workloads, compute, functions, applications, or
   users, to fulfill a given task.
-- Closed-system Discovery, where the discover mechanims runs within a
+- Closed-system Discovery, where the discover mechanisms runs within a
   bounded controlled network of entities
 - Open-system Discovery, where entities to be discovered may belong to
   different administrative domains.
-- Interactive-discovery, where the discovery mechanims require
+- Interactive-discovery, where the discovery mechanisms require
   additional rounds of interactions with the discovery query generating
-  entitiy before the discovery request can be fulfilled.
+  entity before the discovery request can be fulfilled.
 - Reversed discovery, where a discovering entity published its needs in
   the form of discoverable objects that can be discovered by entities
   looking for offering their services.
