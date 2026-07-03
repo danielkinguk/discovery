@@ -693,14 +693,25 @@ entities and capabilities. Selective visibility mechanisms are needed.
 
 # Privacy Considerations {#sec-privacy}
 
-Querying for entities may reveal the discovering entity's intentions or
-interests. Discovery should minimise information leakage through the
-query process.
+Privacy in discovering  Agents, Workloads and Named entities is 
+inherently a two-sided problem. On the one hand, the party seeking an
+entity should be able to discover providers without unnecessarily 
+revealing its identity, interests, or intent. On the other hand, 
+the entity offering a service, a workload, etc., should be 
+able to control what information about its capabilities, 
+existence, and availability is exposed to potential discoverers.
 
-Published entity properties, such as skills, capabilities, and
-organisational affiliations, may be sensitive. Entities and their
-operators should control the granularity and audience of published
-information.
+In line with guidelines provided in {{?RFC6973}}, discovery 
+architecture and related protocols should treat privacy as 
+a mutual property rather than a client-only concern. Both 
+discoverers and discovered entities are potential sources 
+and targets of information leakage, requiring mechanisms 
+that minimize data exposure, limit observability, and 
+support policy-based selective disclosure on both sides.
+
+Further discussion and analysis about privacy considerations 
+in the context of DAWN can be found in 
+{{?I-D.iannone-dawn-privacy-considerations}}.
 
 # Operational Consideration {#sec-opcon}
 
