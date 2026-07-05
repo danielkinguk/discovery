@@ -8,6 +8,7 @@ docname: draft-farrel-dawn-terminology-03
 workgroup:
 category: info
 ipr: trust200902
+stream: IETF
 
 stand_alone: yes
 pi: [toc, tocompact, tocindent, sortrefs, symrefs, compact]
@@ -92,7 +93,7 @@ to independently publish discovery information.
 This document defines common terminology for use in documents that discuss
 Discovery of Agents, Workloads, and Named Entities (DAWN).
 
-(: #sec-scope}
+{: #sec-scope}
 ## Discovery Scope
 
 It will be helpful to understand the broader discovery ecosystem. Information must 
