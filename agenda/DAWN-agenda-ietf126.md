@@ -31,12 +31,9 @@ BoF Meeting at IETF-126, Vienna, Austria
            - https://datatracker.ietf.org/doc/draft-king-dawn-requirements/
       - Time: 10 minutes (50/120)
 
-5. Proposed solutions to date overview
-      - Potential presenter: Chairs
-      - Content: Quick overview of known potential starting drafts
-      - Reference:
-           - https://datatracker.ietf.org/doc/draft-moussa-dawn-gap-analysis/
-           - https://github.com/danielkinguk/discovery/blob/main/solutions-list.md
+5. What the Community Needs to Decide
+      - Presenter: Chairs
+      - Content: High-Level Questions that Need to be Resolved
       - Time: 10 minutes (60/120)
 
 6. Charter and WG Scope Discussion
