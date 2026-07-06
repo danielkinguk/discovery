@@ -55,7 +55,9 @@ Anyone may submit an I-D to the IETF. These I-Ds are not endorsed by the IETF an
         - https://datatracker.ietf.org/doc/draft-etcheverry-action-ref/
    - AgIS: An Agent Identity System for DNS-Backed Verification of AI and Software Agents
         - https://datatracker.ietf.org/doc/draft-ayoub-agis-agent-identity-system/
-   
+   - DNS-based Entity-Level Discovery and End-to-End Connection for AI Agents
+        - https://datatracker.ietf.org/doc/draft-ni-agent-entity-discovery/
+          
 ### Non-DNS solutions in Internet-Drafts
 
    - Agent Registration and Discovery Protocol (ARDP)
