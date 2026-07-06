@@ -1,6 +1,4 @@
-# AGENDA
-
-Discovery of Agents, Workloads, and Named entities (DAWN)
+# Discovery of Agents, Workloads, and Named entities (DAWN)
 
 BoF Meeting at IETF-126, Vienna, Austria
 * Tuesday, 21 July 2026
@@ -15,11 +13,14 @@ Chairs
 AD
 * [evyncke@cisco.com]Eric Vyncke
 
-Logistics
+## Logistics
+
 * Materials: [https://datatracker.ietf.org/meeting/126/session/dawn](https://datatracker.ietf.org/meeting/126/session/dawn)
 * Note taking: [https://notes.ietf.org/notes-ietf-126-dawn](https://notes.ietf.org/notes-ietf-126-dawn)
 * Meetecho: [https://meetings.conf.meetecho.com/ietf126/?group=dawn&short=dawn&item=1](https://meetings.conf.meetecho.com/ietf126/?group=dawn&short=dawn&item=1)
 * Zulip: [https://zulip.ietf.org/#narrow/stream/dawn](https://zulip.ietf.org/#narrow/stream/dawn)
+
+## Agenda
 
 1. Administrivia and purpose of the BoF
       - Presenters: Chairs and ADs
