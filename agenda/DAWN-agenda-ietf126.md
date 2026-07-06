@@ -1,4 +1,4 @@
-# VERY EARLY FIRST DRAFT AGENDA
+# AGENDA
 
 Discovery of Agents, Workloads, and Named entities (DAWN)
 
