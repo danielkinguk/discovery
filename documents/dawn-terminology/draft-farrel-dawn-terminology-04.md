@@ -103,7 +103,7 @@ a compromise between too much detail which will overload the discovery process, 
 too little information which would make discovery suboptimal.
 
 Additional detailed information may be exchanged between entities and this part of the
-process may also include negotiaton of capabilities. 
+process may also include negotiation of capabilities. 
 
 In the end, this means that the "discovery ecosystem" can be broken down into at least the
 following functions:
@@ -121,7 +121,7 @@ From an implementation perspective, some of these functional components might be
 
 The terms presented in this section are in alphabetic order for ease of
 reference.  For those wishing to read this document to gain an understanding
-of the DAWN scenery, if it recommended to read the terms in the order presented
+of the DAWN scenery, it is recommended to read the terms in the order presented
 in {{term-table}}.
 
 ~~~~
@@ -140,7 +140,7 @@ in {{term-table}}.
 |              | Discoverable Object              |
 |              | Minimum Discoverable Information |
 |              | Discovery Mechanism              |
-|              | Disovery Scope                   |
+|              | Discovery Scope                  |
 | Capability   |                                  |
 |              | Function                         |
 |              | Attributes                       |
@@ -168,9 +168,11 @@ Agent:
 
 Attributes:
 : The properties, features, capabilities, skills, etc., that an entity
-  possess or may have access to such as capabilities, skill type,
+  possesses or may have access to, such as skill type,
   communication language, capacity, task description, contact information,
-  ID, etc. (See also, properties.)
+  ID, etc. The attributes of an entity form a full detailed set of information
+  about the entity not all of which is necessarily available to be discovered
+  or communicated to other entities. (See also, properties and capability.)
 
 Capability:
 : A description of the functions, services, or actions that an entity
@@ -199,12 +201,12 @@ Capability Exchange:
 
 Discoverable Object:
 : An information object that is discoverable and includes information that
-  defines what an entity is, what attributes it possess, how to reach to the
+  defines what an entity is, what attributes it possesses, how to reach the
   associated entity, etc.  May be represented as a capability card.
 
 Discoverable Object Validation:
 : The process that verifies a discoverable object, ensures its compliance
-  to referenced standards, and makes it available to the discovery substrate.
+  to referenced standards, and makes it available to be discovered.
 
 Discovered Entity:
 : An entity whose properties are returned as the result of a discovery
@@ -224,9 +226,9 @@ Discovery:
 Discovery Information:
 : The information returned by a discovery mechanism that allows the 
   discovering entity to decide whether later interaction is possible
-  and desireable. This should be considered in terms of the Minimum 
+  and desirable. This should be considered in terms of the Minimum 
   Discoverable Information (q.v.) and compared with the broader set of
-  information that forms part of the Capabilities Exchange (q.v.).
+  information that forms part of the Capability Exchange (q.v.).
 
 Discovery Mechanism:
 : A protocol, system, or method used to perform discovery.  Examples
@@ -263,7 +265,7 @@ Named Entity:
 Properties:
 : The discoverable characteristics of an entity.  Properties include, but
   are not limited to, communication protocols, capability cards, location,
-  trust indicators, and operational status.
+  trust indicators, and operational status. (Compare with attributes.)
 
 Registrar:
 : An entity or system responsible for accepting and maintaining records
@@ -308,6 +310,11 @@ This document does not make any requests of IANA.
 This document only defines a set of terms.  It does not introduce any
 issues that require security consideration.
 
+However, this document does define Trust Indicator, attestation-dependent Registration,
+and scope-based policy enforcement, and so it should be clear that discovery has significant
+security and privacy implications.  It is anticipated that these will be addressed
+in the DAWN solution/architecture documents 
+
 {: #sec-privacy}
 # Privacy Considerations
 
@@ -325,5 +332,5 @@ issues that require operational consideration.
 The authors wish to acknowledge the contributions of participants in
 the DAWN discussions that shaped this document.
 
-Jim Mozley, Med Boucadair, and Chenguang Du, and Daniel King provided 
-useful reviews of this document.
+Jim Mozley, Med Boucadair, Chenguang Du, Daniel King, and Benoit Claise
+provided useful reviews of this document.
