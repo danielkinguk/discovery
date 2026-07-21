@@ -41,9 +41,15 @@ communication about the following attributes:
 
 Where possible, any solutions work will be built in a modular way
 using existing IETF protocols that provide support for any needed
-communication, authentication and privacy. The WG will consider the
-DNS as a likely initial protocol upon which to build a discovery
-protocol, while examining other solutions to learn lessons.
+communication, authentication and privacy. 
+
+In particular, the WG will reuse existing identity and trust management models and 
+will coordinate the structure of discovered information with related external 
+work (e.g. ITU-T FG-TIDA Focus Group on Trust and Identity for Humans and 
+Agentic AI and ITU-T SG17, etc.) rather than define new identity semantics.
+
+The WG will consider the DNS as a likely initial protocol upon which to 
+build a discovery protocol, while examining other solutions to learn lessons.
 
 Although initially focused on discovery of AI agents, agentic tools,
 and agentic skills, the WG is
@@ -55,11 +61,14 @@ discovery contexts whenever possible.
 Specifically out of scope of the DAWN WG, at least during its initial
 launch, includes:
 
+- Agentic AI stable identifiers 
 - Entity registration within discovery servers
 - Discovery of discovery servers.
 - Bulk transfer of larger capabilities beyond the minimal
   establishment requirements.
 - All communication between entities beyond the initial discovery process.
+- Definition of trust management and trust evaluation methods 
+
 
 Future DAWN or other WG charters may consider taking on these tasks.
 
@@ -70,6 +79,10 @@ roughly in this order:
 
 - Terminology: A document defining common DAWN terminology for use in
   the other DAWN documents (Informational).
+
+- Information Model: a specification of the structure of discovered 
+  entity information, developed in coordination with the bodies listed 
+  under Coordination (Standards Track or Informational).
 
 - Discovery Architecture: A document describing the problem space,
   requirements and the resulting DAWN architecture (Informational).
@@ -84,8 +97,9 @@ roughly in this order:
 
 The DAWN working group will seek to coordinate with other WGs and
 external standards bodies as necessary.  These may include WIMSE,
-CORE, CATS, DNSSD, DNSOP, ADD, DELEG, ITU-T SG17, 3GPP, and the Linux Foundation.
+CORE, CATS, DNSSD, DNSOP, ADD, DELEG, ITU-T SG17, ITU-T FG-TIDA, 3GPP, 
+and the Linux Foundation.
 
 ## Milestones
 
-TBD
+- End of August: IESG and/or IAB to answer LS2202
