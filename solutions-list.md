@@ -57,6 +57,8 @@ Anyone may submit an I-D to the IETF. These I-Ds are not endorsed by the IETF an
         - https://datatracker.ietf.org/doc/draft-ayoub-agis-agent-identity-system/
    - DNS-based Entity-Level Discovery and End-to-End Connection for AI Agents
         - https://datatracker.ietf.org/doc/draft-ni-agent-entity-discovery/
+   - Zero-Configuration Local Agent Discovery via mDNS/DNS-SD
+        - https://datatracker.ietf.org/doc/draft-jakab-dawn-agent-discovery-mdns/
           
 ### Non-DNS solutions in Internet-Drafts
 
