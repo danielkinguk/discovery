@@ -76,9 +76,9 @@ Zulip: https://zulip.ietf.org/#narrow/stream/dawn
 
 ### Discussion
 
-- Ekr (chat): "we're going to solve the problem that is really easy
+- Eric Recorla (EKR) (chat): We're going to solve the problem that is really easy
   and seems to map onto DNS but have no plan to solve anything
-  difficult."
+  difficult.
 
 - Pete Resnick (chat): If MDI includes some interesting
   information, then there (seems to me) actual work that needs to be
@@ -93,31 +93,31 @@ Zulip: https://zulip.ietf.org/#narrow/stream/dawn
 - M. Usama Sardar: in AI we have data, model, user. in this picture
   (slide 3), is everything in the diagram an entity? Is user an entity? 
   
-    - Arashmid: entity could be any of those.
-    - chairs: this is not entirely agreed to yet
+    - Arashmid: Entity could be any of those.
+    - Chairs: This is not entirely agreed to yet
 
-- DKG and Eric Rescorla (Ekr) in chat expressed skepticism about how an
+- DKG and EKR (chat) expressed skepticism about how an
   internet-scale capability search (e.g., finding translation
   services) could scale efficiently.
 
-- Linda Dunbar: an entity that contains workload and
-  services... what's the difference between these?
-    - Arashmid: all of these have a description. that's the MDI. 
-    - Lindar: discovering compute, are you doing the whole orchestration in the WG? 
-    - Arashmid: no.
-    - Linda Dunbar questioned how DAWN avoids overlapping with cloud
+- Linda Dunbar: An entity that contains workload and
+  services... What's the difference between these?
+    - Arashmid: All of these have a description. that's the MDI. 
+    - Linda: Discovering compute, are you doing the whole orchestration in the WG? 
+    - Arashmid: No.
+    - Linda questioned how DAWN avoids overlapping with cloud
       orchestration frameworks (e.g., AWS or Google Cloud compute
       registries). 
-    - Rashmit clarified that DAWN aims to enable interoperability
+    - Arashmit clarified that DAWN aims to enable interoperability
       *across* distinct cloud and administrative domains.
 
-- EKR: Can you give me an example use case.  Is an example who can
-  translate french to english?  And if so then I end up with what?
-    - Arashmid: agent discovering another agent is the primary use case.
+- EKR: Can you give me an example use case? Is an example who can
+  translate french to English?  And if so then I end up with what?
+    - Arashmid: Agent discovering another agent is the primary use case.
 
-- Ramesh: does this lead to search and semantic search?
-    - Arashmid: individual companies have mature search engine.
-    - Chairs: we'll get to that question beyond the terminology topic
+- Ramesh: Does this lead to search and semantic search?
+    - Arashmid: Individual companies have mature search engine.
+    - Chairs: We'll get to that question beyond the terminology topic
 
 ## 3. Overview of categories of use cases
 
@@ -142,24 +142,24 @@ Zulip: https://zulip.ietf.org/#narrow/stream/dawn
 
 ### Discussion
 
-- EKR: for the Internet vs. enterprise case you mentioned: are both part of this scope?  Are global, Internet-wide capability queries (e.g., "who on the Internet can translate French to English?") are a realistic requirement or if the focus should be restricted to trusted partners or local namespaces.
-    - Chairs: move to scope section in open discussion.
+- EKR: For the Internet vs. enterprise case you mentioned: are both part of this scope?  Are global, Internet-wide capability queries (e.g., "who on the Internet can translate French to English?") are a realistic requirement or if the focus should be restricted to trusted partners or local namespaces.
+    - Chairs: Move to scope section in open discussion.
 
-- Hesham: what are the protocols for search exist, and will DAWN solve them all.
-    - Kehan: it is likely that multiple groups will need to interact
-    - Chairs: it is unlikely we will to pick more than one use case, and that should be discussed later
+- Hesham: What are the protocols for search exist, and will DAWN solve them all.
+    - Kehan: It is likely that multiple groups will need to interact
+    - Chairs: lt is unlikely we will to pick more than one use case, and that should be discussed later
 
-- Rachid Bouziane: how do you establish trust in this environment?
-    - A: trust is a multlayered problem. In DAWN, only MDI trust is in scope
+- Rachid Bouziane: How do you establish trust in this environment?
+    - Kehan: Trust is a multlayered problem. In DAWN, only MDI trust is in scope
 
 - Usama: Trust is multi-layered as you describe. Who is trusting whom about what is still an open question here.
-    - Chairs: yep, big topic we have to pin down.
+    - Chairs: Yep, big topic we have to pin down.
 
 - Benjamin Schwartz (chat): I think underlying useful thing here is basically "Can anyone here print a PDF?" That seems like a pretty familiar problem, and maybe already solved.  On request, Benjamin provided an example: Principally DNS-SD for IPP, RFC 6763
 
-- Martin Thomson (chat):  this is the question to answer: on what scope is the discovery going to operate?
+- Martin Thomson (chat):  This is the question to answer: on what scope is the discovery going to operate?
 
-## 4. Solution requirements
+## 4. Solution Requirements
 
 - Presenter: Dan King (Old Dog Consulting)
 - Content: What does a solution need to include?
@@ -180,17 +180,17 @@ Security and Trust: Authenticity, DDOS, Extensibility, Trust
 ### Discussion
 
 - Steven: DAWN is a vertical line between the two boxes on the slide 4? 
-    - A: yes
+    - Dan: yes
 
 - Peter Liu: You mentioned there is no authentication.  Should the
   trust bundle / anchors be considered in scope for DAWN.
-    - A: It probably depends on the use case.  It's not clear how
+    - Dan: It probably depends on the use case.  It's not clear how
       mandatory it is.
 
-- Usama: slide 8: trust being out of scope does not make much sense,
-  if i am discovering agents at Internet scale some might be
+- Usama: Slide 8: trust being out of scope does not make much sense,
+  if I am discovering agents at Internet scale some might be
   malicious.  Trust should be in scope.
-    - A: good point we should consider that.
+    - Dan: Good point we should consider that.
 
 ## 5. What the Community Needs to Decide
 
@@ -225,12 +225,12 @@ discovery process.
 - Linda Dunbar: Will DAWN use the identity defined in WIMSE?
     - Adrian: People should not ask BoF chairs questions. Please just make
       the points you want to make.
-    - Arashmid: will reuse whatever mech. identity is important, but
+    - Arashmid: will reuse whatever mechanisms. Identity is important, but
       not part of discovery.
 
 - Yogesh Deshpande: Firstly, will DAWN reuse whatever mechanism that
   it sees fit from IETF to actually solve this problem, including
-  identity and other important building blocks. Secondly, the
+  identity and other important building blocks? Secondly, the
   importance and relevance should also be taken into account, beyond
   timing.
 
@@ -251,13 +251,13 @@ discovery process.
   ask the questions to that database.
 
 - Arnaud Taddei: 5 points to bring up about the charter:
-   - 1. on Scope: WG should reuse existing trust data models and
+   - 1. On Scope: WG should reuse existing trust data models and
      coordinate the structure of this code information with related
      external work from other bodies rather than define new semantics.
-   - 2. on deliverables: We need to mention coordination with ITU-T
+   - 2. On deliverables: We need to mention coordination with ITU-T
      SG17 focus group.
-   - Milestones discussion
-   - Need to add trust frameworks and methods to out of scope
+   - 3. Milestones discussion
+     - Need to add trust frameworks and methods to out of scope
    - Wes: Please send your list of changes to the mailing list. It
      will get too long to read all possible changes at the mic due to
      time constraints.
@@ -276,8 +276,8 @@ discovery process.
   about this.  I'll call it the diameter of the network we're talking
   about working across here before we're really going to be able to
   get to agreement on moving a charter forward. That is the key thing.
-    - Wes: and we haven't even talked about in or cross organizations yet.
-    - Cullen: or even what's an organization in the first place?
+    - Wes: And we haven't even talked about in or cross organizations yet.
+    - Cullen: Or even what's an organization in the first place?
 
 - Jonathan Rosenberg: We should exclude global Internet-wide
   discovery, as its unsolvable. I think it is solvable inside a domain
@@ -320,7 +320,7 @@ discovery process.
   there are already people in this general area that want to
   interoperate things that already exist. Also, Internet scale and
   org-internal are totally different problems. Internet scale is not
-  plausible. Should we use dns?  Comically premature question at this
+  plausible. Should we use DNS?  Comically premature question at this
   point.
 
 - Steven Mih: Implementer's view. Lots of those don't have domain
@@ -363,7 +363,7 @@ discovery process.
   let's evaluate and come up, maybe with some common terminology to
   understand how to evaluate. And then revisit what should be
   standardized later.
-    - Wes: typically WGs are short term groups that can accomplish
+    - Wes: Typically WGs are short term groups that can accomplish
       work in a short period of time (often 3-5 years).
       Specifications are useless without interoperability of course.
 
@@ -372,7 +372,7 @@ discovery process.
   requirements.  I think the requirements should come from the
   ecosystems that already implement it and what are their
   interoperability needs.  Rather than boiling the ocean.
-    - Wes: the deliverables do have some preliminary things and your
+    - Wes: The deliverables do have some preliminary things and your
       point is valid that those types of things need to be included.
 
 - Ramesh Raskar: WRT DNS or not DNS: the real question is what's the
@@ -391,8 +391,8 @@ discovery process.
   might be doable.  Then we need to extend the DNS with extra
   information.  We can return other records to extend that "card" to
   return additional information.
-    - Wes: we were asked to put DNS into the charter because it's a
-      mechanism. I work on the DNS, it can't handle everything that
+    - Wes: We were asked to put DNS into the charter because it's an
+      existing mechanism. I work on the DNS, it can't handle everything that
       DAWN would need to carry as its not designed for bulk transfer.
 
 - M. Usama Sardar: This space not fully explored, there is a need to
@@ -405,7 +405,7 @@ discovery process.
     - Adrian: The logical and staged approach of working through all
       this denies urgency.
 
-- Sam Betts: maintainer of the (castle) project. There should be a
+- Sam Betts: Maintainer of the (castle) project. There should be a
   split between "making something available to be discovered" and
   "layering on how those things can be discovered". e.g. in DNS,
   that's "making things available", then there are other active
@@ -421,7 +421,7 @@ discovery process.
   user that is connected.  Two cases should be considered: where
   everything is open and is discoverable.
 
-- Hesham Moussa: regarding scoping of what entities we can discover:
+- Hesham Moussa: Regarding scoping of what entities we can discover:
   suggest two approaches: find a common denominator across entities,
   or if we can't then pick the most pressing scenarios. I suggest that
   agents, tools, and skills are the most urgent discoverable entities
