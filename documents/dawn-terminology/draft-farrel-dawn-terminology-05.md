@@ -269,10 +269,13 @@ Properties:
 
 Registrar:
 : An entity or system responsible for accepting and maintaining records
-  about entities that wish to be discoverable.
+  about entities that wish to be discoverable. Acts as a go-between for
+  registrants and registries through the process of registration.  Note
+  that not all registrations require the use of a registrar, and that the
+  registrar in a DAWN system is not necessarily the DNS registrar {{?RFC9499}}.
 
 Registration:
-: The steps by which agents can register their existence with a registrar.
+: The steps by which agents can register their existence via a registrar.
   This should include attestation and other security mechanisms.
 : Registration
   is out of scope for DAWN, but the information that can be discovered and the
@@ -332,5 +335,5 @@ issues that require operational consideration.
 The authors wish to acknowledge the contributions of participants in
 the DAWN discussions that shaped this document.
 
-Jim Mozley, Med Boucadair, Chenguang Du, Daniel King, and Benoit Claise
-provided useful reviews of this document.
+Jim Mozley, Med Boucadair, Chenguang Du, Daniel King, Benoit Claise,
+and Kaveh Ranjbar provided useful reviews of this document.
