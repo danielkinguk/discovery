@@ -1,14 +1,14 @@
 # Discovery of Agents With Names (DAWN)
 
-Agentic AI systems depend upon the interaction between an entity (a 
+AI systems depend upon the interaction between an entity (a 
 device or software, including but not limited to an AI agent) and an
-AI agent.  For this to work, the entity must find available AI agents
+AI agent.  For this to work, the entity must find available AI resources
 and learn how to contact them about their specific capabilities.
 
 The focus this working group will be on how an entity can discover an
 agent's specific properties before proceeding: what type of agent they
 are, what their reachability information is, what communication protocols 
-options are available, and what services do they offer.  Additional more 
+options are available, and what services do they offer.  Additional, more 
 detailed metadata may be communicated as well, or may be left out of scope
 for direct capabilities exchange between entity and AI agent.
 
@@ -21,7 +21,7 @@ publish discovery information.
 ## Scope
 
 Discovery in the DAWN context is limited to "find me an
-agent to interact with" within an organization, within collaborating
+agent resource to interact with" within an organization, within collaborating
 organizations, or within local networks.  This may include
 communication about the following example attributes:
 
@@ -31,7 +31,7 @@ communication about the following example attributes:
 
 Where possible, any solutions work will be built in a modular way
 using existing IETF protocols that provide support for any needed
-communication, authentication and privacy. The WG will consider mDNS
+communication, authentication, and privacy. The WG will consider mDNS
 and DNS as potential mechanisms upon which to build a discovery protocol,
 but may examine other solutions as well.
 
@@ -47,8 +47,8 @@ Specifically out of scope of the DAWN WG during its initial phase are:
   requirements to establish communications.
 - All communication between entities beyond the initial discovery process.
 - Discovery across the wider Internet.
-- Agentic AI stable identifiers 
-- Entity registration within discovery servers
+- Agentic AI stable identifiers.
+- Entity registration within discovery servers.
 - Discovery of discovery servers.
 - How the interoperable information schema is made extensible.
 - Availability of attestation evidence and results for agents. 
@@ -69,7 +69,7 @@ The DAWN working group will work on the following deliverables:
   very stable.)
 
 - Use Cases: A document describing broad use case categories.
-  (May be remain as an Internet-Draft informing other work or may be
+  (May be remain as an Internet-Draft informing other work, or may be
   published as an Informational RFC.)
 
 - Protocol: A specification describing the applicability of existing
