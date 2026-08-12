@@ -2,7 +2,7 @@
 
 AI systems depend upon the interaction between an entity (a 
 device or software, including but not limited to an AI agent) and an
-AI agent.  For this to work, the entity must find available AI resources
+AI agent.  For this to work, the entity must determine available AI resources
 and learn how to contact them about their specific capabilities.
 
 The focus this working group is be on how an entity can discover an
