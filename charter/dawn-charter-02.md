@@ -5,7 +5,7 @@ device or software, including but not limited to an AI agent) and an
 AI agent. For this to work, the entity must determine available AI resources
 and learn how to contact them about their specific capabilities.
 
-The focus of this working group will be on how an entity can discover an
+The focus of this working group is on how an entity can discover an
 agent's specific properties before proceeding: what type of agent it
 is, what its reachability information is, what communication protocol 
 options are available, and what services it offers. Additionally, more 
