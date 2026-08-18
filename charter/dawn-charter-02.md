@@ -90,4 +90,15 @@ coordinate with external standards bodies as necessary.
 
 ## Milestones
 
-TBD
+April 2027
+Publication for DAWN Terminology document as an Informational RFC.
+
+June 2027
+Completion of DAWN Use Cases document.
+
+December 2027
+Publication request for DAWN Protocol Specification and Applicability
+document as a Standards Track RFC.
+
+January 2028
+Publication request Discovery Architecture for as an Informational RFC.
