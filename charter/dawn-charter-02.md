@@ -47,17 +47,16 @@ Specifically out of scope for the DAWN WG during its initial phase are:
 
 - Bulk transfer of capability information beyond the minimum
   requirements to establish communication.
-- All communication between entities beyond the initial discovery process.
-- Discovery of AI resource indexing across the wider Internet.
-- Agentic AI stable identifiers.
+- All communication beyond the initial discovery process.
+- AI resource indexing across the wider Internet.
+- Stable identifiers of AI agents, tools and skills.
 - Entity registration within discovery servers.
 - Discovery of discovery servers.
-- How the interoperable information schema is made extensible.
-- Definition of trust management and trust evaluation methods, but not
-  excluding discovery of information that identifies the party that
-  published or asserts it.
+- Interoperable information schemas beyond discovering a transfer protocol.
+- Trust management and trust evaluation methods beyond defining trust
+  content exchange protocols.
 
-Future DAWN or other WG charters may consider taking on these tasks.
+Future DAWN or other WG charters may take on these tasks.
 
 ## Deliverables
 
@@ -68,36 +67,32 @@ The DAWN working group will work on the following deliverables:
   included in the Architecture document.)
 
 - Discovery Architecture: A document describing the problem space,
-  requirements, and the resulting DAWN architecture. (To be published
-  as an Informational RFC, but may be held until the Protocol work is
-  very stable.)
+  requirements, and the resulting DAWN architecture. (May be published
+  as an Informational RFC, but maybe held until the Protocol work is
+  considered stable.)
 
-- Use Cases: A document describing broad use case categories.
-  (May remain as an Internet-Draft informing other work, or may be
-  published as an Informational RFC.)
+- Use Cases: A document describing broad DAWN use case categories.
+  (May be published as an Informational RFC)
 
-- Protocol: A specification describing the applicability of existing
-  protocols and tools, and defining the protocol semantics or
-  extensions developed to achieve the initial discovery goals within
-  the Discovery Architecture. 
+- Protocol: A specification describing the implementation of the
+  Discover Architecture (To be published as a Standards Track document).
 
 ## Coordination with Other Working Groups and Organizations
 
 The DAWN working group will seek to coordinate with other WGs
-working on DNS, discovery, identities, or AI. It will also
+relating to DNS, discovery, identities, or AI. It will also
 coordinate with external standards bodies as necessary.
 
 ## Milestones
 
 April 2027
-Publication for DAWN Terminology document as an Informational RFC.
+Optional submission of the DAWN Terminology document to the IESG for publication.
 
 June 2027
-Completion of DAWN Use Cases document.
+Optional submission of the DAWN Use Cases document to the IESG for publication.
 
 December 2027
-Publication request for DAWN Protocol Specification and Applicability
-document as a Standards Track RFC.
+Submission of the DAWN Protocol specification to the IESG for publication.
 
 January 2028
-Publication request Discovery Architecture for as an Informational RFC.
+Optional submission of the DAWN Architecture document to the IESG for publication.
