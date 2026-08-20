@@ -11,6 +11,8 @@ is, what its reachability information is, what communication protocol
 options are available, and what services it offers. Additionally, more 
 detailed metadata may be communicated as well, or may be left out of scope
 for direct capabilities exchange between entity and AI agent.
+Note that discovery may be an iterative process and utilize indirection as
+well as direct data transfer.
 
 To support these goals, the working group will specify an interoperable
 and generic discovery mechanism that builds on existing protocols and tools,
@@ -34,9 +36,6 @@ using existing IETF protocols that provide support for any needed
 communication, authentication, and privacy. The WG will consider mDNS
 and DNS as potential mechanisms upon which to build a discovery protocol,
 but may examine other solutions as well.
-
-Note that discovery may be an iterative process and utilize indirection as
-well as direct data transfer.
 
 Although initially focused on discovery of AI agents, agentic tools,
 and agentic skills, the WG should strive to produce results that are
