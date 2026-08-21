@@ -11,7 +11,7 @@ is, what its reachability information is, what communication protocol
 options are available, and what services it offers. Additionally, more 
 detailed metadata may be communicated as well, or may be left out of scope
 until a subsequent direct capabilities exchange between a client and an AI agent.
-Note that discovery may be an iterative process, may utilize either direct 
+Note that discovery may be an iterative process, and may utilize either direct 
 transfer or indirection.
 
 To support these goals, the working group will specify an interoperable
