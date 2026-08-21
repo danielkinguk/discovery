@@ -50,7 +50,7 @@ Specifically out of scope for the DAWN WG during its initial phase are:
 - All communication beyond the initial discovery process.
 - AI resource indexing across the wider Internet.
 - Stable identifiers of AI agents, tools and skills.
-- AI agent or other resource registrations within discovery servers.
+- Registration of AI agents or other resource within discovery servers.
 - Discovery of discovery servers.
 - Interoperable information schemas beyond discovering a transfer protocol.
 - Trust management and trust evaluation methods beyond defining trust
