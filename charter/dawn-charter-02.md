@@ -1,18 +1,18 @@
 # Discovery of Agents With Names (DAWN)
 
-AI systems depend upon the interactions between an entity (a
+AI systems depend upon the interactions between an client (a
 device or software, including but not limited to an AI agent) and 
-one or more AI resources. For these interactions to work, the entity
+one or more AI resources. For these interactions to work, the client
 must determine available AI resources and learn how to contact them.
 
-The focus of this working group is on how an entity can discover an
-agent's specific properties before proceeding: what type of agent it
+The focus of this working group is on how a client can discover an
+AI agent's specific properties before proceeding: what type of agent it
 is, what its reachability information is, what communication protocol 
 options are available, and what services it offers. Additionally, more 
 detailed metadata may be communicated as well, or may be left out of scope
-for direct capabilities exchange between entity and AI agent.
-Note that discovery may be an iterative process and utilize indirection as
-well as direct data transfer.
+until a subsequent direct capabilities exchange between a client and an AI agent.
+Note that discovery may be an iterative process, and may utilize either direct 
+transfer or indirection.
 
 To support these goals, the working group will specify an interoperable
 and generic discovery mechanism that builds on existing protocols and tools,
@@ -22,24 +22,24 @@ published discovery information.
 
 ## Scope 
 
-Discovery in the DAWN context is limited to "find me an agent resource to
-interact with" within an organization, between organizations, or within a 
-local network. This may include communication about the following 
-example attributes:
+Discovery in the DAWN context is limited to a client requesting, "Find
+me an agent resource to interact with," within a local
+network, within an organization, or between organizations. This may
+include communication about the following example attributes:
 
 - What is the agent resource's type and classification?
-- What communication and security protocols does the discovered agent resource support?
+- What communication and security protocols does the discovered agent support?
 - What are the minimum requirements for information exchange?
 
-Where possible, any solutions will be built in a modular way
-using existing IETF protocols that provide support for any needed
-communication, authentication, and privacy. The WG will consider mDNS
-and DNS as potential mechanisms upon which to build a discovery protocol,
-but may examine other solutions as well.
+Where possible, any solutions created by this WG will be built in a
+modular way using existing IETF protocols that provide support for any
+needed communication, authentication, and privacy. The WG will
+consider mDNS and DNS as potential mechanisms upon which to build a
+discovery protocol, but may examine other solutions as well.
 
-Although initially focused on discovery of AI agents, agentic tools,
-and agentic skills, the WG should strive to produce results that are
-general and reusable within other discovery contexts if possible.
+Although initially focused on discovery of AI agents and their
+capabilities, the WG should strive to produce results that are general
+and reusable within other discovery contexts if possible.
 
 ## Out of Scope
 
@@ -50,7 +50,7 @@ Specifically out of scope for the DAWN WG during its initial phase are:
 - All communication beyond the initial discovery process.
 - AI resource indexing across the wider Internet.
 - Stable identifiers of AI agents, tools and skills.
-- Entity registration within discovery servers.
+- Registration of AI agents or other resource within discovery servers.
 - Discovery of discovery servers.
 - Interoperable information schemas beyond discovering a transfer protocol.
 - Trust management and trust evaluation methods beyond defining trust
