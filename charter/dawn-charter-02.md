@@ -22,8 +22,8 @@ published discovery information.
 
 ## Scope 
 
-Discovery in the DAWN context is limited to a client needing to "find
-me an agent resource to interact with" within a within a local
+Discovery in the DAWN context is limited to a client requesting, "Find
+me an agent resource to interact with," within a local
 network, within an organization, or between organizations. This may
 include communication about the following example attributes:
 
