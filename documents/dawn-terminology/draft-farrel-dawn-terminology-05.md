@@ -1,7 +1,7 @@
 ---
 coding: utf-8
 
-title: Terminology for the Discovery of Agents, Workloads, and Named Entities (DAWN)
+title: Terminology for the Discovery of Agents With Names (DAWN)
 
 abbrev: DAWN Terminology
 docname: draft-farrel-dawn-terminology-05
@@ -53,8 +53,9 @@ interoperable mechanisms to discover entities. Entities may include AI agents, s
 compute workloads, and other named resources that need to be found and
 characterised before interaction can begin.
 
-This document defines terminology for Discovery of Agents, Workloads,
-and Named Entities (DAWN).  The intention is that this common set of
+This document defines terminology for Discovery of Agents With Names (DAWN), focusing
+on the terms necessary to describe the discovery of information about AI systems and
+resources (e.g., AI agents).  The intention is that this common set of
 terms can be used by other documents related to DAWN and so achieve
 consistency of meaning across the space.
 
@@ -79,7 +80,7 @@ configuration, but this approach is impractical at scale and across
 organisational boundaries.  Automated discovery mechanisms are therefore
 needed.
 
-Today, where automated discovery exists, it is typically handled through
+Today, where automated discovery of AI agents exists, it is typically handled through
 proprietary directories or platform-specific mechanisms.  These
 approaches do not scale across organisational boundaries and create
 fragmented ecosystems where entities cannot find entities managed by
@@ -91,7 +92,7 @@ proven delegation and federation architectures, and allows organisations
 to independently publish discovery information.
 
 This document defines common terminology for use in documents that discuss
-Discovery of Agents, Workloads, and Named Entities (DAWN).
+Discovery of Agents With Names (DAWN).
 
 {: #sec-scope}
 ## Discovery Scope
