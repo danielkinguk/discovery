@@ -183,7 +183,8 @@ Capability Card:
 : A structured, machine-readable description of an entity's
   capabilities and interface.  Variants include agent cards, task cards,
   resource cards, tool cards, and skill cards depending on the type of
-  entity.
+  entity. A capability card may also include human-readable information
+  as well as authentication/security certification data.
 
 Capability Exposure:
 : The processes by which entities expose their capabilities. Such exposure
