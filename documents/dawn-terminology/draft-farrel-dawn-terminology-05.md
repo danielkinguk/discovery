@@ -250,7 +250,7 @@ Entity:
 : A system component that communicates with other entities in a
   peer-to-peer or client-server relationship.  In the context of DAWN, entities
   include, but are not limited to, AI agents, tools, skills, tasks, compute workloads,
-  software services, task owners, network functions, and application endpoints. Howewver,
+  software services, task owners, network functions, and application endpoints. However,
   see the definition of "Discovered Entity."
 
 Function:
