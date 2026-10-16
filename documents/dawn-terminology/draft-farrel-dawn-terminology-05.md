@@ -213,7 +213,8 @@ Discoverable Object Validation:
 Discovered Entity:
 : An entity whose properties are returned as the result of a discovery
   process. A discovered entity may be a specific instance or a member of
-  a class of entities that can perform a desired function.
+  a class of entities that can perform a desired function. In the context of
+  DAWN, a discovered entity is an AI system or AI resource (e.g., an AI agent).
 
 Discovering Entity:
 : An entity (or its operator) that initiates the discovery process in
@@ -247,9 +248,10 @@ Discovery Scope:
 
 Entity:
 : A system component that communicates with other entities in a
-  peer-to-peer or client-server relationship.  Entities include, but
-  are not limited to, AI agents, tools, skills, tasks, compute workloads,
-  software services, task owners, network functions, and application endpoints.
+  peer-to-peer or client-server relationship.  In the context of DAWN, entities
+  include, but are not limited to, AI agents, tools, skills, tasks, compute workloads,
+  software services, task owners, network functions, and application endpoints. Howewver,
+  see the definition of "Discovered Entity."
 
 Function:
 : The functional processing capability that an entity offers. Examples
