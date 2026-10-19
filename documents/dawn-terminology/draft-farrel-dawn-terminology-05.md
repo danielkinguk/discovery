@@ -100,11 +100,12 @@ Discovery of Agents With Names (DAWN).
 It will be helpful to understand the broader discovery ecosystem. Information must 
 be registered to the discovery system, may be managed and updated, can then be 
 discovered by other entities. But the discoverable information must be balanced as
-a compromise between too much detail which will overload the discovery process, and
-too little information which would make discovery suboptimal.
+a compromise between too much detail which will overload the discovery process,
+be duplicative and thus cause maintenance issues, and too little information which
+would make discovery suboptimal.
 
-Additional detailed information may be exchanged between entities and this part of the
-process may also include negotiation of capabilities. 
+Additional detailed information may be exchanged between entities following initial discovery
+and this part of the process may also include negotiation of capabilities.
 
 In the end, this means that the "discovery ecosystem" can be broken down into at least the
 following functions:
