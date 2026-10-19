@@ -4,7 +4,7 @@ coding: utf-8
 title: Terminology for the Discovery of Agents With Names (DAWN)
 
 abbrev: DAWN Terminology
-docname: draft-farrel-dawn-terminology-05
+docname: draft-farrel-dawn-terminology-06
 workgroup:
 category: info
 ipr: trust200902
@@ -13,7 +13,7 @@ stream: IETF
 stand_alone: yes
 pi: [toc, tocompact, tocindent, sortrefs, symrefs, compact]
 
-area: TBD
+area: INT
 kw:
   - discovery
   - agents
