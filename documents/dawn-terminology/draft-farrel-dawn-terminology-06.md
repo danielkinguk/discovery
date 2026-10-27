@@ -128,6 +128,7 @@ in {{term-table}}.
 | Entity       |                                  |
 |              | Named Entity                     |
 |              | Agent                            |
+|              | AI Resource                      |
 |              | Discovering Entity               |
 |              | Discovered Entity                |
 | Discovery    |                                  |
@@ -161,6 +162,13 @@ Agent:
 :  AI agents are
   a specific class of agent that employ artificial intelligence
   techniques.
+
+AI Resource:
+: An identifiable entity or service that provides AI-related functionality, enables
+  access to such functionality, or facilitates the discovery of other AI resources. Examples 
+  include AI agents, AI inference services, and agent discovery catalogs. An AI resource does
+  not necessarily perform AI processing itself and may represent an entire AI system or an
+  individually accessible component of one.
 
 Attributes:
 : The properties, features, capabilities, skills, etc., that an entity
