@@ -243,8 +243,9 @@ Discovery Information:
 : The information returned by a discovery mechanism that allows the 
   discovering entity to decide whether later interaction is possible
   and desirable. This should be considered in terms of the Minimum 
-  Discoverable Information (q.v.) and compared with the broader set of
-  information that forms part of the Capability Exchange (q.v.).
+  Discoverable Information (q.v.) of which Discovery Information is a 
+  subset, and compared with the broader set of information that forms
+  part of the Capability Exchange (q.v.).
 
 Discovery Mechanism:
 : A protocol, system, or method used to perform discovery.  Examples
@@ -272,7 +273,7 @@ Function:
 
 Minimum Discoverable Information (MDI):
 : The minimum amount of information an entity needs to provide to become
-  discoverable. Think of it as common header of a data structure.
+  discoverable.
 
 Minimum Viable Dataset (MVD):
 : The data that must be provided to the discovery mechanism to enable it to return 
@@ -347,4 +348,5 @@ The authors wish to acknowledge the contributions of participants in
 the DAWN discussions that shaped this document.
 
 Jim Mozley, Med Boucadair, Chenguang Du, Daniel King, Benoit Claise,
-Kaveh Ranjbar, and Muhammad Awais Jadoon provided useful reviews of this document.
+Kaveh Ranjbar, Muhammad Awais Jadoon, and Aditya Dogra provided useful reviews
+of this document.
