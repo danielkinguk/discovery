@@ -17,7 +17,7 @@ area: INT
 kw:
   - discovery
   - agents
-  - workloads
+  - AI
 
 author:
   -
@@ -128,8 +128,6 @@ in {{term-table}}.
 | Entity       |                                  |
 |              | Named Entity                     |
 |              | Agent                            |
-|              | Workload                         |
-|              | Task                             |
 |              | Discovering Entity               |
 |              | Discovered Entity                |
 | Discovery    |                                  |
@@ -286,20 +284,11 @@ Selection:
 :  Selection is out of scope
   for DAWN, but depends on information obtained through discovery.
 
-Task:
-: A legacy term kept for continuity with earlier work.  A task may be
-  considered as software service.
-
 Trust Indicator:
 : Information associated with an entity that allows a discovering party
   to assess the trustworthiness or provenance of the entity and its
   advertised properties.  Examples include digital signatures,
   certificates, and attestations.
-
-Workload:
-: A unit of compute or processing that is deployed and executed within a
-  hosting environment.  Workloads may be transient or long-lived and may
-  move between hosting environments.
 
 {: #sec-iana}
 # IANA Considerations
