@@ -92,6 +92,8 @@ Discovery of Agents With Names (DAWN).
 {: #sec-scope}
 ## Discovery Scope
 
+[Editor's Note: This section probably belongs in an Architecture document and not here.]
+
 It will be helpful to understand the broader discovery ecosystem. Information must 
 be registered to the discovery system, may be managed and updated, can then be 
 discovered by other AI agents. But the discoverable information must be balanced as
