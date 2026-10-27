@@ -107,7 +107,7 @@ following functions:
 
 - Registration and management of an entity to be discovered.
 - Search based on a formalised encoding of search criteria.
-- Discovery lookup based on a minimum viable data set (protocol, identifying properties) with return of a minimum set of discoverable information (including reachability).
+- Discovery lookup based on a minimum viable dataset (protocol, identifying properties) with return of a set of minimum discoverable information (including reachability).
 - Reading of additional information.
 - Capability exchange and negotiation.
 
@@ -133,6 +133,7 @@ in {{term-table}}.
 | Discovery    |                                  |
 |              | Discovery Information            |
 |              | Discoverable Object              |
+|              | Minimum Viable Dataset           |
 |              | Minimum Discoverable Information |
 |              | Discovery Mechanism              |
 |              | Discovery Scope                  |
@@ -255,6 +256,10 @@ Minimum Discoverable Information (MDI):
 : The minimum amount of information an entity needs to provide to become
   discoverable. Think of it as common header of a data structure.
 
+Minimum Viable Dataset (MVD):
+: The data that must be provided to the discovery mechanism to enable it to return 
+  indications of Discovered Entities.
+
 Named Entity:
 : An entity that is identified by a stable name within a naming system.
   The naming system may be hierarchical (e.g., DNS) or flat.
@@ -324,4 +329,4 @@ The authors wish to acknowledge the contributions of participants in
 the DAWN discussions that shaped this document.
 
 Jim Mozley, Med Boucadair, Chenguang Du, Daniel King, Benoit Claise,
-and Kaveh Ranjbar provided useful reviews of this document.
+Kaveh Ranjbar, and Muhammad Awais Jadoon provided useful reviews of this document.
