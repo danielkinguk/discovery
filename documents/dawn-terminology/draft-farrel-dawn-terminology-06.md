@@ -47,11 +47,9 @@ author:
 
 --- abstract
 
-The proliferation of distributed systems, Artificial Intelligence (AI)
-agents, cloud workloads, and network services has created a need for
-interoperable mechanisms to discover entities. Entities may include AI agents, software services,
-compute workloads, and other named resources that need to be found and
-characterised before interaction can begin.
+The proliferation of distributed Artificial Intelligence (AI) systems and 
+agents has created a need for interoperable mechanisms for components of AI 
+systems to discover each other.
 
 This document defines terminology for Discovery of Agents With Names (DAWN), focusing
 on the terms necessary to describe the discovery of information about AI systems and
@@ -66,14 +64,10 @@ consistency of meaning across the space.
 
 Distributed systems increasingly rely on the dynamic composition
 of services, agents, and workloads that may not have pre-configured connectivity
-relationships.  For example, an AI agent may need to find another agent
-with specific capabilities, a workload orchestrator may need to locate
-compute resources in a particular jurisdiction, or a service consumer
-may need to discover providers that support a required protocol or a data schema version.
-Further use cases and scenarios may be considered, but it is out of scope
-to enumerate them.
+relationships.  In an AI-based system, an AI agent may need to find another agent
+with specific capabilities.
 
-In each case, an entity needs knowledge of remote entities before
+In these cases an AI agent needs knowledge of remote agents before
 interaction can proceed: what they are, what they offer, and whether
 they can be trusted.  Such knowledge could be obtained through static
 configuration, but this approach is impractical at scale and across
@@ -86,7 +80,8 @@ approaches do not scale across organisational boundaries and create
 fragmented ecosystems where entities cannot find entities managed by
 other organisations.
 
-An interoperable discovery mechanism is needed that builds on existing
+An interoperable mechanism for the discovery of AI systems and
+resources (e.g., AI agents) is needed that builds on existing
 protocols and tools, benefits from an established trust model, supports
 proven delegation and federation architectures, and allows organisations
 to independently publish discovery information.
@@ -99,12 +94,12 @@ Discovery of Agents With Names (DAWN).
 
 It will be helpful to understand the broader discovery ecosystem. Information must 
 be registered to the discovery system, may be managed and updated, can then be 
-discovered by other entities. But the discoverable information must be balanced as
-a compromise between too much detail which will overload the discovery process,
+discovered by other AI agents. But the discoverable information must be balanced as
+a compromise between too much detail which will overload the discovery process or
 be duplicative and thus cause maintenance issues, and too little information which
 would make discovery suboptimal.
 
-Additional detailed information may be exchanged between entities following initial discovery
+Additional detailed information may be exchanged following initial discovery,
 and this part of the process may also include negotiation of capabilities.
 
 In the end, this means that the "discovery ecosystem" can be broken down into at least the
@@ -250,8 +245,7 @@ Discovery Scope:
 Entity:
 : A system component that communicates with other entities in a
   peer-to-peer or client-server relationship.  In the context of DAWN, entities
-  include, but are not limited to, AI agents, tools, skills, tasks, compute workloads,
-  software services, task owners, network functions, and application endpoints. However,
+  include, but are not limited to, AI agents and AI resources.  However,
   see the definition of "Discovered Entity."
 
 Function:
