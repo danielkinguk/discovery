@@ -128,7 +128,9 @@ in {{term-table}}.
 | Entity       |                                  |
 |              | Named Entity                     |
 |              | Agent                            |
+|              | AI Agent                         |
 |              | AI Resource                      |
+|              | AI System                        |
 |              | Discovering Entity               |
 |              | Discovered Entity                |
 | Discovery    |                                  |
@@ -159,16 +161,22 @@ Agent:
 : A software entity that acts autonomously or semi-autonomously on behalf of a
   user, organisation, or system.  An agent may initiate interactions
   with other entities, make decisions, and perform tasks.
-:  AI agents are
-  a specific class of agent that employ artificial intelligence
+
+AI Agents:
+: A specific class of agent that employ artificial intelligence
   techniques.
 
 AI Resource:
 : An identifiable entity or service that provides AI-related functionality, enables
   access to such functionality, or facilitates the discovery of other AI resources. Examples 
-  include AI agents, AI inference services, and agent discovery catalogs. An AI resource does
+  include AI agents, AI models, and AI inference services.  An AI resource does
   not necessarily perform AI processing itself and may represent an entire AI system or an
   individually accessible component of one.
+
+AI system: 
+: A system that uses AI to process inputs and generate outputs such as predictions, 
+  content generation, recommendations, or decisions, to achieve objectives.  An AI system may
+  comprise multiple interacting components such as AI agents or AI resources.
 
 Attributes:
 : The properties, features, capabilities, skills, etc., that an entity
