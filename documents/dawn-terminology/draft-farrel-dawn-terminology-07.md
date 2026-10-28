@@ -4,7 +4,7 @@ coding: utf-8
 title: Terminology for the Discovery of Agents With Names (DAWN)
 
 abbrev: DAWN Terminology
-docname: draft-farrel-dawn-terminology-06
+docname: draft-farrel-dawn-terminology-07
 workgroup:
 category: info
 ipr: trust200902
