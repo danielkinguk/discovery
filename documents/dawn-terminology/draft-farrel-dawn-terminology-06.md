@@ -267,9 +267,8 @@ Entity:
   see the definition of "Discovered Entity."
 
 Function:
-: The functional processing capability that an entity offers. Examples
-  include task execution, data transformation, inference, routing, steering,
-  storage, and orchestration.
+: The processing that an entity offers. Examples include task execution, data 
+  transformation, inference, routing, steering, storage, and orchestration.
 
 Minimum Discoverable Information (MDI):
 : The minimum amount of information an entity needs to provide to become
