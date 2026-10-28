@@ -327,14 +327,19 @@ issues that require security consideration.
 
 However, this document does define Trust Indicator, attestation-dependent Registration,
 and scope-based policy enforcement, and so it should be clear that discovery has significant
-security and privacy implications.  It is anticipated that these will be addressed
-in the DAWN solution/architecture documents.
+security implications.  It is anticipated that these will be addressed in the DAWN
+solution/architecture documents.
 
 {: #sec-privacy}
 # Privacy Considerations
 
 This document only defines a set of terms.  It does not introduce any
 issues that require privacy consideration.
+
+However, this document does use the concepts of names and identities, locations, reachability, 
+operational status, capabilities, and trust indicators, so it should be clear that discovery
+has significant privacy considerations.  It is anticipated that these will be addressed in the
+DAWN solution/architecture documents.
 
 {: #sec-operations}
 # Operational Considerations
