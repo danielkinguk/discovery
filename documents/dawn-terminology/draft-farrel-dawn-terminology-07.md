@@ -237,8 +237,13 @@ Discovery:
 : The process by which an entity or its operator locates other entities
   that are capable of performing a desired function or providing a
   desired service, and obtains sufficient information to initiate
-  interaction.
-
+  interaction. In the context of DAWN, the discovery process is about
+  how a client can discover public properties of AI agents or AI resources
+  to facilitate subsequent interactions such as selection, invocation, or
+  communication. Specifically, this not include open-ended searches, semantic 
+  matching ranking, or selection of an AI resource based on capabilities or
+  user intent.
+  
 Discovery Information:
 : The information returned by a discovery mechanism that allows the 
   discovering entity to decide whether later interaction is possible
@@ -285,7 +290,9 @@ Named Entity:
 Properties:
 : The discoverable characteristics of an entity.  Properties include, but
   are not limited to, communication protocols, capability cards, location,
-  trust indicators, and operational status. (Compare with attributes.)
+  trust indicators, and operational status. (Compare with attributes.) In 
+  DAWN, the properties are those needed to select a communication means, i.e.,
+  a protocol and achieve communication. 
 
 Registrar:
 : An entity or system responsible for accepting and maintaining records
