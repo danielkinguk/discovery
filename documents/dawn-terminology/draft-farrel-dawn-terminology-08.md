@@ -359,5 +359,5 @@ The authors wish to acknowledge the contributions of participants in
 the DAWN discussions that shaped this document.
 
 Jim Mozley, Med Boucadair, Chenguang Du, Daniel King, Benoit Claise,
-Kaveh Ranjbar, Muhammad Awais Jadoon, and Aditya Dogra provided useful reviews
-of this document.
+Kaveh Ranjbar, Muhammad Awais Jadoon, and Aditya Dogra, Frank Brockners
+provided useful reviews of this document.
