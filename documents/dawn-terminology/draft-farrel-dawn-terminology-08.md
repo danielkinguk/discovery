@@ -291,7 +291,7 @@ Properties:
 : The discoverable characteristics of an entity.  Properties include, but
   are not limited to, communication protocols, capability cards, location,
   trust indicators, and operational status. (Compare with attributes.) In 
-  DAWN, the properties are those needed to select a communication means (i.e.,
+  DAWN, the properties are those needed to determine a communication means (i.e.,
   a protocol) and achieve communication. 
 
 Registrar:
