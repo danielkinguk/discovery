@@ -81,7 +81,7 @@ the Discovery Architecture, which will define the minimum discovery
 information. The mapping between requirements and use cases is maintained in
 the requirements document, not here.
 
-This document first presents two scenarios in {{scenarios}}. It then draws out
+This document first presents three scenarios in {{scenarios}}. It then draws out
 the discovery characteristics and common pattern they share, and defines the
 following categories of entity discovery:
 
@@ -190,12 +190,14 @@ Protocol work should reuse existing IETF mechanisms where possible.
 
 # Example Scenarios {#scenarios}
 
-The two scenarios in this section ground the rest of the document. The first
+The three scenarios in this section ground the rest of the document. The first
 follows a personal assistant coordinating an appointment across an
 organisational boundary. The second follows a media orchestration agent
 provisioning edge compute within a broadcaster and its cooperating providers.
-The discovery characteristics, pattern, and categories in the following
-sections draw on them.
+The third follows the same personal assistant discovering the agents of an
+unfamiliar building from the local network it has joined. The discovery
+characteristics, pattern, and categories in the following sections draw on
+them.
 
 ## Cross-Organisation Appointment Coordination {#appointment-coordination}
 
@@ -465,6 +467,138 @@ boundaries, and its origin and freshness are checked. Finding a controller
 does not grant permission to provision resources. Viewer details and detailed
 capacity data are restricted to authorised application exchanges.
 
+## Visitor Assistance in an Unfamiliar Building {#visitor-assistance}
+
+Alice visits Bob's office for a meeting. The building is shared by several
+organisations and run by a facilities operator. On arrival, she joins the
+building's guest Wi-Fi network and asks Hermes to check her in and show her the
+way to the meeting room.
+
+The example shows discovery that starts from the network a client has joined,
+rather than from a name. The same applies to visitors at a conference venue,
+hotel, hospital, airport, or stadium.
+
+### Actors and Assumptions
+
+Hermes, Alice's assistant from {{appointment-coordination}}, runs on her phone
+and is the discovering entity. The facilities operator runs a reception agent,
+which checks visitors in and notifies their hosts, and a wayfinding agent,
+which gives directions inside the building. Both are advertised on the guest
+network.
+
+Hermes knows neither the operator's name nor any catalogue it publishes, and
+has no prior relationship with it. The operator's agents are not published at
+the discovery entry point of Bob's organisation. The network Alice has joined
+is the only starting point Hermes has.
+
+Joining the network is outside discovery. Using the discovered agents remains
+subject to application permissions.
+
+### Discovery from the Joined Network
+
+With Alice's phone attached to the guest network, Hermes proceeds as follows:
+
+1. Request the agents advertised on the network it has joined. The request
+   names no organisation, entity, or capability: the network bounds it, as the
+   organisation's discovery entry point bounds the requests in
+   {{appointment-coordination}}. DNS-based Service Discovery over multicast DNS
+   could provide this; the example does not depend on a particular discovery
+   protocol.
+2. Receive, for each advertised agent, its name, its communication protocol,
+   and how to contact it, possibly with a reference to a richer description.
+   The names, such as "Reception" and "Wayfinding", are meant to be read by
+   people. An agent may support more than one protocol, for example A2A and
+   MCP, in which case Hermes uses one that it supports.
+3. Present the names to Alice, who picks the agents to use. Alternatively,
+   Hermes can retrieve the referenced descriptions and decide which agents fit
+   her request. Either way, the choice is made after discovery.
+4. Check Alice in through the reception agent, which notifies Bob, then ask
+   the wayfinding agent for directions to the meeting room.
+
+The discovery target is the set of agents the building advertises. Choosing
+among them, checking in, and finding the way are subsequent application
+activities. To notify Bob, the reception agent may itself discover an agent at
+the discovery entry point of his organisation, as in
+{{appointment-coordination}}.
+
+~~~
+ Alice            Hermes              Building's          Reception /
+                                     guest network         wayfinding
+                                                              agents
+   |                 |                     |                     |
+   |---Check me in--->                     |                     |
+   |                 |                     |                     |
+  Discovery within the joined network
+   |                 |--Advertised agents-->                     |
+   |                 <-Name, URI, protocol-|                     |
+   |                 |                     |                     |
+   <---Agent names---|                     |                     |
+   |---Pick agents--->                     |                     |
+   |                 |                     |                     |
+  Application exchanges with each agent
+   |                 |--------------Check in Alice--------------->
+   |                 <---------Checked in, host notified---------|
+   |                 |-----------Route to meeting room----------->
+   |                 <----------------Directions-----------------|
+   <---Directions----|                     |                     |
+   |                 |                     |                     |
+~~~
+
+### Changes During the Visit
+
+While Alice is in the building, Hermes can reuse the discovery information it
+has obtained. Agents may appear or be withdrawn during her visit; an agent that
+serves a single event, for example, is withdrawn when the event ends. A changed
+or withdrawn agent may require a refresh or a new request.
+
+The information applies only to the network on which it was obtained. When
+Alice leaves the building, Hermes stops relying on it; at another building it
+discovers again. If Alice returns the next day, Hermes cannot assume that the
+same agents are still advertised.
+
+In a large building or campus, the guest network may span several network
+segments. Alice expects the same agents to be discoverable wherever she is
+attached, so the operator may make the same discovery information available
+across those segments. How it does so is a deployment matter.
+
+The operator also decides which agents are visible on which network. Agents
+for staff, such as building-control agents, are not advertised on the guest
+network.
+
+### Discovery Information Needed in This Scenario
+
+The request identifies no organisation, entity, or capability; the joined
+network bounds it. As in {{appointment-coordination}}, useful results include
+the entity's name, reachability information and supported communication
+methods, and references used to obtain further information. The starting point
+differs, but discovery on a local network adds no fields to the minimum
+discovery information.
+
+Names are most useful when they are meaningful to people, because Alice may
+choose among the agents directly. Evaluating what an agent can do, beyond the
+minimum discovery information, is outside discovery.
+
+### Security and Privacy
+
+Like a well-run enterprise network, the building's network can offer some
+protection against rogue advertisements. The operator can isolate guest devices
+from one another, or accept advertisements on the guest network only from its
+own infrastructure, so that another visitor cannot advertise an agent named
+"Reception". These measures complement integrity protection and an origin check
+of the discovery information, as in the other scenarios, but do not replace
+them: not every network is run this way, and locality alone does not establish
+trust.
+
+An authentic advertisement does not entitle an agent to Alice's personal
+details. Checking in shares her name and Bob's with the operator, in an
+application exchange that Alice authorises.
+
+A request bounded by the joined network names no organisation or capability,
+so it reveals little about Alice's intent, although other devices on the
+network may observe it. Advertisements on the guest network are visible to
+every visitor, so the operator publishes there only what all visitors may see,
+without exposing its internal structure or its tenants.
+
 # Discovery Characteristics
 
 The scenarios in {{scenarios}} share a common question: what must a client
@@ -479,12 +613,17 @@ characteristics are drawn from them.
   determined by properties or classification. The assistant first looks for a
   calendar-coordination capability at a known organisation, and later
   reconnects to the specific agent it found.
+* The starting point of discovery varies: an organisation's name in
+  {{appointment-coordination}}, known discovery entry points in
+  {{personalised-live-media}}, and only the network the client has joined in
+  {{visitor-assistance}}. The minimum discovery information returned is the
+  same in each case.
 * Capability is often an important discovery input, but it is not the only one.
   Organisation, jurisdiction, locality, protocol, policy, and responsible party
   also appear in several use cases.
 * The minimum discovery information may change over time. Freshness and caching
   therefore matter even when detailed runtime properties are obtained later
-  through application interaction. Both scenarios reuse cached discovery
+  through application interaction. The scenarios reuse cached discovery
   information and refresh it when it has expired or changed, while calendar
   contents, table availability, and site capacity are obtained from the
   services themselves.
@@ -526,7 +665,9 @@ The assistant queries that organisation's discovery entry point by capability
 Choosing a candidate, obtaining authorisation, and exchanging proposed times
 are step 5. In {{personalised-live-media}}, the same steps are repeated for
 the compute allocation capability, the data services, and the site
-controllers.
+controllers. In {{visitor-assistance}}, the request in step 3 names no
+organisation, entity, or capability: the network the assistant has joined
+bounds it.
 
 The Architecture determines which query properties belong in minimum discovery
 information. Other constraints are evaluated by the application.
