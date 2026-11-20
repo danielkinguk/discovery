@@ -80,6 +80,17 @@ protocols. This document makes no assumptions about implementation solutions and
 to an abstract functional model: frustrated engineers are invited to progress direct to solution
 architectures and protocol specifications.
 
+## Chicken and Egg
+
+There are three approaches to cover the material in this document:
+
+- Present and explain the functional step in the discovery ecosystem lifecycle
+- Show the functional components and flow of control in a figure
+- Explain the information elements that need to be stored or exchanged
+
+This document includes all three approaches, but each approach depends on the other two, 
+so it will be a matter of personal taste which the reader wants to see first.
+
 {: #sec-terms}
 ## Terminology
 
@@ -102,6 +113,9 @@ Other terms are defined as they are used.
    *  Reading of additional information.
 
    *  Capability exchange and negotiation.
+
+{: #sec-flow}
+# Flow of Control
 
 {: #sec-information}
 # Information
