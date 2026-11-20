@@ -102,7 +102,10 @@ Other terms are defined as they are used.
 {: #sec-lifecycle}
 # Discovery Ecosystem Lifecycle
 
-   *  Registration and management of an entity to be discovered.
+   *  Assignment of identity to an agent or agent resource that is
+      to be discovered.
+
+   *  Publication of information about the agent or agent resource to be discovered.
 
    *  Search based on a formalised encoding of search criteria.
 
