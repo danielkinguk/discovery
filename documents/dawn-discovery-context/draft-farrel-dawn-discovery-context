@@ -167,13 +167,14 @@ catalog and to a capabilities file if one is used.
 
 Registration to the agent registry may be made direct by the agent resource or from the agent catalog.
 
-The location of the agent catalog is advertised or discovered by other agents/users/clients.
+The location of the agent catalog is advertised or discovered by other agents/users/clients. This step may form part of DAWN.
 
 Any agent (on the left of the figure) can search the catalog to find a list of potential agent resources to communicate with. It may
 cache the results, and selects one that it wishes to communicate with.
 
 The agent then performs a discovery lookup to find the critical details necessary to communicate with the agent resource and the location of any
-capabilities file that might exist for the agent resource. Again, the agent may cache the result.
+capabilities file that might exist for the agent resource. Again, the agent may cache the result. This step in the flow of control corresponds to 
+DAWN.
 
 The agent may read the capabilities file and decide to select a different agent resource, or to continue with the one first selected.
 
