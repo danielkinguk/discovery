@@ -226,6 +226,17 @@ This document does not make any requests of IANA.
 {: #sec-privacy}
 # Privacy Considerations
 
+The information (see {{sec-information}}) exposed during the phases of the discovery ecosystem is largely pubic information, or at least
+public within the scope of the system of AI agents and AI resources that are available for discovery. 
+
+In the case that there are scoping limitations (for example, an enterprise has AI agents and AI resources that are only for use within
+the enterprise's network) access control are important to ensure privacy so that external parties cannot discover what agents and resources
+are available within the scoped environment.
+
+It is also important to consider protecting users from the exposure of their searches and lookups as well as the acutal agents and resources
+that they use. Thus, not only does the agent-to-agent protocol need to be protected to keep exchanges confidential, but the search and lookup
+protocols need to be kept private. 
+
 {: #sec-operations}
 # Operational Considerations
 
