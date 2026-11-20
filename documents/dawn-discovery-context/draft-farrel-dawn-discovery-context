@@ -1,1 +1,139 @@
+---
+coding: utf-8
 
+title: AI Resource Discovery in Context
+
+abbrev: AI Discovery Context
+docname: draft-farrel-dawn-discovery-context-08
+workgroup:
+category: info
+ipr: trust200902
+stream: IETF
+
+stand_alone: yes
+pi: [toc, tocompact, tocindent, sortrefs, symrefs, compact]
+
+area: INT
+kw:
+  - dawn
+  - agents
+  - search
+  - capabilities
+
+author:
+  -
+    ins: A. Farrel
+    name: Adrian Farrel
+    org: Old Dog Consulting
+    country: UK
+    email: adrian@olddog.co.uk
+  -
+    ins: J. Mozley
+    name: Jim Mozley
+    org: Infoblox
+    country: USA
+    email: jmozley@infoblox.com
+
+--- abstract
+
+The Discovery of Agents With Names (DAWN) working group focuses on how a
+client can discover public properties of AI resources to facilitate subsequent
+interactions such as selection, invocation, or communication.
+
+A lot of discussion within the DAWN working group has been around how 
+other phases of information exchange and lookup sit around the specific
+discovery steps that are in scope for DAWN. 
+
+This document provides a brief overview of the context of AI resource
+discovery. It is intended as an anchor for further discussion. It is not
+intended for adoption by any working group or later publication as an RFC.
+
+This document makes no assumptions about implementation solutions and limits itself
+to an abstract functional model.
+
+--- middle
+
+{: #sec-intro}
+# Introduction
+
+In order to understand the scope and purpose of the DAWN working group effort, 
+it will be helpful to understand what we are calling "the broader discovery ecosystem."
+
+Information must be registered to the discovery system, may be managed and updated,
+can then be discovered by other AI agents. But the discoverable information must be
+balanced as a compromise between too much detail which will overload the discovery 
+process or be duplicative and thus cause maintenance issues, and too little
+information which would make discovery suboptimal.
+
+Initial searches (possibly in human language and intent-based) may rely on large
+unstructured datasets. Additional detailed information may be retrieved or exchanged
+following initial discovery, and this part of the process may also include negotiation
+of capabilities.
+
+In the end, this means that the "discovery ecosystem" can be broken down into a series of 
+functions as set out in {{sec-lifecycle}}. These functions may overlap and, in some circumstances,
+the information present in one function might obviate the need for another function.
+
+From an implementation perspective, some of these functional components might be included 
+within the same module, and it is possible that some elements might be achieved using the same
+protocols. This document makes no assumptions about implementation solutions and limits itself
+to an abstract functional model: frustrated engineers are invited to progress direct to solution
+architectures and protocol specifications.
+
+{: #sec-terms}
+## Terminology
+
+This document uses the following terms as defined in {{!draft-farrel-dawn-terminology}}. 
+Other terms are defined as they are used.
+
+- term1
+
+{: #sec-lifecycle}
+# Discovery Ecosystem Lifecycle
+
+   *  Registration and management of an entity to be discovered.
+
+   *  Search based on a formalised encoding of search criteria.
+
+   *  Discovery lookup based on a minimum viable dataset (protocol,
+      identifying properties) with return of a set of minimum
+      discoverable information (including reachability).
+
+   *  Reading of additional information.
+
+   *  Capability exchange and negotiation.
+
+{: #sec-information}
+# Information
+
+   *  Wider web-style search
+
+   *  Searchable catalog
+
+   *  Regisred discoverable information (MDI)
+
+   *  Lookup keys (MVD)
+
+   *  Discovered information (Discovery Information)
+
+   *  Referenced readable additional information
+
+   *  Capabilities exchange and negotiation
+
+{: #sec-iana}
+# IANA Considerations
+
+This document does not make any requests of IANA.
+
+{: #sec-security}
+# Security Considerations
+
+{: #sec-privacy}
+# Privacy Considerations
+
+{: #sec-operations}
+# Operational Considerations
+
+# Acknowledgements
+
+TBD
