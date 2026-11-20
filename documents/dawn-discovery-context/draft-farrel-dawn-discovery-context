@@ -97,7 +97,19 @@ so it will be a matter of personal taste which the reader wants to see first.
 This document uses the following terms as defined in {{!draft-farrel-dawn-terminology}}. 
 Other terms are defined as they are used.
 
-- term1
+- Agent
+- Agent Resource
+- Attributes
+- Capability
+- Capability Exchange
+- Discovered Entity
+- Discovery
+- Discovery Information
+- Minimum Discovery Information (MDI)
+- Minimum Viable Dataset (MVD)
+- Property
+- Registration
+- Selection
 
 {: #sec-lifecycle}
 # Discovery Ecosystem Lifecycle
@@ -166,7 +178,7 @@ explanation is provided after the figure.
 {: #fig-flow title="Discovery Ecosystem Flow of Control" artwork-align="center"}
 
 The flow starts at the agent resource on the right of the figure. It publishes its information to the agent
-catalog and to a capabilities file if one is used.
+catalog and to a capabilities file if one is used. This step is called "Capability Exposure" in {{!draft-farrel-dawn-terminology}}.
 
 Registration to the agent registry may be made direct by the agent resource or from the agent catalog.
 
