@@ -117,6 +117,55 @@ Other terms are defined as they are used.
 {: #sec-flow}
 # Flow of Control
 
+
+~~~~
+ __________                 ______________                 __________  
+|          |               |              |               |          | 
+|          |               | Agent Index  |               |          | 
+|          |               |   Registry   |               |          | 
+|          |               |              |               |          | 
+|          |               |   ---------  |               |          | 
+| Client/  |   Publish     |  |  Agent  | |  Publication  |  Agent   | 
+|  User /  |   Catalog     |  | Catalog | |<--------------| Resource | 
+|   Agent  |   Location    |  |         | |               |          | 
+|          |<--------------|  |         | |               |          | 
+|          |               |  |         | |               |          | 
+|          |               |  |         | |               |          | 
+|          |   Search      |  |         | |               |          | 
+|          |-------------->|   ---------  |               |          | 
+|          |               |       |      |               |          | 
+|          |  Search Rsp   |       |      |               |          | 
+|          |<--------------| Registration |               |          | 
+|          |               |       |      |               |          | 
+|          |  Discovery    |       V      |               |          | 
+|          |   Lookup      |   ---------  |  Registration |          | 
+|          |-------------->|  | Agent   | |<--------------|          | 
+|          |               |  | Registry| |               |          | 
+|          |  Lookup Rsp   |  |         | |               |          | 
+|          |<--------------|  |         | |               |          | 
+|          |               |  |         | |               |          | 
+|          |               |  |         | |               |          | 
+|          |               |   ---------  |               |          | 
+|          |               |              |               |          | 
+|          |                --------------                |          | 
+|          |                                              |          | 
+|          |                --------------                |          | 
+|          |   Read Caps   |              |               |          | 
+|          |-------------->| Capabilities |               |          | 
+|          |<--------------|     File     |               |          | 
+|          |   Read Rsp    |              |               |          | 
+|          |                --------------                |          | 
+|          |                                              |          | 
+|          |           Agent-to-agent Bootstrap           |          | 
+|          |<-------------------------------------------->|          | 
+|          |                                              |          | 
+|          |         Agent-to-agent Communication         |          | 
+|          |<-------------------------------------------->|          | 
+|          |                                              |          | 
+ ----------                                                ----------
+~~~~
+{: #fig-flow title="Discovery Ecosystem Flow of Control" artwork-align="center"}
+
 {: #sec-information}
 # Information
 
