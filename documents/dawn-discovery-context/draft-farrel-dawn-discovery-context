@@ -117,54 +117,70 @@ Other terms are defined as they are used.
 {: #sec-flow}
 # Flow of Control
 
-
+{{fig-flow}} presents the flow of control for the component functions of
+the discovery ecosystem that are described in {{sec-lifecycle}}. A brief
+explanation is provided after the figure.
 ~~~~
- __________                 ______________                 __________  
-|          |               |              |               |          | 
-|          |               | Agent Index  |               |          | 
-|          |               |   Registry   |               |          | 
-|          |               |              |               |          | 
-|          |               |   ---------  |               |          | 
-| Client/  |   Publish     |  |  Agent  | |  Publication  |  Agent   | 
-|  User /  |   Catalog     |  | Catalog | |<--------------| Resource | 
-|   Agent  |   Location    |  |         | |               |          | 
-|          |<--------------|  |         | |               |          | 
-|          |               |  |         | |               |          | 
-|          |               |  |         | |               |          | 
-|          |   Search      |  |         | |               |          | 
-|          |-------------->|   ---------  |               |          | 
-|          |               |       |      |               |          | 
-|          |  Search Rsp   |       |      |               |          | 
-|          |<--------------| Registration |               |          | 
-|          |               |       |      |               |          | 
-|          |  Discovery    |       V      |               |          | 
-|          |   Lookup      |   ---------  |  Registration |          | 
-|          |-------------->|  | Agent   | |<--------------|          | 
-|          |               |  | Registry| |               |          | 
-|          |  Lookup Rsp   |  |         | |               |          | 
-|          |<--------------|  |         | |               |          | 
-|          |               |  |         | |               |          | 
-|          |               |  |         | |               |          | 
-|          |               |   ---------  |               |          | 
-|          |               |              |               |          | 
-|          |                --------------                |          | 
-|          |                                              |          | 
-|          |                --------------                |          | 
-|          |   Read Caps   |              |               |          | 
-|          |-------------->| Capabilities |               |          | 
-|          |<--------------|     File     |               |          | 
-|          |   Read Rsp    |              |               |          | 
-|          |                --------------                |          | 
-|          |                                              |          | 
-|          |           Agent-to-agent Bootstrap           |          | 
-|          |<-------------------------------------------->|          | 
-|          |                                              |          | 
-|          |         Agent-to-agent Communication         |          | 
-|          |<-------------------------------------------->|          | 
-|          |                                              |          | 
- ----------                                                ----------
+ __________                 ______________                 __________ 
+|          |               |              |               |          |
+| Client/  |               | Agent Index  |               |  Agent   |
+|  User /  |   Publish     |   Registry   |               | Resource |
+|   Agent  |   Catalog     |              |               |          |
+|          |   Location    |   ---------  |               |          |
+|          |<--------------|  |  Agent  | |  Publication  |          |
+|          |               |  | Catalog | |<--------------|          |
+|          |   Search      |  |         | |               |          |
+|          |-------------->|  |         | |               |          |
+|          |<--------------|  |         | |               |          |
+|          |  Search Rsp   |   ---------  |               |          |
+|          |               |       |      |               |          |
+|          |               | Registration |               |          |
+|          |               |       |      |               |          |
+|          |  Discovery    |       V      |               |          |
+|          |   Lookup      |   ---------  |  Registration |          |
+|          |-------------->|  | Agent   | |<--------------|          |
+|          |<--------------|  | Registry| |               |          |
+|          |  Lookup Rsp   |  |         | |               |          |
+|          |               |   ---------  |               |          |
+|          |               |              |               |          |
+|          |                --------------                |          |
+|          |                                              |          |
+|          |                --------------                |          |
+|          |   Read Caps   |              |  Publication  |          |
+|          |-------------->| Capabilities |<--------------|          |
+|          |<--------------|     File     |               |          |
+|          |   Read Rsp    |              |               |          |
+|          |                --------------                |          |
+|          |                                              |          |
+|          |           Agent-to-agent Bootstrap           |          |
+|          |<-------------------------------------------->|          |
+|          |                                              |          |
+|          |         Agent-to-agent Communication         |          |
+|          |<-------------------------------------------->|          |
+|          |                                              |          |
+ ----------                                                ---------- 
 ~~~~
 {: #fig-flow title="Discovery Ecosystem Flow of Control" artwork-align="center"}
+
+The flow starts at the agent resource on the right of the figure. It publishes its information to the agent
+catalog and to a capabilities file if one is used.
+
+Registration to the agent registry may be made direct by the agent resource or from the agent catalog.
+
+The location of the agent catalog is advertised or discovered by other agents/users/clients.
+
+Any agent (on the left of the figure) can search the catalog to find a list of potential agent resources to communicate with. It may
+cache the results, and selects one that it wishes to communicate with.
+
+The agent then performs a discovery lookup to find the critical details necessary to communicate with the agent resource and the location of any
+capabilities file that might exist for the agent resource. Again, the agent may cache the result.
+
+The agent may read the capabilities file and decide to select a different agent resource, or to continue with the one first selected.
+
+The agent then bootstraps its communications with the agent resource. This step may include an exchange of capabilities and potentially 
+the negotiation of behaviors.
+
+Finally, the agent is able to enter into full communication with the agent resource.
 
 {: #sec-information}
 # Information
