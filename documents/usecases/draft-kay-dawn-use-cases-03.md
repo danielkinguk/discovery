@@ -13,7 +13,6 @@ workgroup: "Discovery of Agents With Names"
 keyword:
   - discovery
   - agents
-  - workloads
   - named entities
   - DAWN
 venue:
@@ -45,8 +44,10 @@ author:
     name: Linda Dunbar
     org: Futurewei
     email: "ldunbar@futurewei.com"
+
 normative:
   I-D.farrel-dawn-terminology:
+
 informative:
   I-D.akhavain-moussa-dawn-problem-statement:
   I-D.king-dawn-requirements:
@@ -78,10 +79,7 @@ to attempt a subsequent interaction.
 Discovery of Agents With Names (DAWN) initially focuses on AI agents and their
 capabilities, including discovery of other resources used in AI systems. This
 document uses "entity" for a discoverable component in that context. Such
-entities may include agents, tools, services, tasks, data sources, models,
-inference services, workloads, brokers, and application endpoints. Skills may be
-discoverable attributes of those entities. Reuse in other discovery contexts is
-desirable, but does not extend the initial scope to general resource discovery.
+entities may include AI agents and AI resources.
 
 The DAWN problem statement {{I-D.akhavain-moussa-dawn-problem-statement}}
 provides background for this work. These use cases are intended as a common
@@ -124,7 +122,7 @@ The following are in scope:
 * discovery of candidate AI resources by capability or other discovery
   properties within the applicable deployment;
 * discovery of tasks as resources in an AI system;
-* discovery initiated by an agent, workload, service, application, or human
+* discovery initiated by an AI agent, application, or human
   operator;
 * discovery of supporting resources used by AI agents and applications;
 * exchange of the minimum discovery information, directly or by indirection,
@@ -135,7 +133,7 @@ The following are out of scope:
 * registration of entities for discovery;
 * authentication or attestation of registrations;
 * design, definition, or governance of naming systems;
-* identity management of AI agents, tools, and skills;
+* identity management of AI agents and AI resources;
 * trust management and trust evaluation beyond protecting content exchanged
   between discovery participants;
 * selection among candidate entities returned by discovery;
@@ -468,7 +466,6 @@ application activities outside DAWN.
 Audience demand or site availability may change. The agents can reuse valid
 discovery information and query current conditions through the data services.
 Changed or expired discovery records may require a refresh or a new query.
-Moving workloads or adding capacity remains an application decision.
 
 ### Security and Privacy
 
@@ -835,7 +832,7 @@ includes assumptions, discovery impacts, and examples within the settings in
 ## Capability-Oriented Discovery
 
 A client needs to find an entity that provides a particular function or
-capability, such as an agent, tool, task, service, or model-serving endpoint.
+capability, such as an AI agent or AI resource.
 
 ### Assumptions
 
@@ -858,7 +855,7 @@ partner organisation and learn how to contact it. This is the scenario in
 {{appointment-coordination}}.
 
 An agentic workflow decomposes a user request into several subtasks. The
-workflow needs to discover agents, tools, services, or tasks that can
+workflow needs to discover AI agents and AI resources that can
 participate in the work. Discovery provides candidate entities and their
 published properties; the workflow then performs selection and orchestration
 outside DAWN.
@@ -944,14 +941,14 @@ cooperating supplier. The discovery result indicates how to contact the
 supplier's agent and provides information needed by later authorisation and
 policy checks.
 
-A software-as-a-service provider hosts agents or tools for multiple customers.
+A software-as-a-service provider hosts AI agents or resources for multiple customers.
 Each customer needs discovery information scoped to its own tenancy. The same
 provider may also need different discovery views for internal operators and
 cooperating customers.
 
 A research consortium operates AI services across several cooperating
 institutions with established trust relationships. Each institution publishes
-information about its own agents, data services, and tools. Collaborators need
+information about its own AI agents and resources. Collaborators need
 to discover entities by capability while respecting institutional boundaries
 and trust models.
 
