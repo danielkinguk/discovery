@@ -117,9 +117,29 @@ Other terms are defined as they are used.
    *  Assignment of identity to an agent or agent resource that is
       to be discovered.
 
+      Fundamental to how an agent or agent resource is identified, referenced, accessed,
+      and authenticated is its formal identity. A number of identity systems have been
+      proposed.
+
    *  Publication of information about the agent or agent resource to be discovered.
 
+      An agent or agent resourse that is to be discovered must first publish information
+      about itself. This may be direct into a consolidated, public catalog or may be
+      into a local (perhaps organisational) catalog that has responsibility for further
+      distribution of the information.
+
+      Further, it is possible to consider placing detailed information about an agent or
+      agent resource into a file that can be signed and retrieved (read) by authorised
+      parties.
+
+   *  Advertisement or discovery of the location of agent catalogs.
+
+      In order that a catalog of agents and agent resources can be used, the location of
+      the catalgo must be known by clients wishing to perform searches or discovery lookups.
+
    *  Search based on a formalised encoding of search criteria.
+
+
 
    *  Discovery lookup based on a minimum viable dataset (protocol,
       identifying properties) with return of a set of minimum
